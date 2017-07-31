@@ -5,6 +5,13 @@ import DivIcon from 'react-leaflet-div-icon';
 import { Map, TileLayer, Marker, Popup, Circle, LayerGroup} from 'react-leaflet';
 
 
+
+
+
+
+
+
+
            // composant affichage avec push quand distance
 class CelebtripLeaflet extends React.Component {
     constructor() {
@@ -15,6 +22,7 @@ class CelebtripLeaflet extends React.Component {
        zoom: 13,
         // place of interests
        marker:[],
+       loading: true,
 
         // valeur par defaut pour exploitation des pushs et notifications
        notification: ''
@@ -88,7 +96,7 @@ class CelebtripLeaflet extends React.Component {
         let lng = Position.coords.longitude;
       // console.log('lat: '+lat+'lon: '+lng);
      //console.log(appObj);
-      appObj.setState({lat: lat, lng: lng, zoom: 13,  marker: obj});
+      appObj.setState({lat: lat, lng: lng, zoom: 13,  marker: obj, loading: false});
       appObj.parseMarker();
 
     }, appObj.options
@@ -96,8 +104,30 @@ class CelebtripLeaflet extends React.Component {
        });
 
         }
+        renderLoading() {
+             var loadingIcon = L.icon({
+        iconUrl: '../image/89.gif',
+        iconSize: [100, 100]
+      });
+    return <div>
+     <h1>Loading</h1>
+      <Map center = {this.paris}  zoom = {this.state.zoom}>
+     <TileLayer
+          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+        />
+         <Marker position={this.paris}  icon={loadingIcon} >
+          <Popup>
+            <span></span>
+          </Popup>
+        </Marker>
+  </Map>
+   </div>
 
-  render() {
+  }
+
+
+        renderMarker() {
 
 
        var coffreIcon = L.icon({
@@ -170,6 +200,19 @@ class CelebtripLeaflet extends React.Component {
   </div>
   </div>
     )
+  }
+
+
+    render() {
+
+    const { loading } = this.state;
+
+    return (
+      <div>
+
+        {loading ? this.renderLoading() : this.renderMarker()}
+      </div>
+    );
   }
 }
 

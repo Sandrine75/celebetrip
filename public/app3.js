@@ -78,24 +78,24 @@ return(
 <div className="container">
 <div className="row">
 <div className="col-sm-12 col-xs-12">
-<div ID="hugocadre2">
+<div id="hugocadre2">
    <div className="background4">
        <div className="container">
            <div className="row1">
                <div className="col-xs-offset-0.5 col-xs-4" >
                    <div className="map">
-                           <div ID="hugocadre">
+                           <div id="hugocadre">
                                <img src="images/circuit1bis.png" className="img-responsive"/>
                            </div>
                                <br />
-                           <div ID="hugocadre">
+                           <div id="hugocadre">
                                <img src="images/photocircuit1couleur.png" className="img-responsive"/>
                            </div>
 
                                <br />
                            <div className="hugotextcentrer">
                               <Link to="/celebetrip">
-                               <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default">Circuit 1<span class="glyphicon glyphicon-chevron-right"></span>
+                               <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default">Circuit 1<span className="glyphicon glyphicon-chevron-right"></span>
                                </button>
                                </Link>
                            </div>
@@ -143,12 +143,12 @@ return(
                        <img src="images/circuit2.png"/>
                    </div>
                            <br />
-                           <div ID="hugocadre">
+                           <div id="hugocadre">
                            <img src="images/photocircuit2couleur.png" className="img-responsive"/>
                            </div>
                            <br />
                    <div className="hugotextcentrer">
-                   <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default"> <a href="file:///C:/Users/famil/Documents/CELEBETRIP/circuit2.html" >Circuit 2 </a><span class="glyphicon glyphicon-chevron-right"></span>
+                   <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default"> <a href="file:///C:/Users/famil/Documents/CELEBETRIP/circuit2.html" >Circuit 2 </a><span className="glyphicon glyphicon-chevron-right"></span>
                    </button>
                    </div>
                </div>
@@ -188,18 +188,18 @@ return(
 <div className="container">
 <div className="row">
 <div className="col-sm-12 col-xs-12">
-<div ID="hugocadre2">
+<div id="hugocadre2">
    <div className="background4">
        <div className="container">
            <div className="row1">
 
                <div className="col-xs-offset-0.5 col-xs-4">
                    <div className="map">
-                       <div ID="hugocadre">
+                       <div id="hugocadre">
                            <img src="images/circuit3.png" className="img-responsive"/>
                        </div>
                            <br />
-                       <div ID="hugocadre">
+                       <div id="hugocadre">
                            <img src="images/photocircuit3couleur.png" className="img-responsive"/>
                        </div>
                            <br />
@@ -243,18 +243,18 @@ return(
 <div className="container">
 <div className="row">
 <div className="col-sm-12 col-xs-12">
-<div ID="hugocadre2">
+<div id="hugocadre2">
    <div className="background4">
        <div className="container">
            <div className="row1">
 
                <div className="col-xs-offset-0.5 col-xs-4">
                    <div className="map">
-                       <div ID="hugocadre">
+                       <div id="hugocadre">
                            <img src="images/circuit3.png" className="img-responsive"/>
                        </div>
                            <br />
-                       <div ID="hugocadre">
+                       <div id="hugocadre">
                            <img src="images/photocircuit4couleur.png" className="img-responsive"/>
                        </div>
                            <br />

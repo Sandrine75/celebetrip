@@ -5,6 +5,9 @@ var Router = require('react-router-dom').BrowserRouter;
 var Route = require('react-router-dom').Route;
 var Link = require('react-router-dom').Link;
 
+var createStore =  require('redux').createStore;
+var Provider    =  require('react-redux').Provider;
+
 import DivIcon from 'react-leaflet-div-icon';
 import { Map, TileLayer, Marker, Popup, Circle, LayerGroup} from 'react-leaflet';
 import { render } from 'react-dom';
@@ -255,6 +258,7 @@ class Footer extends React.Component {
 </div>);
   }
 }
+
 
 ReactDOM.render(
   <Router>
