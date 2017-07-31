@@ -6,7 +6,7 @@
 /*----------------------------------------------------------------------REACT--------------------------------------------------------*/
 
 var React = require('react');
-
+var Link = require('react-router-dom').Link;
 /*----------------------------------------------------------------------REACT--------------------------------------------------------*/
 
 
@@ -94,8 +94,10 @@ return(
 
                                <br />
                            <div className="hugotextcentrer">
-                               <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default"> <a href="file:///C:/Users/famil/Documents/CELEBETRIP/circuit1.html" >Circuit 1 </a> <span class="glyphicon glyphicon-chevron-right"></span>
+                              <Link to="/celebetrip">
+                               <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default">Circuit 1<span class="glyphicon glyphicon-chevron-right"></span>
                                </button>
+                               </Link>
                            </div>
                    </div>
                </div>
@@ -142,10 +144,10 @@ return(
                    </div>
                            <br />
                            <div ID="hugocadre">
-                           <img src="images/photocircuit2couleur.png" class="img-responsive"/>
+                           <img src="images/photocircuit2couleur.png" className="img-responsive"/>
                            </div>
                            <br />
-                   <div class="hugotextcentrer">
+                   <div className="hugotextcentrer">
                    <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default"> <a href="file:///C:/Users/famil/Documents/CELEBETRIP/circuit2.html" >Circuit 2 </a><span class="glyphicon glyphicon-chevron-right"></span>
                    </button>
                    </div>
@@ -202,7 +204,7 @@ return(
                        </div>
                            <br />
                        <div className="hugotextcentrer">
-                           <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default"> <a href="file:///C:/Users/famil/Documents/CELEBETRIP/circuit3.html" >Circuit 3 </a><span class="glyphicon glyphicon-chevron-right"></span>
+                           <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default"> <a href="file:///C:/Users/famil/Documents/CELEBETRIP/circuit3.html" >Circuit 3 </a><span className="glyphicon glyphicon-chevron-right"></span>
                            </button>
                        </div>
                    </div>
@@ -257,7 +259,7 @@ return(
                        </div>
                            <br />
                        <div className="hugotextcentrer">
-                           <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default"> <a href="file:///C:/Users/famil/Documents/CELEBETRIP/circuit3.html" >Circuit 3 </a><span class="glyphicon glyphicon-chevron-right"></span>
+                           <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default"> <a href="file:///C:/Users/famil/Documents/CELEBETRIP/circuit3.html" >Circuit 3 </a><span className="glyphicon glyphicon-chevron-right"></span>
                            </button>
                        </div>
                    </div>

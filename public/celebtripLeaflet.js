@@ -5,13 +5,6 @@ import DivIcon from 'react-leaflet-div-icon';
 import { Map, TileLayer, Marker, Popup, Circle, LayerGroup} from 'react-leaflet';
 
 
-
-
-
-
-
-
-
            // composant affichage avec push quand distance
 class CelebtripLeaflet extends React.Component {
     constructor() {
