@@ -27,7 +27,7 @@ class Logo extends React.Component {
   }
   render() {
     return(
-        <div className="container">
+        <div className="container background-color">
             <div className="row">
                 <div className="col-sm-12 col-xs-12">
                     <h2>Bienvenue sur Celebetrip</h2>
@@ -49,7 +49,7 @@ class Hugo extends React.Component {
   render() {
     return(
      <div>
-         <div className="container">
+         <div className="container background-color">
             <div className="row">
                 <div className="col-xs-12 border">
                     <div className="col-xs-offset-1 col-xs-2">
@@ -88,7 +88,7 @@ class Piaf extends React.Component {
   render() {
     return(
      <div>
-        <div className="container">
+        <div className="container background-color">
             <div className="row">
                 <div className="col-xs-12 border">
                     <div className="col-xs-offset-1 col-xs-2">
@@ -125,7 +125,7 @@ class Rodin extends React.Component {
   render() {
     return(
     <div>
-        <div className="container">
+        <div className="container background-color">
             <div className="row">
                 <div className="col-xs-12 border">
                     <div className="col-xs-offset-1 col-xs-2">
@@ -162,7 +162,7 @@ class YSL extends React.Component {
   render() {
     return(
     <div>
-        <div className="container">
+        <div className="container background-color">
             <div className="row">
                 <div className="col-xs-12 border">
                     <div className="col-xs-offset-1 col-xs-2">
@@ -199,7 +199,7 @@ class Questionnaire extends React.Component {
   render() {
     return(
         <div>
-            <div className="container">
+            <div className="container background-color">
                 <div className="row">
                     <div className="col-lg-6">
                         <div className="col-lg-12">

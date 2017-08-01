@@ -1,13 +1,14 @@
 /**/
 
 
-  /* ---------------------page home --------------------------------*/
-.logo
+/* -----------------------------------HOME PAGE --------------------------------*/
+.homelogo/*OK*/
 {
-    background-color: rgb(215, 183, 99)
+    background-color: rgb(215, 183, 99);
+    text-align: center 
 }
 
-.entete
+.homeentete/*OK*/
 {
   background-color: rgb(10, 44, 56);
   margin-bottom: 80px;
@@ -19,24 +20,68 @@
   text-align: center
 }
 
-.button
+/* GARGOUILLE1 */
+.gar1{
+position:relative;
+height:400px
+}
+
+.gar2{
+position:absolute;
+z-index:1
+}
+
+.gartexte
 {
-  background-color: rgb(10, 44, 56);
-  color: rgb(215, 183, 99);
-  font-family: "Arial", serif;
-  font-size: 18px;
-  text-align: center;
-  margin: 0 0 30px 0
+text-align:right; 
+margin-left: 30;
+color: rgb(215, 183, 99);
+width: 18em ;
+z-index:2;
+right:10px;
+}
+
+
+.background-size
+{
+    background-size: 100%
 }
 
 .operateur
 {
   background-color: rgb(10, 44, 56);
-  background-size: 100%
+  background-size: 100%;
   padding: 0px 0px;
   margin: 0;
   text-align: center
 }
+.background-color/*OK*/
+    {
+       background-color: rgb(10, 44, 56); 
+    }
+
+.background-logo/*OK*/
+    {
+       background-color: rgb(215, 183, 99);
+    }
+.margin
+{
+    margin:  100%
+}
+      
+.homebutton
+{
+  background-color: rgb(10, 44, 56);
+  color: rgb(215, 183, 99);
+  font-family: "Arial", serif;
+  font-size: 10px;
+  text-align: center;
+  margin: 0 0 30px 0
+}
+
+  
+/* -----------------------------------FIN HOME PAGE --------------------------------*/
+
 
 .celebrites
 {
@@ -118,19 +163,43 @@ text-align: center;
 
 
 
-/* -------------------ESSAI BOUTON ---------------------------*/
+/* -------------------ESSAI FOND ECRAN -----------------------  /* border:3px solid #ddab00;
+  color: #d7b700;*/
 
 .backgroundhugo
 {
   /*background-color: rgb(10, 44, 56);*/
   color: #d7b700
-
 }
-.row
+
+.background1
 {
-  background-color: rgb(10, 44, 56);
-  /*border:3px solid #ddab00;*/
-  color: #d7b700;
+background-color: rgb(10, 44, 56);
+background-color: rgb(120, 123, 54);
+border:3px solid #ddab00;
+color: #d7b700;
+text-align: center
+}
+    
+.row1
+{
+background-color: rgb(120, 123, 54);
+text-align: center;
+background-position:100% 100%
+}
+
+.row2
+{
+  background-color: rgb(240, 238, 226);
+  border:3px solid #f0eee2;
+  color: rgb(240, 238, 226);
+  padding:0;
+  text-align: center
+}
+.row3
+{
+  background-color: rgb(240, 238, 226);
+  color: rgb(240, 238, 226);
   padding:0;
   text-align: center
 }
@@ -157,7 +226,7 @@ position:absolute;
 z-index:2
 }
 
-
+/* -------------------FOOTER BOOSTRAP ---------------------------*/
 .copyright {
     color: #d7b700;
     line-height: 30px;
@@ -205,7 +274,7 @@ z-index:2
     padding: 10px 0px;
 }
 
-
+/* ---------------------------MAP NICOLAS-------------------------------*/
 .leaflet-container {
  width:100vh;
     height:100vh;
@@ -232,10 +301,12 @@ z-index:2
 
 /* -------------------CIRCUITS HUGO - SON UNIVERS---------------------------*/
 
+
+
 .hugobody
 {
     background-color: rgb(240, 238, 226);
-    color: #AAA
+    color: rgb(240, 238, 226)
 }
 
 .hugologo

@@ -13,7 +13,7 @@ var App2 = require('./app2.js');
 var App3 = require('./app3.js');
 var CelebtripLeaflet = require('./celebtripLeaflet.js');
 
-/*---------------------------------sous composants-----------------------------------*/
+/*-----------------------------------------sous composants-----------------------------------*/
 class App extends React.Component {
   constructor() {
     super();
@@ -32,7 +32,7 @@ class App extends React.Component {
   }
 }/*FIN*/
 
-/*-------------------detail sous composants LIGNE 25 à 245----------------------------*/
+/*---------------------------detail sous composants LIGNE 25 à 245----------------------------*/
 
 class Logo extends React.Component {
   constructor() {
@@ -41,10 +41,10 @@ class Logo extends React.Component {
   render() {
     return(
     <div>
-        <div className="container">
+        <div className="container background-logo">
             <div className="row">
                 <div className="col-sm-12 col-xs-12">
-                    <div className="logo">
+                    <div className="homelogo">
                     <center> <img src="images/logo.png" className="img-responsive"/></center>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ class Logo extends React.Component {
   }
 }/*FIN*/
 
-/*-----Celebrités + bouton dynamique------*/
+/*------------------------------------Celebrités + bouton dynamique---------------------------*/
 class Stars extends React.Component {
   constructor() {
     super();
@@ -63,17 +63,17 @@ class Stars extends React.Component {
   render() {
     return(
       <div>
-         <div className="container">
+         <div className="container background-color">
             <div className="row">
                 <div className="col-sm-12 col-xs-12">
-                    <div className="entete">
+                    <div className="homeentete">
                        <h4>Découvrez Paris</h4>
                        <h4>avec pour compagnon de voyage </h4>
                        <h4>une célébrité d’hier ou d’aujourd’hui</h4>
                        <p> <img src="images/photopastille.png" className="img-responsive" /> </p>
-                       <div className="button">
+                       <div className="homebutton">
                        <Link to="/app2">
-                       <span>Et bien d'autres... <br /> Découvrez-les </span>
+                       <span>Et bien d'autres... <br /> Découvrez-les <span className="glyphicon glyphicon-chevron-right"></span></span>
                        </Link>
                     </div>
                 </div>
@@ -85,21 +85,22 @@ class Stars extends React.Component {
   }
 }/*FIN*/
 
-/*---------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
 class Gargouille1 extends React.Component {
   constructor() {
     super();
   }
   render() {
     return (
-      <div>
-         <div className="container background image">
+      
+         <div className="container background-color">
                   <div className="row">
                       <div className="col-sm-12 col-xs-12">
                           <div className="gar1">
                               <div className="gar2">
                                   <img src="images/paris1.png" className="img-responsive"/>
                               </div>
+        
                               <div className="gartexte">
                                   <h3>Restez connecté !</h3>
                                   <h4> Avec l'appli des gens célèbres qui vous suit partout </h4>
@@ -108,12 +109,12 @@ class Gargouille1 extends React.Component {
                       </div>
                   </div>
          </div>
-      </div>
+     
     )
   }
 }/*FIN*/
 
-/*---------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
 class Chat extends React.Component {
   constructor() {
     super();
@@ -121,7 +122,7 @@ class Chat extends React.Component {
   render() {
     return (
     <div>
-        <div className="container">
+        <div className="container background-color">
                 <div className="row">
                     <div className="col-sm-12 col-xs-12">
                         <center><img src="images/operateur2.png" className="img-responsive"/></center><br/>
@@ -142,7 +143,7 @@ class Gargouille2 extends React.Component {
   render() {
     return(
     <div>
-       <div className="container background image">
+       <div className="container background-logo">
                 <div className="row">
                     <div className="col-sm-12 col-xs-12">
                         <div className="gar1">
@@ -158,7 +159,7 @@ class Gargouille2 extends React.Component {
   }
 }/*FIN*/
 
-/*---------------------------------*/
+/*------------------------------------------FOOTER---------------------------------------*/
 class Footer extends React.Component {
   constructor() {
     super();
