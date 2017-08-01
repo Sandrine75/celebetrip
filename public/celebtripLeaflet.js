@@ -53,6 +53,7 @@ class CelebtripLeaflet extends React.Component {
         console.log(this.state.notification);
       } else {
           this.state.marker[j].close = false;
+          this.setState({notification: null});
       }
     }
   }

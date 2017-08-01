@@ -42,7 +42,7 @@ right:10px;
 }
 
 
-.background-size
+.background-size/*marche pas*/
 {
     background-size: 100%
 }
@@ -138,10 +138,7 @@ right:10px;
     margin: 20px 0 20px;
 }
 
-
-
-/* -------------------page celebrites ---------------------------*/
-
+/* PAGE APP 2 ------------------- CHOIX DES CELEBRITES ------------------------*/
 
 .background2
 {
@@ -161,6 +158,54 @@ text-align: center;
     margin : 0px;
 }
 
+.celeb-border
+{
+    text-align: right;
+    margin : 0px;
+}
+
+/* PAGE APP3 ------------------- CIRCUITS HUGO - SON UNIVERS--------------------*/
+
+.background-hugo/*OK*/
+{
+    background-color: rgb(240, 238, 226);
+}
+
+.hugologo
+{
+    background-color: rgb(120, 123, 54);
+    border: solid 5px rgb(120, 123, 54)
+}
+.hugotextcentrer
+{
+    text-align: center;
+    color: rgb(120, 123, 54);
+    padding: 5px 5px 5px 5px
+}
+.hugotextjustify
+{
+    text-align: justify;
+    color: rgb(120, 123, 54);
+    padding: 5px 5px 5px 5px
+}
+
+
+.hugograndcadre/* OK*/
+{
+border: solid 4px rgb(120, 123, 54);
+margin-right: 10px;
+margin-left: 10px;
+}
+.hugocadre
+{
+border: solid 1px rgb(120, 123, 54);
+}
+
+
+.map
+{
+margin-top: 25px;
+}
 
 
 /* -------------------ESSAI FOND ECRAN -----------------------  /* border:3px solid #ddab00;
@@ -297,60 +342,4 @@ z-index:2
 }
 .user-icon {
    z-index: 15;
-}
-
-/* -------------------CIRCUITS HUGO - SON UNIVERS---------------------------*/
-
-
-
-.hugobody
-{
-    background-color: rgb(240, 238, 226);
-    color: rgb(240, 238, 226)
-}
-
-.hugologo
-{
-    background-color: rgb(120, 123, 54);
-    border: solid 5px rgb(120, 123, 54)
-}
-
-.hugotextcentrer
-{
-    text-align: center;
-    color: rgb(120, 123, 54);
-    padding: 5px 5px 5px 5px
-}
-
-.hugotextjustify
-{
-    text-align: justify;
-    color: rgb(120, 123, 54);
-    padding: 5px 5px 5px 5px
-}
-
-
-
-#hugocadre
-{
-border: solid 1px rgb(120, 123, 54);
-}
-#cadre img
-{
-float:left;
-}
-
-
-
-#hugocadre2
-{
-border: solid 4px rgb(120, 123, 54);
-margin-right: 10px;
-margin-left: 10px;
-}
-
-
-.map
-{
-margin-top: 25px;
 }

@@ -52146,32 +52146,28 @@ var Intro = function (_React$Component3) {
         value: function render() {
             return React.createElement(
                 'div',
-                { 'class': 'container' },
+                { className: 'container background-hugo' },
                 React.createElement(
                     'div',
-                    { 'class': 'row2' },
+                    { className: 'row2' },
                     React.createElement(
                         'div',
-                        { 'class': 'hugobody' },
+                        { className: 'col-sm-12 col-xs-12' },
                         React.createElement(
                             'div',
-                            { 'class': 'col-sm-12 col-xs-12' },
+                            { className: 'hugotextcentrer' },
+                            React.createElement('br', null),
                             React.createElement(
-                                'div',
-                                { 'class': 'hugotextcentrer' },
-                                React.createElement('br', null),
-                                React.createElement(
-                                    'h3',
-                                    null,
-                                    'Entrez dans l\'univers de Hugo '
-                                ),
-                                React.createElement(
-                                    'h4',
-                                    null,
-                                    '10 circuits pour d\xE9couvrir Paris '
-                                ),
-                                React.createElement('br', null)
-                            )
+                                'h3',
+                                null,
+                                'Entrez dans l\'univers de Hugo '
+                            ),
+                            React.createElement(
+                                'h4',
+                                null,
+                                '10 circuits pour d\xE9couvrir Paris '
+                            ),
+                            React.createElement('br', null)
                         )
                     )
                 )
@@ -52202,19 +52198,19 @@ var Circuit1 = function (_React$Component4) {
                 null,
                 React.createElement(
                     'div',
-                    { className: 'container' },
+                    { className: 'container background-hugo' },
                     React.createElement(
                         'div',
-                        { className: 'row2' },
+                        { className: 'row' },
                         React.createElement(
                             'div',
                             { className: 'col-sm-12 col-xs-12' },
                             React.createElement(
                                 'div',
-                                { className: 'hugobody' },
+                                { className: 'hugograndcadre' },
                                 React.createElement(
                                     'div',
-                                    { ID: 'hugocadre2' },
+                                    { className: 'background4' },
                                     React.createElement(
                                         'div',
                                         { className: 'container' },
@@ -52229,13 +52225,13 @@ var Circuit1 = function (_React$Component4) {
                                                     { className: 'map' },
                                                     React.createElement(
                                                         'div',
-                                                        { ID: 'hugocadre' },
+                                                        { className: 'hugocadre' },
                                                         React.createElement('img', { src: 'images/circuit1.png', className: 'img-responsive' })
                                                     ),
                                                     React.createElement('br', null),
                                                     React.createElement(
                                                         'div',
-                                                        { ID: 'hugocadre' },
+                                                        { className: 'hugocadre' },
                                                         React.createElement('img', { src: 'images/photocircuit1couleur.png', className: 'img-responsive' })
                                                     ),
                                                     React.createElement('br', null),
@@ -52285,9 +52281,9 @@ var Circuit1 = function (_React$Component4) {
                                                 )
                                             )
                                         )
-                                    ),
-                                    React.createElement('br', null)
-                                )
+                                    )
+                                ),
+                                React.createElement('br', null)
                             )
                         )
                     )
@@ -52316,92 +52312,88 @@ var Circuit2 = function (_React$Component5) {
         value: function render() {
             return React.createElement(
                 'div',
-                null,
+                { className: 'container background-hugo' },
                 React.createElement(
                     'div',
-                    { className: 'container' },
+                    { className: 'row' },
                     React.createElement(
                         'div',
-                        { className: 'row2' },
+                        { className: 'col-sm-12 col-xs-12' },
                         React.createElement(
                             'div',
-                            { className: 'col-sm-12 col-xs-12' },
+                            { className: 'hugograndcadre' },
                             React.createElement(
                                 'div',
-                                { ID: 'hugocadre2' },
+                                { className: 'background4' },
                                 React.createElement(
                                     'div',
-                                    { className: 'background4' },
+                                    { className: 'container' },
                                     React.createElement(
                                         'div',
-                                        { className: 'container' },
+                                        { className: 'row1' },
                                         React.createElement(
                                             'div',
-                                            { className: 'row1' },
+                                            { className: 'col-xs-offset-0.5 col-xs-4' },
                                             React.createElement(
                                                 'div',
-                                                { className: 'col-xs-offset-0.5 col-xs-4' },
+                                                { className: 'map' },
                                                 React.createElement(
                                                     'div',
-                                                    { className: 'map' },
+                                                    { className: 'hugocadre' },
+                                                    React.createElement('img', { src: 'images/circuit2.png', className: 'img-responsive' })
+                                                ),
+                                                React.createElement('br', null),
+                                                React.createElement(
+                                                    'div',
+                                                    { className: 'hugocadre' },
+                                                    React.createElement('img', { src: 'images/photocircuit2couleur.png', className: 'img-responsive' })
+                                                ),
+                                                React.createElement('br', null),
+                                                React.createElement(
+                                                    'div',
+                                                    { className: 'hugotextcentrer' },
                                                     React.createElement(
-                                                        'div',
-                                                        { ID: 'hugocadre' },
-                                                        React.createElement('img', { src: 'images/circuit2.png', className: 'img-responsive' })
-                                                    ),
-                                                    React.createElement('br', null),
-                                                    React.createElement(
-                                                        'div',
-                                                        { ID: 'hugocadre' },
-                                                        React.createElement('img', { src: 'images/photocircuit2couleur.png', className: 'img-responsive' })
-                                                    ),
-                                                    React.createElement('br', null),
-                                                    React.createElement(
-                                                        'div',
-                                                        { className: 'hugotextcentrer' },
+                                                        'button',
+                                                        { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default' },
+                                                        ' ',
                                                         React.createElement(
-                                                            'button',
-                                                            { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default' },
-                                                            ' ',
-                                                            React.createElement(
-                                                                'a',
-                                                                { href: 'file:///C:/Users/famil/Documents/CELEBETRIP/circuit2.html' },
-                                                                'Circuit 2 '
-                                                            ),
-                                                            React.createElement('span', { 'class': 'glyphicon glyphicon-chevron-right' })
-                                                        )
+                                                            'a',
+                                                            { href: 'file:///C:/Users/famil/Documents/CELEBETRIP/circuit2.html' },
+                                                            'Circuit 2 '
+                                                        ),
+                                                        React.createElement('span', { 'class': 'glyphicon glyphicon-chevron-right' })
                                                     )
                                                 )
-                                            ),
+                                            )
+                                        ),
+                                        React.createElement(
+                                            'div',
+                                            { className: 'col-xs-offset-0 col-xs-8' },
                                             React.createElement(
                                                 'div',
-                                                { className: 'col-xs-offset-0 col-xs-8' },
+                                                { className: 'hugotextjustify' },
                                                 React.createElement(
-                                                    'div',
-                                                    { className: 'hugotextjustify' },
-                                                    React.createElement(
-                                                        'h3',
-                                                        null,
-                                                        'Autour de la tour Eiffel'
-                                                    ),
-                                                    React.createElement(
-                                                        'h4',
-                                                        null,
-                                                        ' Tour Eiffel, Trocad\xE9ro, Invalides, Pont Alexandre-III... Balade plac\xE9e sous le signe de la d\xE9mesure.'
-                                                    ),
-                                                    React.createElement(
-                                                        'p',
-                                                        null,
-                                                        'Ce parcours guid\xE9 vous permet de d\xE9couvrir Paris avec Victor Hugo. Vous d\xE9couvrirez nombreuses anacdotes de sa vie parisiennes tout au long de votre parcours, ses pens\xE9es, ses souvenirs, le Paris qu\'il a aim\xE9. '
-                                                    )
+                                                    'h3',
+                                                    null,
+                                                    'Autour de la tour Eiffel'
+                                                ),
+                                                React.createElement(
+                                                    'h4',
+                                                    null,
+                                                    ' Tour Eiffel, Trocad\xE9ro, Invalides, Pont Alexandre-III... Balade plac\xE9e sous le signe de la d\xE9mesure.'
+                                                ),
+                                                React.createElement(
+                                                    'p',
+                                                    null,
+                                                    'Ce parcours guid\xE9 vous permet de d\xE9couvrir Paris avec Victor Hugo. Vous d\xE9couvrirez nombreuses anacdotes de sa vie parisiennes tout au long de votre parcours, ses pens\xE9es, ses souvenirs, le Paris qu\'il a aim\xE9. '
                                                 )
                                             )
                                         )
                                     )
                                 )
-                            ),
-                            React.createElement('br', null)
-                        )
+                            )
+                        ),
+                        React.createElement('br', null)
                     )
                 )
             );
@@ -52428,92 +52420,88 @@ var Circuit3 = function (_React$Component6) {
         value: function render() {
             return React.createElement(
                 'div',
-                null,
+                { className: 'container background-hugo' },
                 React.createElement(
                     'div',
-                    { className: 'container' },
+                    { className: 'row' },
                     React.createElement(
                         'div',
-                        { className: 'row2' },
+                        { className: 'col-sm-12 col-xs-12' },
                         React.createElement(
                             'div',
-                            { className: 'col-sm-12 col-xs-12' },
+                            { className: 'hugograndcadre' },
                             React.createElement(
                                 'div',
-                                { ID: 'hugocadre2' },
+                                { className: 'background4' },
                                 React.createElement(
                                     'div',
-                                    { className: 'background4' },
+                                    { className: 'container' },
                                     React.createElement(
                                         'div',
-                                        { className: 'container' },
+                                        { className: 'row1' },
                                         React.createElement(
                                             'div',
-                                            { className: 'row1' },
+                                            { className: 'col-xs-offset-0.5 col-xs-4' },
                                             React.createElement(
                                                 'div',
-                                                { className: 'col-xs-offset-0.5 col-xs-4' },
+                                                { className: 'map' },
                                                 React.createElement(
                                                     'div',
-                                                    { className: 'map' },
+                                                    { className: 'hugocadre' },
+                                                    React.createElement('img', { src: 'images/circuit3.png', className: 'img-responsive' })
+                                                ),
+                                                React.createElement('br', null),
+                                                React.createElement(
+                                                    'div',
+                                                    { className: 'hugocadre' },
+                                                    React.createElement('img', { src: 'images/photocircuit3couleur.png', className: 'img-responsive' })
+                                                ),
+                                                React.createElement('br', null),
+                                                React.createElement(
+                                                    'div',
+                                                    { className: 'hugotextcentrer' },
                                                     React.createElement(
-                                                        'div',
-                                                        { ID: 'hugocadre' },
-                                                        React.createElement('img', { src: 'images/circuit3.png', className: 'img-responsive' })
-                                                    ),
-                                                    React.createElement('br', null),
-                                                    React.createElement(
-                                                        'div',
-                                                        { ID: 'hugocadre' },
-                                                        React.createElement('img', { src: 'images/photocircuit3couleur.png', className: 'img-responsive' })
-                                                    ),
-                                                    React.createElement('br', null),
-                                                    React.createElement(
-                                                        'div',
-                                                        { className: 'hugotextcentrer' },
+                                                        'button',
+                                                        { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default' },
+                                                        ' ',
                                                         React.createElement(
-                                                            'button',
-                                                            { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default' },
-                                                            ' ',
-                                                            React.createElement(
-                                                                'a',
-                                                                { href: 'file:///C:/Users/famil/Documents/CELEBETRIP/circuit3.html' },
-                                                                'Circuit 3 '
-                                                            ),
-                                                            React.createElement('span', { 'class': 'glyphicon glyphicon-chevron-right' })
-                                                        )
+                                                            'a',
+                                                            { href: 'file:///C:/Users/famil/Documents/CELEBETRIP/circuit3.html' },
+                                                            'Circuit 3 '
+                                                        ),
+                                                        React.createElement('span', { 'class': 'glyphicon glyphicon-chevron-right' })
                                                     )
                                                 )
-                                            ),
+                                            )
+                                        ),
+                                        React.createElement(
+                                            'div',
+                                            { className: 'col-xs-offset-0 col-xs-8' },
                                             React.createElement(
                                                 'div',
-                                                { className: 'col-xs-offset-0 col-xs-8' },
+                                                { className: 'hugotextjustify' },
                                                 React.createElement(
-                                                    'div',
-                                                    { className: 'hugotextjustify' },
-                                                    React.createElement(
-                                                        'h3',
-                                                        null,
-                                                        'Des Champs-Elys\xE9es au Louvre'
-                                                    ),
-                                                    React.createElement(
-                                                        'h4',
-                                                        null,
-                                                        ' Le Louvre, la Concorde, les Tuileries, le Grand Palais, les Champs-\xC9lys\xE9es...Voyage au c\u0153ur du Paris l\xE9gendaire.'
-                                                    ),
-                                                    React.createElement(
-                                                        'p',
-                                                        null,
-                                                        'Ce parcours guid\xE9 vous permet de d\xE9couvrir Paris avec Victor Hugo. Vous d\xE9couvrirez nombreuses anacdotes de sa vie parisiennes tout au long de votre parcours, ses pens\xE9es, ses souvenirs, le Paris qu\'il a aim\xE9. '
-                                                    )
+                                                    'h3',
+                                                    null,
+                                                    'Des Champs-Elys\xE9es au Louvre'
+                                                ),
+                                                React.createElement(
+                                                    'h4',
+                                                    null,
+                                                    ' Le Louvre, la Concorde, les Tuileries, le Grand Palais, les Champs-\xC9lys\xE9es...Voyage au c\u0153ur du Paris l\xE9gendaire.'
+                                                ),
+                                                React.createElement(
+                                                    'p',
+                                                    null,
+                                                    'Ce parcours guid\xE9 vous permet de d\xE9couvrir Paris avec Victor Hugo. Vous d\xE9couvrirez nombreuses anacdotes de sa vie parisiennes tout au long de votre parcours, ses pens\xE9es, ses souvenirs, le Paris qu\'il a aim\xE9. '
                                                 )
                                             )
                                         )
                                     )
-                                ),
-                                React.createElement('br', null)
+                                )
                             )
-                        )
+                        ),
+                        React.createElement('br', null)
                     )
                 )
             );
@@ -52543,16 +52531,16 @@ var Circuit4 = function (_React$Component7) {
                 null,
                 React.createElement(
                     'div',
-                    { className: 'container' },
+                    { className: 'container background-hugo' },
                     React.createElement(
                         'div',
-                        { className: 'row2' },
+                        { className: 'row' },
                         React.createElement(
                             'div',
                             { className: 'col-sm-12 col-xs-12' },
                             React.createElement(
                                 'div',
-                                { ID: 'hugocadre2' },
+                                { className: 'hugograndcadre' },
                                 React.createElement(
                                     'div',
                                     { className: 'background4' },
@@ -52570,13 +52558,13 @@ var Circuit4 = function (_React$Component7) {
                                                     { className: 'map' },
                                                     React.createElement(
                                                         'div',
-                                                        { ID: 'hugocadre' },
+                                                        { className: 'hugocadre' },
                                                         React.createElement('img', { src: 'images/circuit3.png', className: 'img-responsive' })
                                                     ),
                                                     React.createElement('br', null),
                                                     React.createElement(
                                                         'div',
-                                                        { ID: 'hugocadre' },
+                                                        { className: 'hugocadre' },
                                                         React.createElement('img', { src: 'images/photocircuit4couleur.png', className: 'img-responsive' })
                                                     ),
                                                     React.createElement('br', null),
@@ -52655,7 +52643,7 @@ var Recherche = function (_React$Component8) {
                 null,
                 React.createElement(
                     'div',
-                    { className: 'container' },
+                    { className: 'container background-hugo' },
                     React.createElement(
                         'div',
                         { className: 'row2' },
@@ -52772,6 +52760,7 @@ var CelebtripLeaflet = function (_React$Component) {
           console.log(this.state.notification);
         } else {
           this.state.marker[j].close = false;
+          this.setState({ notification: null });
         }
       }
     }

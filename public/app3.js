@@ -56,12 +56,12 @@ super();
 render() {
 return(
     
-<div class="container">
-    <div class="row2">  
-        <div class="hugobody"> 
-        <div class="col-sm-12 col-xs-12">
+<div className="container background-hugo">
+    <div className="row2">  
+        
+        <div className="col-sm-12 col-xs-12">
             
-                <div class="hugotextcentrer">
+                <div className="hugotextcentrer">
                     <br/>
                     <h3>Entrez dans l'univers de Hugo </h3>
                     <h4>10 circuits pour découvrir Paris </h4> 
@@ -69,7 +69,7 @@ return(
                 </div>
             </div>
         </div>
-    </div>
+    
 </div>
 );
 }
@@ -84,23 +84,23 @@ super();
 render() {
 return(
     <div>
-        <div className="container">
-            <div className="row2">
+        <div className="container background-hugo">
+            <div className="row">
                 <div className="col-sm-12 col-xs-12">
-                    <div className="hugobody">
-                    <div ID="hugocadre2">
-                        
+                    
+                    <div className="hugograndcadre">
+                        <div className="background4">
                             <div className="container">
                                 <div className="row1">
                                     <div className="col-xs-offset-0.5 col-xs-4" >
                                         <div className="map">
-                                            <div ID="hugocadre">
+                                            <div className="hugocadre">
                                             <img src="images/circuit1.png" className="img-responsive"/>
                                             </div>
     
                                             <br />
     
-                                            <div ID="hugocadre">
+                                            <div className="hugocadre">
                                             <img src="images/photocircuit1couleur.png" className="img-responsive"/>
                                             </div>
     
@@ -122,9 +122,9 @@ return(
                                     </div>
                                 </div>
                             </div>
-                        
+                        </div>
                         <br />
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -141,23 +141,23 @@ super();
 }
 render() {
 return(
-    <div>
-        <div className="container">
-            <div className="row2">
+    
+        <div className="container background-hugo">
+            <div className="row">
                 <div className="col-sm-12 col-xs-12">
-                    <div ID="hugocadre2">
+                    <div className="hugograndcadre">
                         <div className="background4">
                             <div className="container">
                                 <div className="row1">
                                     <div className="col-xs-offset-0.5 col-xs-4">
                                         <div className="map">
-                                            <div ID="hugocadre">
+                                            <div className="hugocadre">
                                                 <img src="images/circuit2.png" className="img-responsive"/>
                                                 </div>
     
                                                 <br />
     
-                                                <div ID="hugocadre">
+                                                <div className="hugocadre">
                                                 <img src="images/photocircuit2couleur.png" className="img-responsive"/>
                                                 </div>
 
@@ -179,12 +179,14 @@ return(
                                 </div>
                             </div>
                         </div>
+                        </div>
+                        <br />
                     </div>
-                    <br />
+                   
                 </div>
             </div>
-        </div>
-    </div>
+      
+   
 );
 }
 }/*FIN*/
@@ -197,21 +199,21 @@ super();
 }
 render() {
 return(
-    <div>
-        <div className="container">
-            <div className="row2">
+    
+        <div className="container background-hugo">
+            <div className="row">
                 <div className="col-sm-12 col-xs-12">
-                    <div ID="hugocadre2">
+                    <div className="hugograndcadre">
                         <div className="background4">
                             <div className="container">
                                 <div className="row1">
                                     <div className="col-xs-offset-0.5 col-xs-4">
                                         <div className="map">
-                                            <div ID="hugocadre">
+                                            <div className="hugocadre">
                                                <img src="images/circuit3.png" className="img-responsive"/>
                                             </div>
                                                <br />
-                                            <div ID="hugocadre">
+                                            <div className="hugocadre">
                                                <img src="images/photocircuit3couleur.png" className="img-responsive"/>
                                             </div>
     
@@ -233,12 +235,13 @@ return(
                                 </div>
                             </div>
                         </div>
-                        <br />
+                        
                     </div>
+                    <br />
                 </div>
             </div>
         </div>
-    </div>
+    
 );
 }
 }/*FIN*/
@@ -252,20 +255,20 @@ super();
 render() {
 return(
     <div>
-        <div className="container">
-            <div className="row2">
+        <div className="container background-hugo">
+            <div className="row">
                 <div className="col-sm-12 col-xs-12">
-                    <div ID="hugocadre2">
+                    <div className="hugograndcadre">
                         <div className="background4">
                             <div className="container">
                                 <div className="row1">
                                     <div className="col-xs-offset-0 col-xs-4">
                                         <div className="map">
-                                            <div ID="hugocadre">
+                                            <div className="hugocadre">
                                                <img src="images/circuit3.png" className="img-responsive"/>
                                             </div>
                                                <br />
-                                            <div ID="hugocadre">
+                                            <div className="hugocadre">
                                                <img src="images/photocircuit4couleur.png" className="img-responsive"/>
                                             </div>
                                                <br />
@@ -304,7 +307,7 @@ super();
 render() {
 return(
     <div>
-        <div className="container">
+        <div className="container background-hugo">
             <div className="row2">
                 <nav className="navbar navbar-inverse">
                     <div className="container-fluid">
