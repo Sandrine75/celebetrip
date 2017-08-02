@@ -54819,7 +54819,6 @@ var CelebtripLeaflet = function (_React$Component) {
         //console.log(Math.round(this.marker[j].distance));
         if (this.state.marker[j].distance <= this.detect) {
           this.state.marker[j].close = true;
-
           // AJOUT DES DATA A PUSH
           this.setState({ notification: this.state.marker[j].description });
 
