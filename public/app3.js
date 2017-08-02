@@ -36,14 +36,16 @@ constructor(){
 super();
 }
 render() {
-return(
- 
-    <div className="container">
+return( 
+    <div className="background-logohugo">
+        <div className="container">
             <div className="row">
-                
-                <img src="images/logo-paris-hugo.png" className="img-responsive"/>
+                <div className="col-sm-12 col-xs-12">
+                <center><img src="images/logo-paris-hugo.png" className="img-responsive"/></center>
+                </div>
             </div>
         </div>
+    </div>
 );
 }
 }/*FIN*/
@@ -55,12 +57,10 @@ super();
 }
 render() {
 return(
-    
-<div className="container background-hugo">
-    <div className="row2">  
-        
-        <div className="col-sm-12 col-xs-12">
-            
+<div className="background-hugo">
+    <div className="container">
+        <div className="row">  
+            <div className="col-sm-12 col-xs-12">
                 <div className="hugotextcentrer">
                     <br/>
                     <h3>Entrez dans l'univers de Hugo </h3>
@@ -69,7 +69,7 @@ return(
                 </div>
             </div>
         </div>
-    
+    </div>
 </div>
 );
 }
@@ -83,8 +83,8 @@ super();
 }
 render() {
 return(
-    <div>
-        <div className="container background-hugo">
+    <div className="background-hugo">
+        <div className="container">
             <div className="row">
                 <div className="col-sm-12 col-xs-12">
                     
@@ -105,20 +105,20 @@ return(
                                             </div>
     
                                             <br />
-    
-                                            <div className="hugotextcentrer">
-                                            <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default"> <a href="file:///C:/Users/famil/Documents/CELEBETRIP/circuit1.html" >Circuit 1 </a> <span class="glyphicon glyphicon-chevron-right"></span>
+                                            
+                                            <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default circuithugobutton"> <a href="file:///C:/Users/famil/Documents/CELEBETRIP/circuit1.html" >Circuit 1 </a> <span class="glyphicon glyphicon-chevron-right"></span>
                                             </button>
-                                            </div>
+                                            
                                         </div>
+                                        <br />
                                     </div>
 
-                                    <div className="col-xs-offset-0 col-xs-8">
-                                        <div className="hugotextjustify">
+                                    <div className="col-xs-offset-0 col-xs-8 hugotextjustify">
+                                        
                                         <h3><strong>Coeur historique de Paris</strong></h3>
                                         <h4> Notre-Dame de Paris, les îles de la Cité et Saint-Louis, le quartier latin... visite du cœur historique de Paris.</h4>
                                         <p>Ce parcours guidé vous permet de découvrir Paris avec Victor Hugo. Vous découvrirez nombreuses anacdotes de sa vie parisiennes tout au long de votre parcours, ses pensées, ses souvenirs, le Paris qu'il a aimé. </p>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -143,8 +143,8 @@ super();
 }
 render() {
 return(
-    <div>
-        <div className="container background-hugo">
+    <div className="background-hugo">
+        <div className="container">
             <div className="row">
                 <div className="col-sm-12 col-xs-12">
                     <div className="hugograndcadre">
@@ -165,11 +165,10 @@ return(
 
                                                 <br />
 
-                                                <div className="hugotextcentrer">
-                                                <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default"> <a href="file:///C:/Users/famil/Documents/CELEBETRIP/circuit2.html" >Circuit 2 </a><span class="glyphicon glyphicon-chevron-right"></span>
+                                                <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default circuithugobutton"> <a href="file:///C:/Users/famil/Documents/CELEBETRIP/circuit2.html" >Circuit 2 </a><span class="glyphicon glyphicon-chevron-right"></span>
                                                 </button>
-                                                </div>
                                             </div>
+                                            <br />
                                         </div>
                                         <div className="col-xs-offset-0 col-xs-8">
                                             <div className="hugotextjustify">
@@ -201,8 +200,8 @@ super();
 }
 render() {
 return(
-    
-        <div className="container background-hugo">
+    <div className="background-hugo">
+        <div className="container">
             <div className="row">
                 <div className="col-sm-12 col-xs-12">
                     <div className="hugograndcadre">
@@ -221,11 +220,10 @@ return(
     
                                                <br />
     
-                                            <div className="hugotextcentrer">
-                                               <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default"> <a href="file:///C:/Users/famil/Documents/CELEBETRIP/circuit3.html" >Circuit 3 </a><span class="glyphicon glyphicon-chevron-right"></span>
+                                               <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default circuithugobutton"> <a href="file:///C:/Users/famil/Documents/CELEBETRIP/circuit3.html" >Circuit 3 </a><span class="glyphicon glyphicon-chevron-right"></span>
                                                </button>
-                                            </div>
                                         </div>
+                                        <br />
                                     </div>
                                     <div className="col-xs-offset-0 col-xs-8">
                                         <div className="hugotextjustify">
@@ -243,7 +241,7 @@ return(
                 </div>
             </div>
         </div>
-    
+    </div>
 );
 }
 }/*FIN*/
@@ -256,8 +254,8 @@ super();
 }
 render() {
 return(
-    <div>
-        <div className="container background-hugo">
+    <div className="background-hugo">
+        <div className="container">
             <div className="row">
                 <div className="col-sm-12 col-xs-12">
                     <div className="hugograndcadre">
@@ -274,11 +272,11 @@ return(
                                                <img src="images/photocircuit4couleur.png" className="img-responsive"/>
                                             </div>
                                                <br />
-                                            <div className="hugotextcentrer">
-                                               <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default"> <a href="file:///C:/Users/famil/Documents/CELEBETRIP/circuit3.html" >Circuit 3 </a><span class="glyphicon glyphicon-chevron-right"></span>
+                                               <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default circuithugobutton"> <a href="file:///C:/Users/famil/Documents/CELEBETRIP/circuit3.html" >Circuit 3 </a><span class="glyphicon glyphicon-chevron-right"></span>
                                                </button>
-                                            </div>
+                                            
                                         </div>
+                                        <br />
                                     </div>
                                     <div className="col-xs-offset-0 col-xs-8">
                                         <div className="hugotextjustify">
@@ -308,9 +306,9 @@ super();
 }
 render() {
 return(
-    <div>
-        <div className="container background-hugo">
-            <div className="row2">
+    <div className="background-hugo">
+        <div className="container">
+            <div className="row">
                 <nav className="navbar navbar-inverse">
                     <div className="container-fluid">
                         <form className="navbar-form navbar-right inline-form">

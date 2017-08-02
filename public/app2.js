@@ -67,7 +67,7 @@ class Hugo extends React.Component {
                                 <img src="images/hugopastille.png"/>
                                     <p>10 circuits <br /> 2 à 6 jours </p>
                                     <Link to="/app3">
-                                    <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default">GO<span className="glyphicon glyphicon-chevron-right"></span>
+                                    <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default homebutton">GO<span className="glyphicon glyphicon-chevron-right"></span>
                                     </button>
                                     </Link>
                             </div>
@@ -117,7 +117,7 @@ class Piaf extends React.Component {
                                     <img src="images/piafpastille.png" />
                                     <p> 6 circuits <br /> 2 à 4 jours </p>
                                     <Link to="/app32">
-                                    <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default">GO<span className="glyphicon glyphicon-chevron-right"></span>
+                                    <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default homebutton">GO<span className="glyphicon glyphicon-chevron-right"></span>
                                     </button>
                                     </Link>
                                 </div>
@@ -168,7 +168,7 @@ class Rodin extends React.Component {
                                 <img src="images/rodinpastille.png"/>
                                 <p> 5 circuits <br /> 2 à 4 jours </p>
                                 <Link to="/app33">
-                                <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default">GO<span className="glyphicon glyphicon-chevron-right"></span>
+                                <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default homebutton">GO<span className="glyphicon glyphicon-chevron-right"></span>
                                 </button>
                                 </Link>
                             </div>
@@ -218,7 +218,7 @@ class YSL extends React.Component {
                                     <img src="images/yslpastille.png"/>
                                     <p> 4 circuits <br /> 2 à 4 jours </p>
                                     <Link to="/app34">
-                                    <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default">GO<span className="glyphicon glyphicon-chevron-right"></span>
+                                    <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default homebutton">GO<span className="glyphicon glyphicon-chevron-right"></span>
                                     </button>
                                     </Link>
                                 </div>

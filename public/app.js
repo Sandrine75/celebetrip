@@ -101,11 +101,11 @@ class Stars extends React.Component {
         
         
                        <p> <img src="images/photopastille.png" className="img-responsive" /> </p>
-                       <div className="homebutton">
-                       <Link to="/app2" className="btn btn-default">
+                       
+                       <Link to="/app2" className="btn btn-default homebutton">
                        <span>Et bien d'autres... <br /> Découvrez-les <span className="glyphicon glyphicon-chevron-right"></span></span>
                        </Link>
-                    </div>
+                    
                 </div>
             </div>
          </div>

@@ -8,6 +8,13 @@
     text-align: center 
 }
 
+.homebutton/*OK*/
+{
+    background-color: rgb(215, 183, 99);
+    border: solid 3px rgb(215, 183, 99);
+    text-align: center 
+}
+
 .homeentete/*OK*/
 {
   background-color: rgb(10, 44, 56);
@@ -198,6 +205,12 @@ text-align: center;
 
 /* PAGE APP3 ------------------- CIRCUITS HUGO - SON UNIVERS--------------------*/
 
+
+.background-logohugo/*OK*/
+    {
+       background-color: rgb(120, 123, 54);
+    }
+
 .background-hugo/*OK*/
 {
     background-color: rgb(240, 238, 226);
@@ -234,10 +247,17 @@ margin-left: 10px;
 border: solid 1px rgb(120, 123, 54);
 }
 
-
-.map
+.ma
 {
 margin-top: 25px;
+}
+
+.circuithugobutton/*OK*/
+{
+    background-color: rgb(209, 213, 157);
+    border: solid 2px rgb(120, 123, 54);
+    color: rgb(240, 238, 226);
+    text-align: center 
 }
 
 

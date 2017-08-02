@@ -29340,19 +29340,15 @@ var Stars = function (_React$Component3) {
                                     ' '
                                 ),
                                 React.createElement(
-                                    'div',
-                                    { className: 'homebutton' },
+                                    Link,
+                                    { to: '/app2', className: 'btn btn-default homebutton' },
                                     React.createElement(
-                                        Link,
-                                        { to: '/app2', className: 'btn btn-default' },
-                                        React.createElement(
-                                            'span',
-                                            null,
-                                            'Et bien d\'autres... ',
-                                            React.createElement('br', null),
-                                            ' D\xE9couvrez-les ',
-                                            React.createElement('span', { className: 'glyphicon glyphicon-chevron-right' })
-                                        )
+                                        'span',
+                                        null,
+                                        'Et bien d\'autres... ',
+                                        React.createElement('br', null),
+                                        ' D\xE9couvrez-les ',
+                                        React.createElement('span', { className: 'glyphicon glyphicon-chevron-right' })
                                     )
                                 )
                             )
@@ -51648,7 +51644,7 @@ var Hugo = function (_React$Component3) {
                                                     { to: '/app3' },
                                                     React.createElement(
                                                         'button',
-                                                        { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default' },
+                                                        { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default homebutton' },
                                                         'GO',
                                                         React.createElement('span', { className: 'glyphicon glyphicon-chevron-right' })
                                                     )
@@ -51754,7 +51750,7 @@ var Piaf = function (_React$Component4) {
                                                         { to: '/app32' },
                                                         React.createElement(
                                                             'button',
-                                                            { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default' },
+                                                            { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default homebutton' },
                                                             'GO',
                                                             React.createElement('span', { className: 'glyphicon glyphicon-chevron-right' })
                                                         )
@@ -51861,7 +51857,7 @@ var Rodin = function (_React$Component5) {
                                                         { to: '/app33' },
                                                         React.createElement(
                                                             'button',
-                                                            { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default' },
+                                                            { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default homebutton' },
                                                             'GO',
                                                             React.createElement('span', { className: 'glyphicon glyphicon-chevron-right' })
                                                         )
@@ -51968,7 +51964,7 @@ var YSL = function (_React$Component6) {
                                                         { to: '/app34' },
                                                         React.createElement(
                                                             'button',
-                                                            { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default' },
+                                                            { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default homebutton' },
                                                             'GO',
                                                             React.createElement('span', { className: 'glyphicon glyphicon-chevron-right' })
                                                         )
@@ -52229,11 +52225,23 @@ var Macaron = function (_React$Component2) {
         value: function render() {
             return React.createElement(
                 'div',
-                { className: 'container' },
+                { className: 'background-logohugo' },
                 React.createElement(
                     'div',
-                    { className: 'row' },
-                    React.createElement('img', { src: 'images/logo-paris-hugo.png', className: 'img-responsive' })
+                    { className: 'container' },
+                    React.createElement(
+                        'div',
+                        { className: 'row' },
+                        React.createElement(
+                            'div',
+                            { className: 'col-sm-12 col-xs-12' },
+                            React.createElement(
+                                'center',
+                                null,
+                                React.createElement('img', { src: 'images/logo-paris-hugo.png', className: 'img-responsive' })
+                            )
+                        )
+                    )
                 )
             );
         }
@@ -52256,28 +52264,32 @@ var Intro = function (_React$Component3) {
         value: function render() {
             return React.createElement(
                 'div',
-                { className: 'container background-hugo' },
+                { className: 'background-hugo' },
                 React.createElement(
                     'div',
-                    { className: 'row2' },
+                    { className: 'container' },
                     React.createElement(
                         'div',
-                        { className: 'col-sm-12 col-xs-12' },
+                        { className: 'row' },
                         React.createElement(
                             'div',
-                            { className: 'hugotextcentrer' },
-                            React.createElement('br', null),
+                            { className: 'col-sm-12 col-xs-12' },
                             React.createElement(
-                                'h3',
-                                null,
-                                'Entrez dans l\'univers de Hugo '
-                            ),
-                            React.createElement(
-                                'h4',
-                                null,
-                                '10 circuits pour d\xE9couvrir Paris '
-                            ),
-                            React.createElement('br', null)
+                                'div',
+                                { className: 'hugotextcentrer' },
+                                React.createElement('br', null),
+                                React.createElement(
+                                    'h3',
+                                    null,
+                                    'Entrez dans l\'univers de Hugo '
+                                ),
+                                React.createElement(
+                                    'h4',
+                                    null,
+                                    '10 circuits pour d\xE9couvrir Paris '
+                                ),
+                                React.createElement('br', null)
+                            )
                         )
                     )
                 )
@@ -52305,10 +52317,10 @@ var Circuit1 = function (_React$Component4) {
         value: function render() {
             return React.createElement(
                 'div',
-                null,
+                { className: 'background-hugo' },
                 React.createElement(
                     'div',
-                    { className: 'container background-hugo' },
+                    { className: 'container' },
                     React.createElement(
                         'div',
                         { className: 'row' },
@@ -52346,48 +52358,41 @@ var Circuit1 = function (_React$Component4) {
                                                     ),
                                                     React.createElement('br', null),
                                                     React.createElement(
-                                                        'div',
-                                                        { className: 'hugotextcentrer' },
+                                                        'button',
+                                                        { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default circuithugobutton' },
+                                                        ' ',
                                                         React.createElement(
-                                                            'button',
-                                                            { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default' },
-                                                            ' ',
-                                                            React.createElement(
-                                                                'a',
-                                                                { href: 'file:///C:/Users/famil/Documents/CELEBETRIP/circuit1.html' },
-                                                                'Circuit 1 '
-                                                            ),
-                                                            ' ',
-                                                            React.createElement('span', { 'class': 'glyphicon glyphicon-chevron-right' })
-                                                        )
+                                                            'a',
+                                                            { href: 'file:///C:/Users/famil/Documents/CELEBETRIP/circuit1.html' },
+                                                            'Circuit 1 '
+                                                        ),
+                                                        ' ',
+                                                        React.createElement('span', { 'class': 'glyphicon glyphicon-chevron-right' })
                                                     )
-                                                )
+                                                ),
+                                                React.createElement('br', null)
                                             ),
                                             React.createElement(
                                                 'div',
-                                                { className: 'col-xs-offset-0 col-xs-8' },
+                                                { className: 'col-xs-offset-0 col-xs-8 hugotextjustify' },
                                                 React.createElement(
-                                                    'div',
-                                                    { className: 'hugotextjustify' },
+                                                    'h3',
+                                                    null,
                                                     React.createElement(
-                                                        'h3',
+                                                        'strong',
                                                         null,
-                                                        React.createElement(
-                                                            'strong',
-                                                            null,
-                                                            'Coeur historique de Paris'
-                                                        )
-                                                    ),
-                                                    React.createElement(
-                                                        'h4',
-                                                        null,
-                                                        ' Notre-Dame de Paris, les \xEEles de la Cit\xE9 et Saint-Louis, le quartier latin... visite du c\u0153ur historique de Paris.'
-                                                    ),
-                                                    React.createElement(
-                                                        'p',
-                                                        null,
-                                                        'Ce parcours guid\xE9 vous permet de d\xE9couvrir Paris avec Victor Hugo. Vous d\xE9couvrirez nombreuses anacdotes de sa vie parisiennes tout au long de votre parcours, ses pens\xE9es, ses souvenirs, le Paris qu\'il a aim\xE9. '
+                                                        'Coeur historique de Paris'
                                                     )
+                                                ),
+                                                React.createElement(
+                                                    'h4',
+                                                    null,
+                                                    ' Notre-Dame de Paris, les \xEEles de la Cit\xE9 et Saint-Louis, le quartier latin... visite du c\u0153ur historique de Paris.'
+                                                ),
+                                                React.createElement(
+                                                    'p',
+                                                    null,
+                                                    'Ce parcours guid\xE9 vous permet de d\xE9couvrir Paris avec Victor Hugo. Vous d\xE9couvrirez nombreuses anacdotes de sa vie parisiennes tout au long de votre parcours, ses pens\xE9es, ses souvenirs, le Paris qu\'il a aim\xE9. '
                                                 )
                                             )
                                         )
@@ -52422,10 +52427,10 @@ var Circuit2 = function (_React$Component5) {
         value: function render() {
             return React.createElement(
                 'div',
-                null,
+                { className: 'background-hugo' },
                 React.createElement(
                     'div',
-                    { className: 'container background-hugo' },
+                    { className: 'container' },
                     React.createElement(
                         'div',
                         { className: 'row' },
@@ -52463,21 +52468,18 @@ var Circuit2 = function (_React$Component5) {
                                                     ),
                                                     React.createElement('br', null),
                                                     React.createElement(
-                                                        'div',
-                                                        { className: 'hugotextcentrer' },
+                                                        'button',
+                                                        { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default circuithugobutton' },
+                                                        ' ',
                                                         React.createElement(
-                                                            'button',
-                                                            { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default' },
-                                                            ' ',
-                                                            React.createElement(
-                                                                'a',
-                                                                { href: 'file:///C:/Users/famil/Documents/CELEBETRIP/circuit2.html' },
-                                                                'Circuit 2 '
-                                                            ),
-                                                            React.createElement('span', { 'class': 'glyphicon glyphicon-chevron-right' })
-                                                        )
+                                                            'a',
+                                                            { href: 'file:///C:/Users/famil/Documents/CELEBETRIP/circuit2.html' },
+                                                            'Circuit 2 '
+                                                        ),
+                                                        React.createElement('span', { 'class': 'glyphicon glyphicon-chevron-right' })
                                                     )
-                                                )
+                                                ),
+                                                React.createElement('br', null)
                                             ),
                                             React.createElement(
                                                 'div',
@@ -52534,49 +52536,49 @@ var Circuit3 = function (_React$Component6) {
         value: function render() {
             return React.createElement(
                 'div',
-                { className: 'container background-hugo' },
+                { className: 'background-hugo' },
                 React.createElement(
                     'div',
-                    { className: 'row' },
+                    { className: 'container' },
                     React.createElement(
                         'div',
-                        { className: 'col-sm-12 col-xs-12' },
+                        { className: 'row' },
                         React.createElement(
                             'div',
-                            { className: 'hugograndcadre' },
+                            { className: 'col-sm-12 col-xs-12' },
                             React.createElement(
                                 'div',
-                                { className: 'background4' },
+                                { className: 'hugograndcadre' },
                                 React.createElement(
                                     'div',
-                                    { className: 'container' },
+                                    { className: 'background4' },
                                     React.createElement(
                                         'div',
-                                        { className: 'row1' },
+                                        { className: 'container' },
                                         React.createElement(
                                             'div',
-                                            { className: 'col-xs-offset-0.5 col-xs-4' },
+                                            { className: 'row1' },
                                             React.createElement(
                                                 'div',
-                                                { className: 'map' },
+                                                { className: 'col-xs-offset-0.5 col-xs-4' },
                                                 React.createElement(
                                                     'div',
-                                                    { className: 'hugocadre' },
-                                                    React.createElement('img', { src: 'images/circuit3.png', className: 'img-responsive' })
-                                                ),
-                                                React.createElement('br', null),
-                                                React.createElement(
-                                                    'div',
-                                                    { className: 'hugocadre' },
-                                                    React.createElement('img', { src: 'images/photocircuit3couleur.png', className: 'img-responsive' })
-                                                ),
-                                                React.createElement('br', null),
-                                                React.createElement(
-                                                    'div',
-                                                    { className: 'hugotextcentrer' },
+                                                    { className: 'map' },
+                                                    React.createElement(
+                                                        'div',
+                                                        { className: 'hugocadre' },
+                                                        React.createElement('img', { src: 'images/circuit3.png', className: 'img-responsive' })
+                                                    ),
+                                                    React.createElement('br', null),
+                                                    React.createElement(
+                                                        'div',
+                                                        { className: 'hugocadre' },
+                                                        React.createElement('img', { src: 'images/photocircuit3couleur.png', className: 'img-responsive' })
+                                                    ),
+                                                    React.createElement('br', null),
                                                     React.createElement(
                                                         'button',
-                                                        { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default' },
+                                                        { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default circuithugobutton' },
                                                         ' ',
                                                         React.createElement(
                                                             'a',
@@ -52585,37 +52587,38 @@ var Circuit3 = function (_React$Component6) {
                                                         ),
                                                         React.createElement('span', { 'class': 'glyphicon glyphicon-chevron-right' })
                                                     )
-                                                )
-                                            )
-                                        ),
-                                        React.createElement(
-                                            'div',
-                                            { className: 'col-xs-offset-0 col-xs-8' },
+                                                ),
+                                                React.createElement('br', null)
+                                            ),
                                             React.createElement(
                                                 'div',
-                                                { className: 'hugotextjustify' },
+                                                { className: 'col-xs-offset-0 col-xs-8' },
                                                 React.createElement(
-                                                    'h3',
-                                                    null,
-                                                    'Des Champs-Elys\xE9es au Louvre'
-                                                ),
-                                                React.createElement(
-                                                    'h4',
-                                                    null,
-                                                    ' Le Louvre, la Concorde, les Tuileries, le Grand Palais, les Champs-\xC9lys\xE9es...Voyage au c\u0153ur du Paris l\xE9gendaire.'
-                                                ),
-                                                React.createElement(
-                                                    'p',
-                                                    null,
-                                                    'Ce parcours guid\xE9 vous permet de d\xE9couvrir Paris avec Victor Hugo. Vous d\xE9couvrirez nombreuses anacdotes de sa vie parisiennes tout au long de votre parcours, ses pens\xE9es, ses souvenirs, le Paris qu\'il a aim\xE9. '
+                                                    'div',
+                                                    { className: 'hugotextjustify' },
+                                                    React.createElement(
+                                                        'h3',
+                                                        null,
+                                                        'Des Champs-Elys\xE9es au Louvre'
+                                                    ),
+                                                    React.createElement(
+                                                        'h4',
+                                                        null,
+                                                        ' Le Louvre, la Concorde, les Tuileries, le Grand Palais, les Champs-\xC9lys\xE9es...Voyage au c\u0153ur du Paris l\xE9gendaire.'
+                                                    ),
+                                                    React.createElement(
+                                                        'p',
+                                                        null,
+                                                        'Ce parcours guid\xE9 vous permet de d\xE9couvrir Paris avec Victor Hugo. Vous d\xE9couvrirez nombreuses anacdotes de sa vie parisiennes tout au long de votre parcours, ses pens\xE9es, ses souvenirs, le Paris qu\'il a aim\xE9. '
+                                                    )
                                                 )
                                             )
                                         )
                                     )
                                 )
-                            )
-                        ),
-                        React.createElement('br', null)
+                            ),
+                            React.createElement('br', null)
+                        )
                     )
                 )
             );
@@ -52642,10 +52645,10 @@ var Circuit4 = function (_React$Component7) {
         value: function render() {
             return React.createElement(
                 'div',
-                null,
+                { className: 'background-hugo' },
                 React.createElement(
                     'div',
-                    { className: 'container background-hugo' },
+                    { className: 'container' },
                     React.createElement(
                         'div',
                         { className: 'row' },
@@ -52683,21 +52686,18 @@ var Circuit4 = function (_React$Component7) {
                                                     ),
                                                     React.createElement('br', null),
                                                     React.createElement(
-                                                        'div',
-                                                        { className: 'hugotextcentrer' },
+                                                        'button',
+                                                        { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default circuithugobutton' },
+                                                        ' ',
                                                         React.createElement(
-                                                            'button',
-                                                            { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default' },
-                                                            ' ',
-                                                            React.createElement(
-                                                                'a',
-                                                                { href: 'file:///C:/Users/famil/Documents/CELEBETRIP/circuit3.html' },
-                                                                'Circuit 3 '
-                                                            ),
-                                                            React.createElement('span', { 'class': 'glyphicon glyphicon-chevron-right' })
-                                                        )
+                                                            'a',
+                                                            { href: 'file:///C:/Users/famil/Documents/CELEBETRIP/circuit3.html' },
+                                                            'Circuit 3 '
+                                                        ),
+                                                        React.createElement('span', { 'class': 'glyphicon glyphicon-chevron-right' })
                                                     )
-                                                )
+                                                ),
+                                                React.createElement('br', null)
                                             ),
                                             React.createElement(
                                                 'div',
@@ -52754,13 +52754,13 @@ var Recherche = function (_React$Component8) {
         value: function render() {
             return React.createElement(
                 'div',
-                null,
+                { className: 'background-hugo' },
                 React.createElement(
                     'div',
-                    { className: 'container background-hugo' },
+                    { className: 'container' },
                     React.createElement(
                         'div',
-                        { className: 'row2' },
+                        { className: 'row' },
                         React.createElement(
                             'nav',
                             { className: 'navbar navbar-inverse' },
