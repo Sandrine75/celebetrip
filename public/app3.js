@@ -7,6 +7,7 @@
 
 var React = require('react');
 var Link = require('react-router-dom').Link;
+var connect = require('react-redux').connect;
 /*----------------------------------------------------------------------REACT--------------------------------------------------------*/
 
 
@@ -29,8 +30,8 @@ return(
            <h4>10 circuits pour découvrir Paris :</h4>
            <h6>. </h6>
        </div>
-   <Circuit1 />
-   <Circuit2 />
+   <Circuit1Redux />
+   <Circuit2Redux />
    <Circuit3 />
    <Circuit4 />
    <Recherche />
@@ -71,7 +72,14 @@ return(
 class Circuit1 extends React.Component {
 constructor() {
 super();
+this.onIncreaseClick = this.onIncreaseClick.bind(this);
 }
+
+onIncreaseClick(e) {
+  console.log(e.target.value);
+  this.props.onIncreaseClick({circuit: e.target.value});
+}
+
 render() {
 return(
 <div>
@@ -95,7 +103,7 @@ return(
                                <br />
                            <div className="hugotextcentrer">
                               <Link to="/celebetrip">
-                               <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default">Circuit 1<span className="glyphicon glyphicon-chevron-right"></span>
+                               <button name="choix" id="submit" type="submit" value="hugo_circuit1" className="btn btn-default" onClick={this.onIncreaseClick}>Circuit 1<span className="glyphicon glyphicon-chevron-right"></span>
                                </button>
                                </Link>
                            </div>
@@ -127,6 +135,12 @@ return(
 class Circuit2 extends React.Component {
 constructor() {
 super();
+this.onIncreaseClick = this.onIncreaseClick.bind(this);
+}
+
+onIncreaseClick(e) {
+  console.log(e.target.value);
+  this.props.onIncreaseClick(e.target.value);
 }
 render() {
 return(
@@ -148,8 +162,10 @@ return(
                            </div>
                            <br />
                    <div className="hugotextcentrer">
-                   <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default"> <a href="file:///C:/Users/famil/Documents/CELEBETRIP/circuit2.html" >Circuit 2 </a><span className="glyphicon glyphicon-chevron-right"></span>
+                   <Link to="/celebetrip">
+                   <button name="choix" id="submit" type="submit" value="hugo_circuit2" className="btn btn-default" onClick={this.onIncreaseClick}> Circuit 2<span className="glyphicon glyphicon-chevron-right"></span>
                    </button>
+                   </Link>
                    </div>
                </div>
            </div>
@@ -314,6 +330,31 @@ return(
 }
 }/*FIN*/
 
+function mapDispatchToPropsCircuit1(dispatch) {
+  return {
+    onIncreaseClick: function(value) {
+      dispatch({type: 'addCircuit', circuit: value})
+    }
+  }
+}
+
+var Circuit1Redux = connect(
+  null,
+  mapDispatchToPropsCircuit1
+)(Circuit1);
+
+function mapDispatchToPropsCircuit2(dispatch) {
+  return {
+    onIncreaseClick: function(value) {
+      dispatch({type: 'addCircuit', circuit: value})
+    }
+  }
+}
+
+var Circuit2Redux = connect(
+  null,
+  mapDispatchToPropsCircuit2
+)(Circuit2);
 
 /*----------------------------------------------------------------------REACT--------------------------------------------------------*/
 

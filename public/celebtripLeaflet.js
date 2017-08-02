@@ -5,7 +5,7 @@ import DivIcon from 'react-leaflet-div-icon';
 import { Map, TileLayer, Marker, Popup, Circle, LayerGroup} from 'react-leaflet';
 
 
-  
+
 
 
 
@@ -15,24 +15,25 @@ import { Map, TileLayer, Marker, Popup, Circle, LayerGroup} from 'react-leaflet'
            // COMPOSANT LEAFLET CELEBETRIP
 class CelebtripLeaflet extends React.Component {
     constructor() {
-    super(); 
+    super();
       this.state = {
        lat: '',
        lng: '',
-       zoom: 13, 
-        // PLACE OF INTERESTS
-       marker:[],
+       zoom: 13,
+        // place of interests
+       marker: [],
        loading: true,
-         
-        //  PUSH DES NOTIFICATIONS 
-       notification: ''    
+
+        //  exploitation des pushs et notifications
+       notification: ''
           }
-  
-            // DISTANCE DE DETECTION POUR INTERACTION AVEC LES INFOS A PUSH
+
+            // distance de detection et d'interaction
+
     this.detect = 200;
       // COORD DE PARIS
       this.paris = [48.866667, 2.333333];
-    
+
             }
   
      
@@ -76,9 +77,9 @@ class CelebtripLeaflet extends React.Component {
       if (unit=="K") { dist = dist * 1.609344 }
     if (unit=="N") { dist = dist * 0.8684 }
        return dist
-  
+
       }
-   
+
 
                 // MONITORING DE NOTRE POSITION ET APPEL DES DATA DANS LA DB
    componentDidMount() {
@@ -91,32 +92,33 @@ class CelebtripLeaflet extends React.Component {
       }).then(function(response) {
     // return response.text();
      return response.json();
-  
+
     }).then(function(obj) {
   //console.log('obj'+obj);
  //setInterval(function(){}.bind(this), 3000)
   
                 //    GPS
    navigator.geolocation.watchPosition(function(Position) {
-      
+
       var lat = Position.coords.latitude;
-        var lng = Position.coords.longitude;        
+        var lng = Position.coords.longitude;
       // console.log('lat: '+lat+'lon: '+lng);
    
       appObj.setState({lat: lat, lng: lng, zoom: 13,  marker: obj, loading: false});   
       appObj.parseMarker();
-         
+
     }, appObj.options
       )
        });
-      
+
         }
 
  //   RENDER PENDANT LE DOWNLOAD DES DATA AVANT INITIALISATION
         renderLoading() {
              var loadingIcon = L.icon({
         iconUrl: '../images/89.gif',
-        iconSize: [100, 100]     
+        iconSize: [100, 100]
+
       });
       
     return (
@@ -126,12 +128,12 @@ class CelebtripLeaflet extends React.Component {
      <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-        />   
+        />
          <Marker position={this.paris}  icon={loadingIcon} >
           <Popup>
             <span></span>
           </Popup>
-        </Marker>    
+        </Marker>
   </Map>
    </div>
     )
@@ -139,7 +141,7 @@ class CelebtripLeaflet extends React.Component {
 
 // RENDER REAL VIEW
         renderMarker() {
-  
+
 
        var coffreIcon = L.icon({
         iconUrl: '../images/etoile-gestion-sports.png',
@@ -147,9 +149,9 @@ class CelebtripLeaflet extends React.Component {
         }); 
         var userIcon = L.icon({
         iconUrl: '../images/806 (4).gif',
-        iconSize: [20, 20]     
+        iconSize: [20, 20]
       });
-      
+
 
           // MA POSITION ACTUELLE
   var myPosition = [this.state.lat, this.state.lng];
@@ -184,8 +186,8 @@ class CelebtripLeaflet extends React.Component {
           }
            }
              }
-   
-  
+
+
     return (
       <div>
       <h1>CelebTrip</h1>
@@ -199,15 +201,15 @@ class CelebtripLeaflet extends React.Component {
           <Popup>
             <span></span>
           </Popup>
-         </Marker> 
-    
+         </Marker>
+
         {markerDisplay}
         {markerHidden}
-        
-      
+
+
    </Map>
   <div>
-  
+
   </div>
   </div>
     )
@@ -215,12 +217,12 @@ class CelebtripLeaflet extends React.Component {
 
 
     render() {
-   
+
     const { loading } = this.state;
 
     return (
       <div className="leaflet-comp">
-        
+
         {loading ? this.renderLoading() : this.renderMarker()}
       </div>
     );
