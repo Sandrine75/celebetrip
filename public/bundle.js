@@ -54774,7 +54774,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var React = __webpack_require__(5);
 var ReactDOM = __webpack_require__(36);
 
-// composant affichage avec push quand distance
+// COMPOSANT LEAFLET CELEBETRIP
 var CelebtripLeaflet = function (_React$Component) {
   _inherits(CelebtripLeaflet, _React$Component);
 
@@ -54787,22 +54787,22 @@ var CelebtripLeaflet = function (_React$Component) {
       lat: '',
       lng: '',
       zoom: 13,
-      // place of interests
+      // PLACE OF INTERESTS
       marker: [],
       loading: true,
 
-      //  exploitation des pushs et notifications
+      //  PUSH DES NOTIFICATIONS 
       notification: ''
 
-      // distance de detection et d'interaction
+      // DISTANCE DE DETECTION POUR INTERACTION AVEC LES INFOS A PUSH
     };_this.detect = 200;
-    // coordonnées de paris
+    // COORD DE PARIS
     _this.paris = [48.866667, 2.333333];
 
     return _this;
   }
 
-  // calcul des distances par lat et lng
+  // MODUL DE CALCUL DES DISTANCES 2
 
 
   _createClass(CelebtripLeaflet, [{
@@ -54814,13 +54814,13 @@ var CelebtripLeaflet = function (_React$Component) {
         var lat2 = this.state.marker[j].lat;
         var lon2 = this.state.marker[j].lng;
 
-        // distance entre ma position actuelle et les markers
+        // CALCUL DES DISTANCES ENTRE L UTILISATEUR ET LES POINTS D'INTERETS
         this.state.marker[j].distance = this.distance(lat1, lon1, lat2, lon2, "K") * 1000;
         //console.log(Math.round(this.marker[j].distance));
         if (this.state.marker[j].distance <= this.detect) {
           this.state.marker[j].close = true;
 
-          // ajout des data a exploiter selon la methode choisie
+          // AJOUT DES DATA A PUSH
           this.setState({ notification: this.state.marker[j].description });
 
           console.log(this.state.notification);
@@ -54833,7 +54833,7 @@ var CelebtripLeaflet = function (_React$Component) {
       }
     }
     //
-    // function de calcul des distances
+    // MODULE DE CALCUL DES DISTANCES 1
 
   }, {
     key: 'distance',
@@ -54855,14 +54855,15 @@ var CelebtripLeaflet = function (_React$Component) {
       return dist;
     }
 
-    // monitoring de la position
+    // MONITORING DE NOTRE POSITION ET APPEL DES DATA DANS LA DB
 
   }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
       var appObj = this;
       var options = { enableHighAccuracy: false, timeout: 50000, maximumAge: 0, desiredAccuracy: 0, distanceFilter: 1 };
-      //console.log("call componentDidMount");
+
+      // APPEL A LA DB
       fetch('https://mighty-brushlands-14103.herokuapp.com/getAllData', {
         method: 'post'
       }).then(function (response) {
@@ -54870,20 +54871,23 @@ var CelebtripLeaflet = function (_React$Component) {
         return response.json();
       }).then(function (obj) {
         //console.log('obj'+obj);
-
         //setInterval(function(){}.bind(this), 3000)
 
+        //    GPS
         navigator.geolocation.watchPosition(function (Position) {
 
           var lat = Position.coords.latitude;
           var lng = Position.coords.longitude;
           // console.log('lat: '+lat+'lon: '+lng);
-          //console.log(appObj);
+
           appObj.setState({ lat: lat, lng: lng, zoom: 13, marker: obj, loading: false });
           appObj.parseMarker();
         }, appObj.options);
       });
     }
+
+    //   RENDER PENDANT LE DOWNLOAD DES DATA AVANT INITIALISATION
+
   }, {
     key: 'renderLoading',
     value: function renderLoading() {
@@ -54918,12 +54922,15 @@ var CelebtripLeaflet = function (_React$Component) {
         )
       );
     }
+
+    // RENDER REAL VIEW
+
   }, {
     key: 'renderMarker',
     value: function renderMarker() {
 
       var coffreIcon = L.icon({
-        iconUrl: '../images/etoile-icone-5157-128.png',
+        iconUrl: '../images/etoile-gestion-sports.png',
         iconSize: [30, 30]
       });
       var userIcon = L.icon({
@@ -54931,7 +54938,7 @@ var CelebtripLeaflet = function (_React$Component) {
         iconSize: [20, 20]
       });
 
-      // ma position actuelle et rendu
+      // MA POSITION ACTUELLE
       var myPosition = [this.state.lat, this.state.lng];
       var markerDisplay = [];
       var markerHidden = [];
@@ -54940,7 +54947,7 @@ var CelebtripLeaflet = function (_React$Component) {
         for (var i = 0; i < this.state.marker.length; i++) {
 
           if (this.state.marker[i].hidden == false) {
-
+            // MARKERS 
             markerDisplay.push(React.createElement(
               _reactLeaflet.Marker,
               { position: [this.state.marker[i].lat, this.state.marker[i].lng] },
@@ -54958,7 +54965,7 @@ var CelebtripLeaflet = function (_React$Component) {
               )
             ));
           } else {
-
+            // MARKERS CACHÉS
             markerHidden.push(React.createElement(
               _reactLeaflet.Marker,
               { position: [this.state.marker[i].lat, this.state.marker[i].lng], key: i, icon: coffreIcon },
