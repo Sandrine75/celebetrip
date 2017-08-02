@@ -54841,13 +54841,14 @@ var CelebtripLeaflet = function (_React$Component) {
       marker: [],
       loading: true,
 
-      // valeur par defaut pour exploitation des pushs et notifications
+      //  exploitation des pushs et notifications
       notification: ''
 
       // distance de detection et d'interaction
     };_this.detect = 200;
     // coordonnées de paris
     _this.paris = [48.866667, 2.333333];
+
     return _this;
   }
 
@@ -54871,13 +54872,17 @@ var CelebtripLeaflet = function (_React$Component) {
 
           // ajout des data a exploiter selon la methode choisie
           this.setState({ notification: this.state.marker[j].description });
+
           console.log(this.state.notification);
         } else {
           this.state.marker[j].close = false;
+          // setTimeout(function(){this.setState({notification: ''}); }.bind(this), 10000);
+          this.setState({ notification: '' });
+          //  console.log(this.state.notification);
         }
       }
     }
-
+    //
     // function de calcul des distances
 
   }, {
@@ -54906,7 +54911,7 @@ var CelebtripLeaflet = function (_React$Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       var appObj = this;
-      var options = { enableHighAccuracy: true, timeout: 3000, maximumAge: 0, desiredAccuracy: 0, frequency: 1 };
+      var options = { enableHighAccuracy: false, timeout: 50000, maximumAge: 0, desiredAccuracy: 0, distanceFilter: 1 };
       //console.log("call componentDidMount");
       fetch('https://mighty-brushlands-14103.herokuapp.com/getAllData', {
         method: 'post'
@@ -54916,6 +54921,7 @@ var CelebtripLeaflet = function (_React$Component) {
       }).then(function (obj) {
         //console.log('obj'+obj);
 
+        //setInterval(function(){}.bind(this), 3000)
 
         navigator.geolocation.watchPosition(function (Position) {
 
@@ -54968,7 +54974,7 @@ var CelebtripLeaflet = function (_React$Component) {
 
       var coffreIcon = L.icon({
         iconUrl: '../images/etoile-icone-5157-128.png',
-        iconSize: [20, 20]
+        iconSize: [30, 30]
       });
       var userIcon = L.icon({
         iconUrl: '../images/806 (4).gif',
@@ -54987,7 +54993,7 @@ var CelebtripLeaflet = function (_React$Component) {
 
             markerDisplay.push(React.createElement(
               _reactLeaflet.Marker,
-              { position: [this.state.marker[i].lat, this.state.marker[i].lng], key: i },
+              { position: [this.state.marker[i].lat, this.state.marker[i].lng] },
               React.createElement(
                 _reactLeaflet.Popup,
                 null,
@@ -55033,6 +55039,15 @@ var CelebtripLeaflet = function (_React$Component) {
           'CelebTrip'
         ),
         React.createElement(
+          'span',
+          null,
+          React.createElement(
+            'p',
+            null,
+            this.state.notification
+          )
+        ),
+        React.createElement(
           _reactLeaflet.Map,
           { center: this.paris, zoom: this.state.zoom },
           React.createElement(_reactLeaflet.TileLayer, {
@@ -55051,15 +55066,7 @@ var CelebtripLeaflet = function (_React$Component) {
           markerDisplay,
           markerHidden
         ),
-        React.createElement(
-          'div',
-          null,
-          React.createElement(
-            'p',
-            null,
-            this.state.notification
-          )
-        )
+        React.createElement('div', null)
       );
     }
   }, {
@@ -55070,7 +55077,7 @@ var CelebtripLeaflet = function (_React$Component) {
 
       return React.createElement(
         'div',
-        null,
+        { className: 'leaflet-comp' },
         loading ? this.renderLoading() : this.renderMarker()
       );
     }
