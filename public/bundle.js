@@ -54940,6 +54940,7 @@ var CelebtripLeaflet = function (_React$Component) {
       var loadingIcon = L.icon({
         iconUrl: '../images/89.gif',
         iconSize: [100, 100]
+
       });
       return React.createElement(
         'div',
