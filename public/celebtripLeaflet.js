@@ -118,7 +118,9 @@ class CelebtripLeaflet extends React.Component {
         iconUrl: '../images/89.gif',
         iconSize: [100, 100]     
       });
-    return <div>
+      
+    return (
+      <div>
      <h1>Loading</h1>
       <Map center = {this.paris}  zoom = {this.state.zoom}>
      <TileLayer
@@ -132,7 +134,7 @@ class CelebtripLeaflet extends React.Component {
         </Marker>    
   </Map>
    </div>
-
+    )
   }
 
 // RENDER REAL VIEW
