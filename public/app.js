@@ -259,8 +259,16 @@ class Footer extends React.Component {
   }
 }
 
+function circuitReducer(state, action) {
+  if(action.type = 'addCircuit'){
+    return { circuit: action.circuit }
+  }
+}
+
+const store = createStore(circuitReducer);
 
 ReactDOM.render(
+  <Provider store={store}>
   <Router>
     <div>
         <Route exact path="/" component={App} />
@@ -269,4 +277,5 @@ ReactDOM.render(
         <Route exact path="/celebetrip" component={CelebtripLeaflet} />
     </div>
  </Router>
+ </Provider>
   , document.getElementById('root'));

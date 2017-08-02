@@ -106,7 +106,7 @@ class CelebtripLeaflet extends React.Component {
         }
         renderLoading() {
              var loadingIcon = L.icon({
-        iconUrl: '../image/89.gif',
+        iconUrl: '../images/89.gif',
         iconSize: [100, 100]
       });
     return <div>
