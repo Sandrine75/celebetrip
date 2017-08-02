@@ -1,4 +1,4 @@
-/*---------------- -------------- LES CIRCUITS D'HUGO ---------------------------------*/
+/*---------------- -------------- LES CIRCUITS DE PIAF ---------------------------------*/
 
 var React = require('react');
 var Link = require('react-router-dom').Link;
@@ -6,7 +6,7 @@ var Link = require('react-router-dom').Link;
 
 /*-----------------------------------Sous composants-----------------------------------*/
 
-class App3 extends React.Component {
+class App32 extends React.Component {
   constructor() {
     super();
   }
@@ -41,7 +41,7 @@ return(
     <div className="container">
             <div className="row">
                 
-                <img src="images/logo-paris-hugo.png" className="img-responsive"/>
+                <img src="images/logo-paris-piaf.png" className="img-responsive"/>
             </div>
         </div>
 );
@@ -63,7 +63,7 @@ return(
             
                 <div className="hugotextcentrer">
                     <br/>
-                    <h3>Entrez dans l'univers de Hugo </h3>
+                    <h3>Entrez dans l'univers de Piaf </h3>
                     <h4>10 circuits pour découvrir Paris </h4> 
                     <br/>
                 </div>
@@ -333,4 +333,4 @@ return(
 
 /*----------------------------------------------------------------------REACT--------------------------------------------------------*/
 
-module.exports = App3;
+module.exports = App32;

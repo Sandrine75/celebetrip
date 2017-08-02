@@ -9,8 +9,11 @@ import DivIcon from 'react-leaflet-div-icon';
 import { Map, TileLayer, Marker, Popup, Circle, LayerGroup} from 'react-leaflet';
 import { render } from 'react-dom';
 
-var App2 = require('./app2.js');
-var App3 = require('./app3.js');
+var App2 = require('./app2.js');/*-page Choix artiste-*/
+var App3 = require('./app3.js');/*-page HUGO-*/
+var App32 = require('./app32.js');/*-page PIAF-*/
+var App33 = require('./app33.js');/*-page Rodin-*/
+var App34 = require('./app34.js');/*-page YSL-*/
 var CelebtripLeaflet = require('./celebtripLeaflet.js');
 
 /*-----------------------------------------sous composants-----------------------------------*/
@@ -40,8 +43,8 @@ class Logo extends React.Component {
   }
   render() {
     return(
-    <div>
-        <div className="container background-logo">
+    <div className="background-logo">
+        <div className="container">
             <div className="row">
                 <div className="col-sm-12 col-xs-12">
                     <div className="homelogo">
@@ -62,17 +65,44 @@ class Stars extends React.Component {
   }
   render() {
     return(
-      <div>
-         <div className="container background-color">
+      <div className="background-color">
+         <div className="container">
             <div className="row">
                 <div className="col-sm-12 col-xs-12">
                     <div className="homeentete">
                        <h4>Découvrez Paris</h4>
                        <h4>avec pour compagnon de voyage </h4>
                        <h4>une célébrité d’hier ou d’aujourd’hui</h4>
+        
+        
+        
+        
+        
+        
+        
+    <div className="slider">
+        <figure>
+            <img src="images/hugopastille3.png" className="img-responsive" />
+            <img src="images/piafpastille2.png" className="img-responsive" />
+            <img src="images/rodinpastille2.png" className="img-responsive" />
+            <img src="images/yslpastille2.png" className="img-responsive" />
+            <img src="images/piafpastille2.png" className="img-responsive" />
+        </figure>
+    </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
                        <p> <img src="images/photopastille.png" className="img-responsive" /> </p>
                        <div className="homebutton">
-                       <Link to="/app2">
+                       <Link to="/app2" className="btn btn-default">
                        <span>Et bien d'autres... <br /> Découvrez-les <span className="glyphicon glyphicon-chevron-right"></span></span>
                        </Link>
                     </div>
@@ -93,22 +123,18 @@ class Gargouille1 extends React.Component {
   render() {
     return (
       
-         <div className="container background-color">
-                  <div className="row">
-                      <div className="col-sm-12 col-xs-12">
-                          <div className="gar1">
-                              <div className="gar2">
-                                  <img src="images/paris1.png" className="img-responsive"/>
-                              </div>
-        
-                              <div className="gartexte">
-                                  <h3>Restez connecté !</h3>
-                                  <h4> Avec l'appli des gens célèbres qui vous suit partout </h4>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-         </div>
+        <div className="background-image1">
+            <div className="container">
+                <div className="row">
+                    <div className="col-sm-12 col-xs-12">
+                        <div className="gartexte">
+                            <h3>Restez connecté !</h3>
+                            <h4> Avec l'appli des gens célèbres qui vous suit partout </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
      
     )
   }
@@ -121,12 +147,15 @@ class Chat extends React.Component {
   }
   render() {
     return (
-    <div>
-        <div className="container background-color">
+    <div className="background-color">
+        <div className="container">
                 <div className="row">
                     <div className="col-sm-12 col-xs-12">
+                        <div className="jaune">
+                        <br/>
                         <center><img src="images/operateur2.png" className="img-responsive"/></center><br/>
-                        <p>Premier assistant app/chatbot qui scénarise vos visites touristiques dans Paris</p>
+                        <p>Premier assistant app/chatbot <br/> qui scénarise vos visites touristiques dans Paris</p>
+                        </div>
                     </div>
                 </div>
         </div>
@@ -142,19 +171,18 @@ class Gargouille2 extends React.Component {
   }
   render() {
     return(
-    <div>
-       <div className="container background-logo">
+        <div className="background-image2">
+            <div className="container">
                 <div className="row">
                     <div className="col-sm-12 col-xs-12">
-                        <div className="gar1">
-                            <div className="gar2">
-                                <img src="images/paris2.png" className="img-responsive"/>
-                            </div>
+                        <div className="gartexte">
+                            <h3>.</h3>
+                            <h4>.</h4>
                         </div>
                     </div>
                 </div>
-       </div>
-    </div>
+            </div>
+        </div>     
     );
   }
 }/*FIN*/
@@ -254,8 +282,9 @@ class Footer extends React.Component {
              </div>
       </footer>
 </div>);
-  }
+
 }
+}/*FIN*/
 
 ReactDOM.render(
   <Router>
@@ -263,6 +292,9 @@ ReactDOM.render(
         <Route exact path="/" component={App} />
         <Route exact path="/app2" component={App2} />
         <Route exact path="/app3" component={App3} />
+        <Route exact path="/app32" component={App32} />
+        <Route exact path="/app33" component={App33} />
+        <Route exact path="/app34" component={App34} />
         <Route exact path="/celebetrip" component={CelebtripLeaflet} />
     </div>
  </Router>
