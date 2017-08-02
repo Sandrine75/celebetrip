@@ -12,11 +12,14 @@ import DivIcon from 'react-leaflet-div-icon';
 import { Map, TileLayer, Marker, Popup, Circle, LayerGroup} from 'react-leaflet';
 import { render } from 'react-dom';
 
-var App2 = require('./app2.js');
-var App3 = require('./app3.js');
+var App2 = require('./app2.js');/*-page Choix artiste-*/
+var App3 = require('./app3.js');/*-page HUGO-*/
+var App32 = require('./app32.js');/*-page PIAF-*/
+var App33 = require('./app33.js');/*-page Rodin-*/
+var App34 = require('./app34.js');/*-page YSL-*/
 var CelebtripLeaflet = require('./celebtripLeaflet.js');
 
-/*---------------------------------sous composants-----------------------------------*/
+/*-----------------------------------------sous composants-----------------------------------*/
 class App extends React.Component {
   constructor() {
     super();
@@ -35,7 +38,7 @@ class App extends React.Component {
   }
 }/*FIN*/
 
-/*-------------------detail sous composants LIGNE 25 à 245----------------------------*/
+/*---------------------------detail sous composants LIGNE 25 à 245----------------------------*/
 
 class Logo extends React.Component {
   constructor() {
@@ -43,11 +46,11 @@ class Logo extends React.Component {
   }
   render() {
     return(
-    <div>
+    <div className="background-logo">
         <div className="container">
             <div className="row">
                 <div className="col-sm-12 col-xs-12">
-                    <div className="logo">
+                    <div className="homelogo">
                     <center> <img src="images/logo.png" className="img-responsive"/></center>
                     </div>
                 </div>
@@ -58,27 +61,54 @@ class Logo extends React.Component {
   }
 }/*FIN*/
 
-/*-----Celebrités + bouton dynamique------*/
+/*------------------------------------Celebrités + bouton dynamique---------------------------*/
 class Stars extends React.Component {
   constructor() {
     super();
   }
   render() {
     return(
-      <div>
+      <div className="background-color">
          <div className="container">
             <div className="row">
                 <div className="col-sm-12 col-xs-12">
-                    <div className="entete">
+                    <div className="homeentete">
                        <h4>Découvrez Paris</h4>
                        <h4>avec pour compagnon de voyage </h4>
                        <h4>une célébrité d’hier ou d’aujourd’hui</h4>
+        
+        
+        
+        
+        
+        
+        
+    <div className="slider">
+        <figure>
+            <img src="images/hugopastille3.png" className="img-responsive" />
+            <img src="images/piafpastille2.png" className="img-responsive" />
+            <img src="images/rodinpastille2.png" className="img-responsive" />
+            <img src="images/yslpastille2.png" className="img-responsive" />
+            <img src="images/piafpastille2.png" className="img-responsive" />
+        </figure>
+    </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
                        <p> <img src="images/photopastille.png" className="img-responsive" /> </p>
-                       <div className="button">
-                       <Link to="/app2">
-                       <span>Et bien d'autres... <br /> Découvrez-les </span>
+                       
+                       <Link to="/app2" className="btn btn-default homebutton">
+                       <span>Et bien d'autres... <br /> Découvrez-les <span className="glyphicon glyphicon-chevron-right"></span></span>
                        </Link>
-                    </div>
+                    
                 </div>
             </div>
          </div>
@@ -88,47 +118,47 @@ class Stars extends React.Component {
   }
 }/*FIN*/
 
-/*---------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
 class Gargouille1 extends React.Component {
   constructor() {
     super();
   }
   render() {
     return (
-      <div>
-         <div className="container background image">
-                  <div className="row">
-                      <div className="col-sm-12 col-xs-12">
-                          <div className="gar1">
-                              <div className="gar2">
-                                  <img src="images/paris1.png" className="img-responsive"/>
-                              </div>
-                              <div className="gartexte">
-                                  <h3>Restez connecté !</h3>
-                                  <h4> Avec l'appli des gens célèbres qui vous suit partout </h4>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-         </div>
-      </div>
+      
+        <div className="background-image1">
+            <div className="container">
+                <div className="row">
+                    <div className="col-sm-12 col-xs-12">
+                        <div className="gartexte">
+                            <h3>Restez connecté !</h3>
+                            <h4> Avec l'appli des gens célèbres qui vous suit partout </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
     )
   }
 }/*FIN*/
 
-/*---------------------------------*/
+/*----------------------------------------------------------------------------------------------*/
 class Chat extends React.Component {
   constructor() {
     super();
   }
   render() {
     return (
-    <div>
+    <div className="background-color">
         <div className="container">
                 <div className="row">
                     <div className="col-sm-12 col-xs-12">
+                        <div className="jaune">
+                        <br/>
                         <center><img src="images/operateur2.png" className="img-responsive"/></center><br/>
-                        <p>Premier assistant app/chatbot qui scénarise vos visites touristiques dans Paris</p>
+                        <p>Premier assistant app/chatbot <br/> qui scénarise vos visites touristiques dans Paris</p>
+                        </div>
                     </div>
                 </div>
         </div>
@@ -144,24 +174,23 @@ class Gargouille2 extends React.Component {
   }
   render() {
     return(
-    <div>
-       <div className="container background image">
+        <div className="background-image2">
+            <div className="container">
                 <div className="row">
                     <div className="col-sm-12 col-xs-12">
-                        <div className="gar1">
-                            <div className="gar2">
-                                <img src="images/paris2.png" className="img-responsive"/>
-                            </div>
+                        <div className="gartexte">
+                            <h3>.</h3>
+                            <h4>.</h4>
                         </div>
                     </div>
                 </div>
-       </div>
-    </div>
+            </div>
+        </div>     
     );
   }
 }/*FIN*/
 
-/*---------------------------------*/
+/*------------------------------------------FOOTER---------------------------------------*/
 class Footer extends React.Component {
   constructor() {
     super();
@@ -256,8 +285,9 @@ class Footer extends React.Component {
              </div>
       </footer>
 </div>);
-  }
+
 }
+}/*FIN*/
 
 function circuitReducer(state, action) {
   if(action.type = 'addCircuit'){
@@ -274,6 +304,9 @@ ReactDOM.render(
         <Route exact path="/" component={App} />
         <Route exact path="/app2" component={App2} />
         <Route exact path="/app3" component={App3} />
+        <Route exact path="/app32" component={App32} />
+        <Route exact path="/app33" component={App33} />
+        <Route exact path="/app34" component={App34} />
         <Route exact path="/celebetrip" component={CelebtripLeaflet} />
     </div>
  </Router>
