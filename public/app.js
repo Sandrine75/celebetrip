@@ -5,6 +5,9 @@ var Router = require('react-router-dom').BrowserRouter;
 var Route = require('react-router-dom').Route;
 var Link = require('react-router-dom').Link;
 
+var createStore =  require('redux').createStore;
+var Provider    =  require('react-redux').Provider;
+
 import DivIcon from 'react-leaflet-div-icon';
 import { Map, TileLayer, Marker, Popup, Circle, LayerGroup} from 'react-leaflet';
 import { render } from 'react-dom';
@@ -14,7 +17,7 @@ var App3 = require('./app3.js');/*-page HUGO-*/
 var App32 = require('./app32.js');/*-page PIAF-*/
 var App33 = require('./app33.js');/*-page Rodin-*/
 var App34 = require('./app34.js');/*-page YSL-*/
-var CelebtripLeaflet = require('./celebtripLeaflet.js');
+var CelebtripLeafletRedux = require('./celebtripLeaflet.js');
 
 /*-----------------------------------------sous composants-----------------------------------*/
 class App extends React.Component {
@@ -25,11 +28,10 @@ class App extends React.Component {
     return(
     <div>
         <Logo />
+        <Intro />
+        <Chatbot />
         <Stars />
-        <Gargouille1 />
-        <Chat />
-        <Gargouille2 />
-        <Footer />
+        <Textstars />
     </div>
     );
   }
@@ -58,8 +60,8 @@ class Logo extends React.Component {
   }
 }/*FIN*/
 
-/*------------------------------------Celebrités + bouton dynamique---------------------------*/
-class Stars extends React.Component {
+/*------------------------------------Phrase Intro---------------------------*/
+class Intro extends React.Component {
   constructor() {
     super();
   }
@@ -70,52 +72,17 @@ class Stars extends React.Component {
             <div className="row">
                 <div className="col-sm-12 col-xs-12">
                     <div className="homeentete">
-                       <h4>Découvrez Paris</h4>
-                       <h4>avec pour compagnon de voyage </h4>
-                       <h4>une célébrité d’hier ou d’aujourd’hui</h4>
-        
-                       <p> <img src="images/photopastille.png" className="img-responsive" /> </p>
-                       
-                       <Link to="/app2" className="btn btn-default homebutton">
-                       <span>Et bien d'autres... <br /> Découvrez-les <span className="glyphicon glyphicon-chevron-right"></span></span>
-                       </Link>
-                    
-                </div>
-            </div>
-         </div>
-    </div>
-    </div>
+                       <strong><p>Découvrez Paris</p></strong>
+                        <p font-size ="9">avec pour compagnon de voyage </p>
+                       <strong><p>une célébrité d’hier ou d’aujourd’hui</p></strong>
+        </div></div></div></div></div>
     );
   }
 }/*FIN*/
 
-/*---------------------------------------------------------------------------------------------*/
-class Gargouille1 extends React.Component {
-  constructor() {
-    super();
-  }
-  render() {
-    return (
-      
-        <div className="background-image1">
-            <div className="container">
-                <div className="row">
-                    <div className="col-sm-12 col-xs-12">
-                        <div className="gartexte">
-                            <h3>Restez connecté !</h3>
-                            <h4> Avec l'appli des gens célèbres qui vous suit partout </h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-     
-    )
-  }
-}/*FIN*/
+/*------------------------------------CHATBOT---------------------------*/
 
-/*----------------------------------------------------------------------------------------------*/
-class Chat extends React.Component {
+class Chatbot extends React.Component {
   constructor() {
     super();
   }
@@ -127,8 +94,7 @@ class Chat extends React.Component {
                     <div className="col-sm-12 col-xs-12">
                         <div className="jaune">
                         <br/>
-                        <center><img src="images/operateur2.png" className="img-responsive"/></center><br/>
-                        <p>Premier assistant app/chatbot <br/> qui scénarise vos visites touristiques dans Paris</p>
+                        <center><Link to="app3" ><img src="images/operateur2.png" className="img-responsive"/></Link></center><br/>
                         </div>
                     </div>
                 </div>
@@ -137,8 +103,104 @@ class Chat extends React.Component {
     )
   }
 }/*FIN*/
+        
+class Stars extends React.Component {
+  constructor() {
+    super();
+  }
+  render() {
+    return (   
+    <div className="background-color">
+         <div className="container">
+            <div className="row">
+        
+                <div className="col-sm-6 col-xs-6">
+                    <div className="phototaille">
+                         <img src="images/hugotrans.png" className="img-responsive" /> 
+                      
+                    </div></div>
 
-/*---------------------------------*/
+                <div className="col-sm-6 col-xs-6">
+                <div className="phototaille">
+                         <img src="images/piaftrans.png" className="img-responsive" />
+                      
+                    </div></div>
+    </div></div></div>
+    )
+  }
+}/*FIN*/
+        
+class Textstars extends React.Component {
+  constructor() {
+    super();
+  }
+  render() {
+    return (  
+        
+<div className="background-color">
+    <div className="container">
+        <div className="row">
+            <div className="col-sm-6 col-xs-6">
+                <div className="homeentete">
+                    <h3> Victor Hugo </h3>
+                </div>
+            </div>
+        
+            <div className="col-sm-6 col-xs-6">
+                <div className="homeentete">
+                    <h3> Edith Piaf </h3>
+                </div>
+            </div>
+
+        <br/><br/><br/>
+        
+    </div></div></div>
+        
+    )
+  }
+}/*FIN*/
+        
+        
+        
+                   /*    <Link to="/app2" className="btn btn-default homebutton">
+                       <span>Go ! <br /> Découvrez-les <span className="glyphicon glyphicon-chevron-right"></span></span>
+                       </Link>
+
+                </div>
+            </div>
+         </div>
+    </div>
+    </div>
+    );
+  }
+}
+
+---------------------------------------------------------------------------------------------
+class Gargouille1 extends React.Component {
+  constructor() {
+    super();
+  }
+  render() {
+    return (
+
+        <div className="background-image1">
+            <div className="container">
+                <div className="row">
+                    <div className="col-sm-12 col-xs-12">
+                        <div className="gartexte">
+                            <h3>.</h3>
+                            <h4>.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    )
+  }
+}
+
+
 class Gargouille2 extends React.Component {
   constructor() {
     super();
@@ -156,12 +218,12 @@ class Gargouille2 extends React.Component {
                     </div>
                 </div>
             </div>
-        </div>     
+        </div>
     );
   }
-}/*FIN*/
+}
 
-/*------------------------------------------FOOTER---------------------------------------*/
+
 class Footer extends React.Component {
   constructor() {
     super();
@@ -258,9 +320,18 @@ class Footer extends React.Component {
 </div>);
 
 }
-}/*FIN*/
+}*/
+
+function circuitReducer(state, action) {
+  if(action.type = 'addCircuit'){
+    return { circuit: action.circuit }
+  }
+}
+
+const store = createStore(circuitReducer);
 
 ReactDOM.render(
+  <Provider store={store}>
   <Router>
     <div>
         <Route exact path="/" component={App} />
@@ -269,7 +340,8 @@ ReactDOM.render(
         <Route exact path="/app32" component={App32} />
         <Route exact path="/app33" component={App33} />
         <Route exact path="/app34" component={App34} />
-        <Route exact path="/celebetrip" component={CelebtripLeaflet} />
+        <Route exact path="/celebetrip" component={CelebtripLeafletRedux} />
     </div>
  </Router>
+ </Provider>
   , document.getElementById('root'));

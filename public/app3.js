@@ -15,13 +15,13 @@ class App3 extends React.Component {
   render() {
     return(
     <div>
-        <Macaron />
-        <Intro />
+        <Logo />
+        <Introhugo />
         <Circuit1Redux />
         <Circuit2Redux />
+        <Intropiaf/>
         <Circuit3 />
         <Circuit4 />
-        <Recherche />
     </div>
   );
   }
@@ -30,106 +30,90 @@ class App3 extends React.Component {
 /*-------------------Detail des sous composants LIGNE 25 à 257 ----------------------------*/
 
 
-
-
-
-class Macaron extends React.Component {
-constructor(){
-super();
-}
-render() {
-return(
-    <div className="background-logohugo">
+class Logo extends React.Component {
+  constructor() {
+    super();
+  }
+  render() {
+    return(
+    <div className="background-logo">
         <div className="container">
             <div className="row">
                 <div className="col-sm-12 col-xs-12">
-                <center><img src="images/logo-paris-hugo.png" className="img-responsive"/></center>
+                    <div className="homelogo">
+                    <center> <img src="images/logo.png" className="img-responsive"/></center>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-);
-}
+    );
+  }
 }/*FIN*/
 
-
-class Intro extends React.Component {
-constructor(){
-super();
-}
-render() {
-return(
-<div className="background-hugo">
-    <div className="container">
-        <div className="row">
-            <div className="col-sm-12 col-xs-12">
-                <div className="hugotextcentrer">
-                    <br/>
-                    <h3>Entrez dans l'univers de Hugo </h3>
-                    <h4>10 circuits pour découvrir Paris </h4>
-                    <br/>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-);
-}
+/*------------------------------------Phrase Intro---------------------------*/
+class Introhugo extends React.Component {
+  constructor() {
+    super();
+  }
+  render() {
+    return(
+      <div className="background-color">
+         <div className="container">
+            <div className="row">
+                <div className="col-sm-12 col-xs-12">
+                    <div className="homeentete">
+                       <h4>Entrez dans l'univers d'Hugo </h4>
+        </div></div></div></div></div>
+    );
+  }
 }/*FIN*/
+/*------------------------------------HUGO---------------------------*/
+ 
+
 /*---CIRCUIT 1 Coeur historique de Paris-*/
 class Circuit1 extends React.Component {
 constructor() {
 super();
 this.onIncreaseClick = this.onIncreaseClick.bind(this);
 }
+
 onIncreaseClick(e) {
   console.log(e.target.value);
   this.props.onIncreaseClick1(e.target.value);
 }
+
 render() {
 return(
-    <div className="background-hugo">
-        <div className="container">
-            <div className="row">
-                <div className="col-sm-12 col-xs-12">
-                    <div className="hugograndcadre">
-                        <div className="background4">
-                            <div className="container">
-                                <div className="row1">
-                                    <div className="col-xs-offset-0.5 col-xs-4" >
-                                        <div className="mad">
-                                            <div className="hugocadre">
-                                            <img src="images/circuit1.png" className="img-responsive"/>
-                                            </div>
-                                            <br />
-                                            <div className="hugocadre">
-                                            <img src="images/photocircuit1couleur.png" className="img-responsive"/>
-                                            </div>
-                                            <br />
-                                            <Link to="/celebetrip">
-                                             <button name="choix" id="submit" type="submit" value="hugo_circuit1" className="btn btn-default circuithugobutton" onClick={this.onIncreaseClick}>Circuit 1<span className="glyphicon glyphicon-chevron-right"></span>
-                                             </button>
-                                             </Link>
-                                            </div>
-                                        <br />
-                                    </div>
-                                    <div className="col-xs-offset-0 col-xs-8 hugotextjustify">
-                                        <h3><strong>Coeur historique de Paris</strong></h3>
-                                        <h4> Notre-Dame de Paris, les îles de la Cité et Saint-Louis, le quartier latin... visite du cœur historique de Paris.</h4>
 
-                                    </div>
-                                </div>
+<div className="background-color">
+    <div className="container">
+        <div className="row">
+            <div className="col-sm-12 col-xs-12">
+    
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xs-offset-0 col-xs-3">
+                            <br />
+                            <br />
+                            <Link to="/celebetrip">
+                            <button name="choix" id="submit" type="submit" value="hugo_circuit1" className="btn btn-default circuithugobutton" onClick={this.onIncreaseClick}>Circuit 1<span className="glyphicon glyphicon-chevron-right"></span>
+                            </button>
+                            </Link>
                             </div>
+                        <div className="col-xs-offset-1 col-xs-8 hugotextjustify">
+                            <h4><strong>Coeur historique de Paris</strong></h4>
+                            <h6> Notre-Dame de Paris, les îles de la Cité et Saint-Louis, le quartier latin... visite du cœur historique de Paris.</h6>
                         </div>
-
-
+                    </div>
                 </div>
-                <br />
+    
             </div>
+            <br />
         </div>
     </div>
 </div>
+
 );
 }
 }/*FIN*/
@@ -149,175 +133,159 @@ onIncreaseClick(e) {
 render() {
 return(
 
-    <div className="background-hugo">
+    <div className="background-color">
         <div className="container">
             <div className="row">
                 <div className="col-sm-12 col-xs-12">
-                    <div className="hugograndcadre">
-                        <div className="background4">
-                            <div className="container">
-                                <div className="row1">
-                                    <div className="col-xs-offset-0.5 col-xs-4">
-                                        <div className="mad">
-                                            <div className="hugocadre">
-                                                <img src="images/circuit2.png" className="img-responsive"/>
-                                                </div>
-
-                                                <br />
-
-                                                <div className="hugocadre">
-                                                <img src="images/photocircuit2couleur.png" className="img-responsive"/>
-                                                </div>
-
-                                                <br />
-                                                <Link to="/celebetrip">
-                                                <button name="choix" id="submit" type="submit" value="hugo_circuit2" className="btn btn-default circuithugobutton" onClick={this.onIncreaseClick}> Circuit 2<span className="glyphicon glyphicon-chevron-right"></span>
-                                                </button>
-                                                </Link>
-
-                                            </div>
-                                            <br />
-                                        </div>
-                                        <div className="col-xs-offset-0 col-xs-8">
-                                            <div className="hugotextjustify">
-                                               <h3>Autour de la tour Eiffel</h3>
-                                               <h4> Tour Eiffel, Trocadéro, Invalides, Pont Alexandre-III... Balade placée sous le signe de la démesure.</h4>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+    
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xs-offset-0 col-xs-3">
+                            <br />
+                            <br />
+                            <Link to="/celebetrip">
+                            <button name="choix" id="submit" type="submit" value="hugo_circuit2" className="btn btn-default circuithugobutton" onClick={this.onIncreaseClick}> Circuit 2<span className="glyphicon glyphicon-chevron-right"></span>
+                            </button>
+                            </Link>
                         </div>
+                        <div className="col-xs-offset-1 col-xs-8 hugotextjustify">
+                            <h4>Autour de la tour Eiffel</h4>
+                            <h6> Tour Eiffel, Trocadéro, Invalides, Pont Alexandre-III... Balade placée sous le signe de la démesure.</h6>
+
                         </div>
-                        <br />
                     </div>
                 </div>
-            </div>
-      </div>
+    
+                </div>
+            <br />
+        </div>
+    </div>
+</div>
+
 );
 }
 }/*FIN*/
-/*--CIRCUIT 3 Des Champs-Elysées au Louvre--*/
+
+
+
+/*------------------------------------PIAF---------------------------*/
+class Intropiaf extends React.Component {
+  constructor() {
+    super();
+  }
+  render() {
+    return(
+      <div className="background-color">
+         <div className="container">
+            <div className="row">
+                <div className="col-sm-12 col-xs-12">
+                    <div className="homeentete">
+                       <h4>Entrez dans l'univers de Piaf </h4>
+        </div></div></div></div></div>
+);
+}
+}
+
+
+/*---CIRCUIT 1 Coeur historique de Paris-*/
 class Circuit3 extends React.Component {
 constructor() {
 super();
+this.onIncreaseClick = this.onIncreaseClick.bind(this);
 }
+
+onIncreaseClick(e) {
+  console.log(e.target.value);
+  this.props.onIncreaseClick1(e.target.value);
+}
+
 render() {
 return(
-    <div className="background-hugo">
-        <div className="container">
-            <div className="row">
-                <div className="col-sm-12 col-xs-12">
-                    <div className="hugograndcadre">
-                        <div className="background4">
-                            <div className="container">
-                                <div className="row1">
-                                    <div className="col-xs-offset-0.5 col-xs-4">
-                                        <div className="mad">
-                                            <div className="hugocadre">
-                                               <img src="images/photocircuit3couleur.png" className="img-responsive"/>
-                                            </div>
-                                               <br />
-                                               <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default circuithugobutton"> <a href="file:///C:/Users/famil/Documents/CELEBETRIP/circuit3.html" >Circuit 3 </a><span className="glyphicon glyphicon-chevron-right"></span>
-                                               </button>
-                                        </div>
-                                        <br />
-                                    </div>
-                                    <div className="col-xs-offset-0 col-xs-8">
-                                        <div className="hugotextjustify">
-                                            <h3>Des Champs-Elysées au Louvre</h3>
-                                            <h4> Le Louvre, la Concorde, les Tuileries, le Grand Palais, les Champs-Élysées...Voyage au cœur du Paris légendaire.</h4>
 
-                                        </div>
-                                    </div>
-                                </div>
+<div className="background-color">
+    <div className="container">
+        <div className="row">
+            <div className="col-sm-12 col-xs-12">
+    
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xs-offset-0 col-xs-3">
+                            <br />
+                            <br />
+                            <Link to="/celebetrip">
+                            <button name="choix" id="submit" type="submit" value="hugo_circuit1" className="btn btn-default circuithugobutton" onClick={this.onIncreaseClick}>Circuit 1<span className="glyphicon glyphicon-chevron-right"></span>
+                            </button>
+                            </Link>
                             </div>
+                        <div className="col-xs-offset-1 col-xs-8 hugotextjustify">
+                            <h4><strong>Coeur historique de Paris</strong></h4>
+                            <h5> Notre-Dame de Paris, les îles de la Cité et Saint-Louis, le quartier latin... visite du cœur historique de Paris.</h5>
                         </div>
-
                     </div>
-                    <br />
                 </div>
+    
             </div>
+            <br />
         </div>
     </div>
+</div>
 
 );
 }
 }/*FIN*/
 
 
-/*--CIRCUIT 4 Montmartre et Pigalle--*/
+/*--CIRCUIT 2 Autour de la Tour Eiffel--*/
 class Circuit4 extends React.Component {
 constructor() {
 super();
+this.onIncreaseClick = this.onIncreaseClick.bind(this);
+}
+
+onIncreaseClick(e) {
+  console.log(e.target.value);
+  this.props.onIncreaseClick2(e.target.value);
 }
 render() {
 return(
-    <div className="background-hugo">
+
+    <div className="background-color">
         <div className="container">
             <div className="row">
                 <div className="col-sm-12 col-xs-12">
-                    <div className="hugograndcadre">
-                        <div className="background4">
-                            <div className="container">
-                                <div className="row1">
-                                    <div className="col-xs-offset-0 col-xs-4">
-                                        <div className="mad">
-                                            <div className="hugocadre">
-                                               <img src="images/photocircuit4couleur.png" className="img-responsive"/>
-                                            </div>
-                                               <br />
-                                               <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default circuithugobutton"> <a href="file:///C:/Users/famil/Documents/CELEBETRIP/circuit3.html" >Circuit 3 </a><span className="glyphicon glyphicon-chevron-right"></span>
-                                               </button>
+    
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xs-offset-0 col-xs-3">
+                            <br />
+                            <br />
+                            <Link to="/celebetrip">
+                            <button name="choix" id="submit" type="submit" value="hugo_circuit2" className="btn btn-default circuithugobutton" onClick={this.onIncreaseClick}> Circuit 2<span className="glyphicon glyphicon-chevron-right"></span>
+                            </button>
+                            </Link>
+                        </div>
+                        <div className="col-xs-offset-1 col-xs-8 hugotextjustify">
+                            <h4>Autour de la tour Eiffel</h4>
+                            <h5> Tour Eiffel, Trocadéro, Invalides, Pont Alexandre-III... Balade placée sous le signe de la démesure.</h5>
 
-                                        </div>
-                                        <br />
-                                    </div>
-                                    <div className="col-xs-offset-0 col-xs-8">
-                                        <div className="hugotextjustify">
-                                           <h3>Des Champs-Elysées au Louvre</h3>
-                                           <h4> Le Louvre, la Concorde, les Tuileries, le Grand Palais, les Champs-Élysées...Voyage au cœur du Paris légendaire.</h4>
-
-                                       </div>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
+                        </div>
                     </div>
-                    <br />
                 </div>
-            </div>
+    
+                </div>
+            <br />
         </div>
     </div>
+</div>
+
 );
 }
 }/*FIN*/
-/*---------Zone de recherche--------*/
-class Recherche extends React.Component {
-constructor() {
-super();
-}
-render() {
-return(
-    <div className="background-hugo">
-        <div className="container">
-            <div className="row">
-                <nav className="navbar navbar-inverse">
-                    <div className="container-fluid">
-                        <form className="navbar-form navbar-right inline-form">
-                            <div className="form-group">
-                            <input type="search" className="input-sm form-control" placeholder="Recherche" />
-                            <button type="submit" className="btn btn-primary btn-sm"><span className="glyphicon glyphicon-eye-open"></span> Chercher</button>
-                            </div>
-                        </form>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-);
-}
-}/*FIN*/
+
+
+        
+
+
 function mapDispatchToPropsCircuit1(dispatch) {
   return {
     onIncreaseClick1: function(value) {
@@ -325,10 +293,12 @@ function mapDispatchToPropsCircuit1(dispatch) {
     }
   }
 }
+
 var Circuit1Redux = connect(
   null,
   mapDispatchToPropsCircuit1
 )(Circuit1);
+
 function mapDispatchToPropsCircuit2(dispatch) {
   return {
     onIncreaseClick2: function(value) {
@@ -336,9 +306,11 @@ function mapDispatchToPropsCircuit2(dispatch) {
     }
   }
 }
+
 var Circuit2Redux = connect(
   null,
   mapDispatchToPropsCircuit2
 )(Circuit2);
+
 /*----------------------------------------------------------------------REACT--------------------------------------------------------*/
 module.exports = App3;
