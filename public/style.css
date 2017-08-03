@@ -1,5 +1,54 @@
 /**/
 
+.hugopastille3
+{
+    background-image: url(images/hugopastille3.png);
+    height: 300px;
+    background-size: cover
+}
+
+.piafpastille2
+{
+    background-image: url(images/piafpastille2.png);
+    height: 300px;
+    background-size: cover
+}
+
+.rodinpastille2
+{
+    background-image: url(images/rodinpastille2.png);
+    height: 300px;
+    background-size: cover
+}
+
+.yslpastille2
+{
+    background-image: url(images/yslpastille2.png);
+    height: 300px;
+    background-size: cover
+}
+  
+.images_petit {
+width:100px;
+height:400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* -----------------------------------HOME PAGE --------------------------------*/
 .homelogo/*OK*/
@@ -247,7 +296,7 @@ margin-left: 10px;
 border: solid 1px rgb(120, 123, 54);
 }
 
-.ma
+.mad
 {
 margin-top: 25px;
 }
@@ -372,6 +421,13 @@ z-index:2
 }
 
 /* ---------------------------MAP NICOLAS-------------------------------*/
+
+.map
+{
+  
+}
+
+
 .leaflet-container {
  width:100vh;
     height:100vh;

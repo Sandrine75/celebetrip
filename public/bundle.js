@@ -29320,19 +29320,6 @@ var Stars = function (_React$Component3) {
                                     'une c\xE9l\xE9brit\xE9 d\u2019hier ou d\u2019aujourd\u2019hui'
                                 ),
                                 React.createElement(
-                                    'div',
-                                    { className: 'slider' },
-                                    React.createElement(
-                                        'figure',
-                                        null,
-                                        React.createElement('img', { src: 'images/hugopastille3.png', className: 'img-responsive' }),
-                                        React.createElement('img', { src: 'images/piafpastille2.png', className: 'img-responsive' }),
-                                        React.createElement('img', { src: 'images/rodinpastille2.png', className: 'img-responsive' }),
-                                        React.createElement('img', { src: 'images/yslpastille2.png', className: 'img-responsive' }),
-                                        React.createElement('img', { src: 'images/piafpastille2.png', className: 'img-responsive' })
-                                    )
-                                ),
-                                React.createElement(
                                     'p',
                                     null,
                                     ' ',
@@ -52178,6 +52165,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var React = __webpack_require__(5);
 var Link = __webpack_require__(35).Link;
 
+var connect = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"react-redux\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())).connect;
+
 /*-----------------------------------Sous composants-----------------------------------*/
 
 var App3 = function (_React$Component) {
@@ -52197,8 +52186,8 @@ var App3 = function (_React$Component) {
                 null,
                 React.createElement(Macaron, null),
                 React.createElement(Intro, null),
-                React.createElement(Circuit1, null),
-                React.createElement(Circuit2, null),
+                React.createElement(Circuit1Redux, null),
+                React.createElement(Circuit2Redux, null),
                 React.createElement(Circuit3, null),
                 React.createElement(Circuit4, null),
                 React.createElement(Recherche, null)
@@ -52299,7 +52288,6 @@ var Intro = function (_React$Component3) {
 
     return Intro;
 }(React.Component); /*FIN*/
-
 /*---CIRCUIT 1 Coeur historique de Paris-*/
 
 
@@ -52309,10 +52297,19 @@ var Circuit1 = function (_React$Component4) {
     function Circuit1() {
         _classCallCheck(this, Circuit1);
 
-        return _possibleConstructorReturn(this, (Circuit1.__proto__ || Object.getPrototypeOf(Circuit1)).call(this));
+        var _this4 = _possibleConstructorReturn(this, (Circuit1.__proto__ || Object.getPrototypeOf(Circuit1)).call(this));
+
+        _this4.onIncreaseClick = _this4.onIncreaseClick.bind(_this4);
+        return _this4;
     }
 
     _createClass(Circuit1, [{
+        key: 'onIncreaseClick',
+        value: function onIncreaseClick(e) {
+            console.log(e.target.value);
+            this.props.onIncreaseClick1(e.target.value);
+        }
+    }, {
         key: 'render',
         value: function render() {
             return React.createElement(
@@ -52344,7 +52341,7 @@ var Circuit1 = function (_React$Component4) {
                                                 { className: 'col-xs-offset-0.5 col-xs-4' },
                                                 React.createElement(
                                                     'div',
-                                                    { className: 'map' },
+                                                    { className: 'mad' },
                                                     React.createElement(
                                                         'div',
                                                         { className: 'hugocadre' },
@@ -52358,16 +52355,14 @@ var Circuit1 = function (_React$Component4) {
                                                     ),
                                                     React.createElement('br', null),
                                                     React.createElement(
-                                                        'button',
-                                                        { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default circuithugobutton' },
-                                                        ' ',
+                                                        Link,
+                                                        { to: '/celebetrip' },
                                                         React.createElement(
-                                                            'a',
-                                                            { href: 'file:///C:/Users/famil/Documents/CELEBETRIP/circuit1.html' },
-                                                            'Circuit 1 '
-                                                        ),
-                                                        ' ',
-                                                        React.createElement('span', { 'class': 'glyphicon glyphicon-chevron-right' })
+                                                            'button',
+                                                            { name: 'choix', id: 'submit', type: 'submit', value: 'hugo_circuit1', className: 'btn btn-default circuithugobutton', onClick: this.onIncreaseClick },
+                                                            'Circuit 1',
+                                                            React.createElement('span', { className: 'glyphicon glyphicon-chevron-right' })
+                                                        )
                                                     )
                                                 ),
                                                 React.createElement('br', null)
@@ -52388,11 +52383,6 @@ var Circuit1 = function (_React$Component4) {
                                                     'h4',
                                                     null,
                                                     ' Notre-Dame de Paris, les \xEEles de la Cit\xE9 et Saint-Louis, le quartier latin... visite du c\u0153ur historique de Paris.'
-                                                ),
-                                                React.createElement(
-                                                    'p',
-                                                    null,
-                                                    'Ce parcours guid\xE9 vous permet de d\xE9couvrir Paris avec Victor Hugo. Vous d\xE9couvrirez nombreuses anacdotes de sa vie parisiennes tout au long de votre parcours, ses pens\xE9es, ses souvenirs, le Paris qu\'il a aim\xE9. '
                                                 )
                                             )
                                         )
@@ -52419,10 +52409,19 @@ var Circuit2 = function (_React$Component5) {
     function Circuit2() {
         _classCallCheck(this, Circuit2);
 
-        return _possibleConstructorReturn(this, (Circuit2.__proto__ || Object.getPrototypeOf(Circuit2)).call(this));
+        var _this5 = _possibleConstructorReturn(this, (Circuit2.__proto__ || Object.getPrototypeOf(Circuit2)).call(this));
+
+        _this5.onIncreaseClick = _this5.onIncreaseClick.bind(_this5);
+        return _this5;
     }
 
     _createClass(Circuit2, [{
+        key: 'onIncreaseClick',
+        value: function onIncreaseClick(e) {
+            console.log(e.target.value);
+            this.props.onIncreaseClick2(e.target.value);
+        }
+    }, {
         key: 'render',
         value: function render() {
             return React.createElement(
@@ -52454,7 +52453,7 @@ var Circuit2 = function (_React$Component5) {
                                                 { className: 'col-xs-offset-0.5 col-xs-4' },
                                                 React.createElement(
                                                     'div',
-                                                    { className: 'map' },
+                                                    { className: 'mad' },
                                                     React.createElement(
                                                         'div',
                                                         { className: 'hugocadre' },
@@ -52468,15 +52467,14 @@ var Circuit2 = function (_React$Component5) {
                                                     ),
                                                     React.createElement('br', null),
                                                     React.createElement(
-                                                        'button',
-                                                        { name: 'choix', id: 'submit', type: 'submit', value: 'submit', className: 'btn btn-default circuithugobutton' },
-                                                        ' ',
+                                                        Link,
+                                                        { to: '/celebetrip' },
                                                         React.createElement(
-                                                            'a',
-                                                            { href: 'file:///C:/Users/famil/Documents/CELEBETRIP/circuit2.html' },
-                                                            'Circuit 2 '
-                                                        ),
-                                                        React.createElement('span', { 'class': 'glyphicon glyphicon-chevron-right' })
+                                                            'button',
+                                                            { name: 'choix', id: 'submit', type: 'submit', value: 'hugo_circuit2', className: 'btn btn-default circuithugobutton', onClick: this.onIncreaseClick },
+                                                            ' Circuit 2',
+                                                            React.createElement('span', { className: 'glyphicon glyphicon-chevron-right' })
+                                                        )
                                                     )
                                                 ),
                                                 React.createElement('br', null)
@@ -52496,11 +52494,6 @@ var Circuit2 = function (_React$Component5) {
                                                         'h4',
                                                         null,
                                                         ' Tour Eiffel, Trocad\xE9ro, Invalides, Pont Alexandre-III... Balade plac\xE9e sous le signe de la d\xE9mesure.'
-                                                    ),
-                                                    React.createElement(
-                                                        'p',
-                                                        null,
-                                                        'Ce parcours guid\xE9 vous permet de d\xE9couvrir Paris avec Victor Hugo. Vous d\xE9couvrirez nombreuses anacdotes de sa vie parisiennes tout au long de votre parcours, ses pens\xE9es, ses souvenirs, le Paris qu\'il a aim\xE9. '
                                                     )
                                                 )
                                             )
@@ -52518,7 +52511,6 @@ var Circuit2 = function (_React$Component5) {
 
     return Circuit2;
 }(React.Component); /*FIN*/
-
 /*--CIRCUIT 3 Des Champs-Elysées au Louvre--*/
 
 
@@ -52563,13 +52555,7 @@ var Circuit3 = function (_React$Component6) {
                                                 { className: 'col-xs-offset-0.5 col-xs-4' },
                                                 React.createElement(
                                                     'div',
-                                                    { className: 'map' },
-                                                    React.createElement(
-                                                        'div',
-                                                        { className: 'hugocadre' },
-                                                        React.createElement('img', { src: 'images/circuit3.png', className: 'img-responsive' })
-                                                    ),
-                                                    React.createElement('br', null),
+                                                    { className: 'mad' },
                                                     React.createElement(
                                                         'div',
                                                         { className: 'hugocadre' },
@@ -52585,7 +52571,7 @@ var Circuit3 = function (_React$Component6) {
                                                             { href: 'file:///C:/Users/famil/Documents/CELEBETRIP/circuit3.html' },
                                                             'Circuit 3 '
                                                         ),
-                                                        React.createElement('span', { 'class': 'glyphicon glyphicon-chevron-right' })
+                                                        React.createElement('span', { className: 'glyphicon glyphicon-chevron-right' })
                                                     )
                                                 ),
                                                 React.createElement('br', null)
@@ -52605,11 +52591,6 @@ var Circuit3 = function (_React$Component6) {
                                                         'h4',
                                                         null,
                                                         ' Le Louvre, la Concorde, les Tuileries, le Grand Palais, les Champs-\xC9lys\xE9es...Voyage au c\u0153ur du Paris l\xE9gendaire.'
-                                                    ),
-                                                    React.createElement(
-                                                        'p',
-                                                        null,
-                                                        'Ce parcours guid\xE9 vous permet de d\xE9couvrir Paris avec Victor Hugo. Vous d\xE9couvrirez nombreuses anacdotes de sa vie parisiennes tout au long de votre parcours, ses pens\xE9es, ses souvenirs, le Paris qu\'il a aim\xE9. '
                                                     )
                                                 )
                                             )
@@ -52672,13 +52653,7 @@ var Circuit4 = function (_React$Component7) {
                                                 { className: 'col-xs-offset-0 col-xs-4' },
                                                 React.createElement(
                                                     'div',
-                                                    { className: 'map' },
-                                                    React.createElement(
-                                                        'div',
-                                                        { className: 'hugocadre' },
-                                                        React.createElement('img', { src: 'images/circuit3.png', className: 'img-responsive' })
-                                                    ),
-                                                    React.createElement('br', null),
+                                                    { className: 'mad' },
                                                     React.createElement(
                                                         'div',
                                                         { className: 'hugocadre' },
@@ -52694,7 +52669,7 @@ var Circuit4 = function (_React$Component7) {
                                                             { href: 'file:///C:/Users/famil/Documents/CELEBETRIP/circuit3.html' },
                                                             'Circuit 3 '
                                                         ),
-                                                        React.createElement('span', { 'class': 'glyphicon glyphicon-chevron-right' })
+                                                        React.createElement('span', { className: 'glyphicon glyphicon-chevron-right' })
                                                     )
                                                 ),
                                                 React.createElement('br', null)
@@ -52714,11 +52689,6 @@ var Circuit4 = function (_React$Component7) {
                                                         'h4',
                                                         null,
                                                         ' Le Louvre, la Concorde, les Tuileries, le Grand Palais, les Champs-\xC9lys\xE9es...Voyage au c\u0153ur du Paris l\xE9gendaire.'
-                                                    ),
-                                                    React.createElement(
-                                                        'p',
-                                                        null,
-                                                        'Ce parcours guid\xE9 vous permet de d\xE9couvrir Paris avec Victor Hugo. Vous d\xE9couvrirez nombreuses anacdotes de sa vie parisiennes tout au long de votre parcours, ses pens\xE9es, ses souvenirs, le Paris qu\'il a aim\xE9. '
                                                     )
                                                 )
                                             )
@@ -52736,7 +52706,6 @@ var Circuit4 = function (_React$Component7) {
 
     return Circuit4;
 }(React.Component); /*FIN*/
-
 /*---------Zone de recherche--------*/
 
 
@@ -52793,8 +52762,24 @@ var Recherche = function (_React$Component8) {
     return Recherche;
 }(React.Component); /*FIN*/
 
-/*----------------------------------------------------------------------REACT--------------------------------------------------------*/
 
+function mapDispatchToPropsCircuit1(dispatch) {
+    return {
+        onIncreaseClick1: function onIncreaseClick1(value) {
+            dispatch({ type: 'addCircuit', circuit: value });
+        }
+    };
+}
+var Circuit1Redux = connect(null, mapDispatchToPropsCircuit1)(Circuit1);
+function mapDispatchToPropsCircuit2(dispatch) {
+    return {
+        onIncreaseClick2: function onIncreaseClick2(value) {
+            dispatch({ type: 'addCircuit', circuit: value });
+        }
+    };
+}
+var Circuit2Redux = connect(null, mapDispatchToPropsCircuit2)(Circuit2);
+/*----------------------------------------------------------------------REACT--------------------------------------------------------*/
 module.exports = App3;
 
 /***/ }),

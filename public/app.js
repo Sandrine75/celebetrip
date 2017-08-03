@@ -74,32 +74,6 @@ class Stars extends React.Component {
                        <h4>avec pour compagnon de voyage </h4>
                        <h4>une célébrité d’hier ou d’aujourd’hui</h4>
         
-        
-        
-        
-        
-        
-        
-    <div className="slider">
-        <figure>
-            <img src="images/hugopastille3.png" className="img-responsive" />
-            <img src="images/piafpastille2.png" className="img-responsive" />
-            <img src="images/rodinpastille2.png" className="img-responsive" />
-            <img src="images/yslpastille2.png" className="img-responsive" />
-            <img src="images/piafpastille2.png" className="img-responsive" />
-        </figure>
-    </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
                        <p> <img src="images/photopastille.png" className="img-responsive" /> </p>
                        
                        <Link to="/app2" className="btn btn-default homebutton">
