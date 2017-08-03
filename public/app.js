@@ -17,7 +17,7 @@ var App3 = require('./app3.js');/*-page HUGO-*/
 var App32 = require('./app32.js');/*-page PIAF-*/
 var App33 = require('./app33.js');/*-page Rodin-*/
 var App34 = require('./app34.js');/*-page YSL-*/
-var CelebtripLeaflet = require('./celebtripLeaflet.js');
+var CelebtripLeafletRedux = require('./celebtripLeaflet.js');
 
 /*-----------------------------------------sous composants-----------------------------------*/
 class App extends React.Component {
@@ -76,39 +76,13 @@ class Stars extends React.Component {
                        <h4>Découvrez Paris</h4>
                        <h4>avec pour compagnon de voyage </h4>
                        <h4>une célébrité d’hier ou d’aujourd’hui</h4>
-        
-        
-        
-        
-        
-        
-        
-    <div className="slider">
-        <figure>
-            <img src="images/hugopastille3.png" className="img-responsive" />
-            <img src="images/piafpastille2.png" className="img-responsive" />
-            <img src="images/rodinpastille2.png" className="img-responsive" />
-            <img src="images/yslpastille2.png" className="img-responsive" />
-            <img src="images/piafpastille2.png" className="img-responsive" />
-        </figure>
-    </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
                        <p> <img src="images/photopastille.png" className="img-responsive" /> </p>
-                       
+
                        <Link to="/app2" className="btn btn-default homebutton">
                        <span>Et bien d'autres... <br /> Découvrez-les <span className="glyphicon glyphicon-chevron-right"></span></span>
                        </Link>
-                    
+
                 </div>
             </div>
          </div>
@@ -125,7 +99,7 @@ class Gargouille1 extends React.Component {
   }
   render() {
     return (
-      
+
         <div className="background-image1">
             <div className="container">
                 <div className="row">
@@ -138,7 +112,7 @@ class Gargouille1 extends React.Component {
                 </div>
             </div>
         </div>
-     
+
     )
   }
 }/*FIN*/
@@ -185,7 +159,7 @@ class Gargouille2 extends React.Component {
                     </div>
                 </div>
             </div>
-        </div>     
+        </div>
     );
   }
 }/*FIN*/
@@ -307,7 +281,7 @@ ReactDOM.render(
         <Route exact path="/app32" component={App32} />
         <Route exact path="/app33" component={App33} />
         <Route exact path="/app34" component={App34} />
-        <Route exact path="/celebetrip" component={CelebtripLeaflet} />
+        <Route exact path="/celebetrip" component={CelebtripLeafletRedux} />
     </div>
  </Router>
  </Provider>

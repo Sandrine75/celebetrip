@@ -4,15 +4,10 @@ import { render } from 'react-dom';
 import DivIcon from 'react-leaflet-div-icon';
 import { Map, TileLayer, Marker, Popup, Circle, LayerGroup} from 'react-leaflet';
 
+var connect = require('react-redux').connect;
 
 
-
-
-
-
-
-
-           // composant affichage avec push quand distance
+           // COMPOSANT LEAFLET CELEBETRIP
 class CelebtripLeaflet extends React.Component {
     constructor() {
     super();
@@ -21,22 +16,24 @@ class CelebtripLeaflet extends React.Component {
        lng: '',
        zoom: 13,
         // place of interests
-       marker:[],
+       marker: [],
        loading: true,
 
         //  exploitation des pushs et notifications
-       notification: ''
+       notification: '',
+       desc: []
           }
 
             // distance de detection et d'interaction
-    this.detect = 200;
-      // coordonnées de paris
-      this.paris = [48.866667, 2.333333];
 
+    this.detect = 200;
+      // COORD DE PARIS
+      this.paris = [48.866667, 2.333333];
+   this.data = [];
             }
 
 
-        // calcul des distances par lat et lng
+       // MODUL DE CALCUL DES DISTANCES 2
   parseMarker() {
     for (var j = 0; j< this.state.marker.length; j++){
       var lat1 = this.state.lat;
@@ -44,28 +41,32 @@ class CelebtripLeaflet extends React.Component {
         var lat2 = this.state.marker[j].lat;
          var lon2 = this.state.marker[j].lng;
 
-      // distance entre ma position actuelle et les markers
+      // CALCUL DES DISTANCES ENTRE L UTILISATEUR ET LES POINTS D'INTERETS
       this.state.marker[j].distance = this.distance(lat1, lon1, lat2, lon2, "K")*1000;
       //console.log(Math.round(this.marker[j].distance));
-      if(this.state.marker[j].distance <= this.detect) {
-        this.state.marker[j].close = true;
+      if (this.state.marker[j].distance <= this.detect ) {
+      //  this.state.marker[j].close = true;
+        // AJOUT DES DATA A PUSH
+        if(this.data.indexOf(this.state.marker[j].description) === -1){
+        this.data.push(this.state.marker[j].description);
+          this.setState({desc: this.data});
+            console.log(this.state.desc);
+    setTimeout(function(){this.setState({desc: ''}); }.bind(this), 90000);
+           console.log(this.state.desc);
+        }
 
-        // ajout des data a exploiter selon la methode choisie
-  this.setState({notification: this.state.marker[j].description});
+      //setTimeout(function(){this.setState({notification: this.state.marker[j].description}) }.bind(this), 5000);
 
 
-       console.log(this.state.notification);
       } else {
-          this.state.marker[j].close = false;
-
-        // setTimeout(function(){this.setState({notification: ''}); }.bind(this), 10000);
-        this.setState({notification: ''});
-         //  console.log(this.state.notification);
+       //   this.state.marker[j].close = false;
+        //this.setState({notification: null});
+           console.log(this.state.notification+'after');
       }
     }
   }
-//
-  // function de calcul des distances
+
+  // MODULE DE CALCUL DES DISTANCES 1
   distance(lat1, lon1, lat2, lon2, unit) {
     var radlat1 = Math.PI * lat1/180
       var radlat2 = Math.PI * lat2/180
@@ -82,11 +83,12 @@ class CelebtripLeaflet extends React.Component {
       }
 
 
-                // monitoring de la position
+                // MONITORING DE NOTRE POSITION ET APPEL DES DATA DANS LA DB
    componentDidMount() {
       var appObj = this;
         var options = {enableHighAccuracy: false,timeout: 50000,maximumAge: 0, desiredAccuracy: 0, distanceFilter: 1 };
-     //console.log("call componentDidMount");
+
+     // APPEL A LA DB
    fetch('https://mighty-brushlands-14103.herokuapp.com/getAllData', {
     method: 'post'
       }).then(function(response) {
@@ -95,17 +97,17 @@ class CelebtripLeaflet extends React.Component {
 
     }).then(function(obj) {
   //console.log('obj'+obj);
-
  //setInterval(function(){}.bind(this), 3000)
 
+                //    GPS
    navigator.geolocation.watchPosition(function(Position) {
 
       var lat = Position.coords.latitude;
         var lng = Position.coords.longitude;
       // console.log('lat: '+lat+'lon: '+lng);
-     //console.log(appObj);
+
       appObj.setState({lat: lat, lng: lng, zoom: 13,  marker: obj, loading: false});
-      appObj.parseMarker();
+      appObj.parseMarker()
 
     }, appObj.options
       )
@@ -113,13 +115,14 @@ class CelebtripLeaflet extends React.Component {
 
         }
 
-
+ //   RENDER PENDANT LE DOWNLOAD DES DATA AVANT INITIALISATION
         renderLoading() {
              var loadingIcon = L.icon({
         iconUrl: '../images/89.gif',
         iconSize: [100, 100]
 
       });
+
     return (
       <div>
      <h1>Loading</h1>
@@ -135,15 +138,15 @@ class CelebtripLeaflet extends React.Component {
         </Marker>
   </Map>
    </div>
-)
+    )
   }
 
-
+// RENDER REAL VIEW
         renderMarker() {
 
 
        var coffreIcon = L.icon({
-        iconUrl: '../images/etoile-icone-5157-128.png',
+        iconUrl: '../images/etoile-gestion-sports.png',
         iconSize: [30, 30]
         });
         var userIcon = L.icon({
@@ -152,16 +155,21 @@ class CelebtripLeaflet extends React.Component {
       });
 
 
-          // ma position actuelle et rendu
+          // MA POSITION ACTUELLE
   var myPosition = [this.state.lat, this.state.lng];
     var markerDisplay = [];
        var markerHidden = [];
-        if(this.state.marker != undefined) {
+         var descDisplay = [];
+
+        if(this.state.marker != undefined || this.state.desc != undefined) {
+            for (var i = 0; i < this.state.desc.length; i++) {
+         descDisplay.push(<p key={i}>{this.state.desc[i]}</p>)
+    }
 
     for (var i = 0; i<this.state.marker.length; i++){
 
   if (this.state.marker[i].hidden == false) {
-
+    // MARKERS
       markerDisplay.push(
 
           <Marker position={[this.state.marker[i].lat, this.state.marker[i].lng]} >
@@ -173,7 +181,7 @@ class CelebtripLeaflet extends React.Component {
 
        )
      } else {
-
+   // MARKERS CACHÉS
       markerHidden.push(
 
           <Marker position={[this.state.marker[i].lat, this.state.marker[i].lng]} key={i} icon={coffreIcon}>
@@ -190,6 +198,7 @@ class CelebtripLeaflet extends React.Component {
     return (
       <div>
       <h1>CelebTrip</h1>
+      {descDisplay}
        <span><p>{this.state.notification}</p></span>
    <Map center = {this.paris}  zoom = {this.state.zoom}>
      <TileLayer
@@ -221,14 +230,20 @@ class CelebtripLeaflet extends React.Component {
 
     return (
       <div className="leaflet-comp">
-
+      {this.props.circuit}
         {loading ? this.renderLoading() : this.renderMarker()}
       </div>
     );
   }
 }
 
+function mapStateToProps(state) {
+  return { circuit: state.circuit }
+}
 
+var CelebtripLeafletRedux = connect(
+  mapStateToProps,
+  null
+)(CelebtripLeaflet);
 
-
-module.exports = CelebtripLeaflet;
+module.exports = CelebtripLeafletRedux;

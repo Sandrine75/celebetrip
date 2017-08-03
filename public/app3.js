@@ -88,7 +88,7 @@ this.onIncreaseClick = this.onIncreaseClick.bind(this);
 
 onIncreaseClick(e) {
   console.log(e.target.value);
-  this.props.onIncreaseClick({circuit: e.target.value});
+  this.props.onIncreaseClick1(e.target.value);
 }
 
 render() {
@@ -156,7 +156,7 @@ this.onIncreaseClick = this.onIncreaseClick.bind(this);
 
 onIncreaseClick(e) {
   console.log(e.target.value);
-  this.props.onIncreaseClick(e.target.value);
+  this.props.onIncreaseClick2(e.target.value);
 }
 render() {
 return(
@@ -294,7 +294,7 @@ return(
                                                <img src="images/photocircuit4couleur.png" className="img-responsive"/>
                                             </div>
                                                <br />
-                                               <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default circuithugobutton"> <a href="file:///C:/Users/famil/Documents/CELEBETRIP/circuit3.html" >Circuit 3 </a><span class="glyphicon glyphicon-chevron-right"></span>
+                                               <button name="choix" id="submit" type="submit" value="submit" className="btn btn-default circuithugobutton"> <a href="file:///C:/Users/famil/Documents/CELEBETRIP/circuit3.html" >Circuit 3 </a><span className="glyphicon glyphicon-chevron-right"></span>
                                                </button>
 
                                         </div>
@@ -350,7 +350,7 @@ return(
 
 function mapDispatchToPropsCircuit1(dispatch) {
   return {
-    onIncreaseClick: function(value) {
+    onIncreaseClick1: function(value) {
       dispatch({type: 'addCircuit', circuit: value})
     }
   }
@@ -363,7 +363,7 @@ var Circuit1Redux = connect(
 
 function mapDispatchToPropsCircuit2(dispatch) {
   return {
-    onIncreaseClick: function(value) {
+    onIncreaseClick2: function(value) {
       dispatch({type: 'addCircuit', circuit: value})
     }
   }
