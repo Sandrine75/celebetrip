@@ -30405,7 +30405,7 @@ var Stars = function (_React$Component5) {
                             React.createElement(
                                 'div',
                                 { className: 'phototaille' },
-                                React.createElement('img', { src: 'images/hugotrans.png', className: 'img-responsive', style: 'width : 40px;' })
+                                React.createElement('img', { src: 'images/hugotrans.png', className: 'img-responsive' })
                             )
                         ),
                         React.createElement(
