@@ -22,15 +22,17 @@ class CelebtripLeaflet extends React.Component {
       
         //  exploitation des pushs et notifications
        notification: '',
-       desc: []
+       desc: [],
+       watchId: null,
+       timeOutId: null 
           }
 
             // distance de detection et d'interaction
-
+    
     this.detect = 200;
-      // COORD DE PARIS
       this.paris = [48.866667, 2.333333];
-   this.data = [];
+       this.data = [];
+      
             }
 
        // MODUL DE CALCUL DES DISTANCES 2
@@ -44,15 +46,17 @@ class CelebtripLeaflet extends React.Component {
       // CALCUL DES DISTANCES ENTRE L UTILISATEUR ET LES POINTS D'INTERETS
       this.state.marker[j].distance = this.distance(lat1, lon1, lat2, lon2, "K")*1000;
       //console.log(Math.round(this.marker[j].distance));
-      if (this.state.marker[j].distance <= this.detect ) {
+        if (this.state.marker[j].distance <= this.detect ) {
       //  this.state.marker[j].close = true;
         // AJOUT DES DATA A PUSH
-        if(this.data.indexOf(this.state.marker[j].description) === -1){
-        this.data.push(this.state.marker[j].description);
-          this.setState({desc: this.data}); 
+          if(this.data.indexOf(this.state.marker[j].description) === -1){
+            this.data.push(this.state.marker[j].description);
+               this.setState({desc: this.data});
+               // navigator.notification.vibrate(1000); 
             console.log(this.state.desc);
-    setTimeout(function(){this.setState({desc: ''}); }.bind(this), 90000);
-           console.log(this.state.desc);
+           var timeOutId = setTimeout(function(){this.setState({desc: ''}); }.bind(this), 90000);
+            this.setState({timeOutId: timeOutId });
+     //console.log(this.state.desc+'after timeout');
         }
       
       //setTimeout(function(){this.setState({notification: this.state.marker[j].description}) }.bind(this), 5000); 
@@ -61,7 +65,7 @@ class CelebtripLeaflet extends React.Component {
       } else {
        //   this.state.marker[j].close = false;
         //this.setState({notification: null});
-           console.log(this.state.notification+'after');
+           //console.log(this.state.notification+'after');
       }
     }
   }
@@ -100,20 +104,27 @@ class CelebtripLeaflet extends React.Component {
  //setInterval(function(){}.bind(this), 3000)
 
                 //    GPS
-   navigator.geolocation.watchPosition(function(Position) {
+   var watchID = navigator.geolocation.watchPosition(function(Position) {
 
       var lat = Position.coords.latitude;
         var lng = Position.coords.longitude;
       // console.log('lat: '+lat+'lon: '+lng);
-   
-      appObj.setState({lat: lat, lng: lng, zoom: 13,  marker: obj, loading: false});   
+      console.log('watch ID : '+watchID);
+      appObj.setState({lat: lat, lng: lng, zoom: 13,  marker: obj, loading: false, watchId: watchID});   
       appObj.parseMarker()
-
+       
     }, appObj.options
       )
        });
-
         }
+
+     componentWillUnmount() {
+           navigator.geolocation.clearWatch(this.state.watchId);
+                clearTimeout(this.state.timeOutId);
+
+           console.log('toto'+this.state.watchId);
+     }
+
 
  //   RENDER PENDANT LE DOWNLOAD DES DATA AVANT INITIALISATION
         renderLoading() {
@@ -197,9 +208,6 @@ class CelebtripLeaflet extends React.Component {
 
     return (
       <div>
-      <h1>CelebTrip</h1>
-      {descDisplay}
-       <span><p>{this.state.notification}</p></span>
    <Map center = {this.paris}  zoom = {this.state.zoom}>
      <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -213,7 +221,6 @@ class CelebtripLeaflet extends React.Component {
 
         {markerDisplay}
         {markerHidden}
-
 
    </Map>
   <div>
