@@ -26,6 +26,7 @@
     "react-leaflet-div-icon": "^1.0.2",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.2",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "webpack": "^3.4.1"
   }
 }

@@ -4,11 +4,7 @@ import { render } from 'react-dom';
 import DivIcon from 'react-leaflet-div-icon';
 import { Map, TileLayer, Marker, Popup, Circle, LayerGroup} from 'react-leaflet';
 
-
-
-
-
-
+var connect = require('react-redux').connect;
 
 
 
@@ -36,8 +32,7 @@ class CelebtripLeaflet extends React.Component {
       this.paris = [48.866667, 2.333333];
    this.data = [];
             }
-  
-     
+
        // MODUL DE CALCUL DES DISTANCES 2
   parseMarker() {
     for (var j = 0; j< this.state.marker.length; j++){
@@ -92,7 +87,7 @@ class CelebtripLeaflet extends React.Component {
    componentDidMount() {
       var appObj = this;
         var options = {enableHighAccuracy: false,timeout: 50000,maximumAge: 0, desiredAccuracy: 0, distanceFilter: 1 };
-     
+
      // APPEL A LA DB
    fetch('https://mighty-brushlands-14103.herokuapp.com/getAllData', {
     method: 'post'
@@ -103,7 +98,7 @@ class CelebtripLeaflet extends React.Component {
     }).then(function(obj) {
   //console.log('obj'+obj);
  //setInterval(function(){}.bind(this), 3000)
-  
+
                 //    GPS
    navigator.geolocation.watchPosition(function(Position) {
 
@@ -127,7 +122,7 @@ class CelebtripLeaflet extends React.Component {
         iconSize: [100, 100]
 
       });
-      
+
     return (
       <div>
      <h1>Loading</h1>
@@ -152,8 +147,8 @@ class CelebtripLeaflet extends React.Component {
 
        var coffreIcon = L.icon({
         iconUrl: '../images/etoile-gestion-sports.png',
-        iconSize: [30, 30] 
-        }); 
+        iconSize: [30, 30]
+        });
         var userIcon = L.icon({
         iconUrl: '../images/806 (4).gif',
         iconSize: [20, 20]
@@ -174,7 +169,7 @@ class CelebtripLeaflet extends React.Component {
     for (var i = 0; i<this.state.marker.length; i++){
 
   if (this.state.marker[i].hidden == false) {
-    // MARKERS 
+    // MARKERS
       markerDisplay.push(
 
           <Marker position={[this.state.marker[i].lat, this.state.marker[i].lng]} >
@@ -222,7 +217,7 @@ class CelebtripLeaflet extends React.Component {
 
    </Map>
   <div>
-
+        {descDisplay}
   </div>
   </div>
     )
@@ -235,14 +230,20 @@ class CelebtripLeaflet extends React.Component {
 
     return (
       <div className="leaflet-comp">
-
+      {this.props.circuit}
         {loading ? this.renderLoading() : this.renderMarker()}
       </div>
     );
   }
 }
 
+function mapStateToProps(state) {
+  return { circuit: state.circuit }
+}
 
+var CelebtripLeafletRedux = connect(
+  mapStateToProps,
+  null
+)(CelebtripLeaflet);
 
-
-module.exports = CelebtripLeaflet;
+module.exports = CelebtripLeafletRedux;

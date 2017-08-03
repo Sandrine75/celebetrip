@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Celebetrip : choisissez votre assistant, il vous accompagne</title>
+    <link rel="stylesheet" href="style.css">
+<!-- Bootstrap -->    
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+        </script>
+<!-- jquery -->
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous">
+        </script>   
+  </head>
+  
+  <body> 
+      
+      <div class="row">
+                  <div class="back">
+           <center> <img src="images/logo.png" class="img-responsive"/></center>
+        </div>
+                <div class="col-lg-10 col-md-9">
+<!--                        <div class="col-lg-1"><img src="img/ajout_contact.png" alt=""></div>-->
+                    <h1 class="titre-contact"></h1>
+                </div>
+            </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">     
+                    <div class="tableaudebord">
+                        <div class="contact_container">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                    <h2></h2>
+                                    <p> </p>
+                                    <div class="nb_com" style="display:none">9</div>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <div class='container'>
+                            <div class='row'>
+
+
+                                
+                                    <form class="form-horizontal" role="form">
+                                        <div class='row'>
+                                            <div class="col-lg-12">
+                                                <div class="titleprghp">
+                                                    <span class="prg">S'enregistrer</span> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class='row'>
+                                            
+                                                <div class="col-lg-6">
+                                                    <!--<form class="form-horizontal" role="form">-->
+                                                   
+                                                    <div class="form-group">
+                                                        <label for="nom" class="col-sm-2 control-label">Nom :</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" name="name" id="name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" >
+                                                        <label for="prenom" class="col-sm-2 control-label">Prenom :</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" name="prenom" id="prenom">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="mail" class="col-sm-2 control-label">Email :</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="email" class="form-control" name="email" id="email">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="mobile" class="col-sm-2 control-label">Mobile :</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" name="mobile" id="mobile">
+                                                        </div>
+                                                    </div>
+                                                    <!--                                    </form>-->
+                                                </div>
+
+
+
+
+
+                                                <div class="col-lg-6">
+                                                    <!--<form class="form-horizontal" role="form">-->
+
+                                                    <div class="form-group">
+
+                                                        <label for="adresse" class="col-sm-2 control-label">Adresse</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" name="adresse" id="adresse">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="cp" class="col-sm-2 control-label">Code Postal</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" name="cp" id="cp">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="ville" class="col-sm-2 control-label">Ville</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" name="ville" class="form-control" id="ville">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="pays" class="col-sm-2 control-label">Pays</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" name="pays" id="pays">
+                                                        </div>
+                                                    </div>
+
+                                                    <!--</form>-->
+                                                </div>
+
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                   
+                                                    <div class="col-lg-12">
+                                                    <div class="titleprghp">
+                                                        
+                                                            <span class="prg">De quelle célébrité êtes-vous fan ?</span> 
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                   
+                                                        
+                                                            <!--<form class="form-horizontal" role="form">-->
+                                                            <div class="form-group">
+                                                                <label for="programme" class="col-sm-2 control-label">Parmi ces choix :</label>
+                                                                <div class="col-sm-8">
+                                                                    <select class="form-control">
+                                                                        <option>Victor Hugo</option>
+                                                                        <option>Edith Piaf</option>
+                                                                        <option>Emile Rodin</option>
+                                                                        <option>Sophie Marceau</option>
+                                                                        <option>Patricia Kass</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="origine" class="col-sm-2 control-label">A venir</label>
+                                                                <div class="col-sm-8">
+                                                                    <select class="form-control">
+                                                                        <option>Paul Bocuse</option>
+                                                                        <option>Yves Saint Laurent</option>
+                                                                        <option>Autre</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <!--</form>-->
+                                                      
+                                                    </div>
+                                              
+                                            </div>
+
+
+
+
+                                                        <div class="col-lg-12 col-xs-12">
+                                                            <!--<form class="form-horizontal" role="form">-->
+
+
+                                                            <!--                                                </form>-->
+                                                        </div>
+                                                       
+                                                        <div class="col-lg-12 col-xs-12">
+                                                            <!--<form class="form-horizontal" role="form">-->
+
+                                           
+                                                            <!--</form>-->
+                                                        </div>
+                                                        <!--<div class="checkbox">
+                                                            <label>
+                                                              <input type="checkbox"> Check me out
+                                                            </label>
+                                                          </div>-->
+                                                    </div>
+
+                                     
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="boutton">
+                                                    <div class="col-lg-7 col-md-7 hidden-md hidden-xs"></div>
+                                                  
+                                                    <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-xs-12">
+                                                        <button name="submit" id="submit" type="submit" value="submit" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk"></span>S'enregistrer <span class="glyphicon glyphicon-chevron-right"></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                         </div>
+                          </div>
+                           </div> 
+      
+      
+</body>
+</html>

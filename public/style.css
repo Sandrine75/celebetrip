@@ -1,13 +1,21 @@
 /**/
 
 
-  /* ---------------------page home --------------------------------*/
-.logo
+/* -----------------------------------HOME PAGE --------------------------------*/
+.homelogo/*OK*/
 {
-    background-color: rgb(215, 183, 99)
+    background-color: rgb(215, 183, 99);
+    text-align: center
 }
 
-.entete
+.homebutton/*OK*/
+{
+    background-color: rgb(215, 183, 99);
+    border: solid 3px rgb(215, 183, 99);
+    text-align: center
+}
+
+.homeentete/*OK*/
 {
   background-color: rgb(10, 44, 56);
   margin-bottom: 80px;
@@ -19,24 +27,78 @@
   text-align: center
 }
 
-.button
+/* GARGOUILLE1 */
+.gar1{
+position:relative;
+height:400px
+}
+
+.gar2{
+position:absolute;
+z-index:1
+}
+
+.gartexte
 {
-  background-color: rgb(10, 44, 56);
-  color: rgb(215, 183, 99);
-  font-family: "Arial", serif;
-  font-size: 18px;
-  text-align: center;
-  margin: 0 0 30px 0
+text-align:right;
+margin-left: 30;
+color: rgb(215, 183, 99);
+width: 18em ;
+z-index:2;
+right:10px;
+}
+
+
+.background-size/*marche pas*/
+{
+    background-size: 100%
 }
 
 .operateur
 {
   background-color: rgb(10, 44, 56);
-  background-size: 100%
+  background-size: 100%;
   padding: 0px 0px;
   margin: 0;
   text-align: center
 }
+.background-color/*OK*/
+    {
+       background-color: rgb(10, 44, 56);
+    }
+
+.background-logo/*OK*/
+    {
+       background-color: rgb(215, 183, 99);
+    }
+.margin
+{
+    margin:  100%
+}
+
+.homebutton
+{
+  background-color: rgb(10, 44, 56);
+  color: rgb(215, 183, 99);
+  font-family: "Arial", serif;
+  font-size: 10px;
+  text-align: center;
+  margin: 0 0 30px 0
+}
+.jaune
+{
+    color: rgb(215, 183, 99);
+    text-align: center
+}
+
+.creme
+{
+    color: rgb(240, 238, 226);
+    text-align: center
+}
+
+/* -----------------------------------FIN HOME PAGE --------------------------------*/
+
 
 .celebrites
 {
@@ -93,16 +155,22 @@
     margin: 20px 0 20px;
 }
 
-
-
-/* -------------------page celebrites ---------------------------*/
-
+/* PAGE APP 2 ------------------- CHOIX DES CELEBRITES ------------------------*/
 
 .background2
 {
   background-color: rgb(10, 44, 56);
   color: rgb(215, 183, 99);
   text-align: center
+}
+
+.celebgrandcadre/* OK*/
+{
+border: solid 3px rgb(215, 183, 99);
+margin-right: 10px;
+margin-left: 10px;
+margin-bottom: 10px;
+margin-top: 10px
 }
 
 .artiste
@@ -116,21 +184,120 @@ text-align: center;
     margin : 0px;
 }
 
+.celeb-border
+{
+    text-align: right;
+    margin : 0px;
+}
+
+.celebjaunetextjustify
+{
+    text-align: justify;
+    color: rgb(215, 183, 99);
+    padding: 5px 5px 5px 5px
+}
+.celebcremetextjustify
+{
+    text-align: justify;
+    color: rgb(240, 238, 226);
+    padding: 5px 5px 5px 5px
+}
+
+/* PAGE APP3 ------------------- CIRCUITS HUGO - SON UNIVERS--------------------*/
 
 
-/* -------------------ESSAI BOUTON ---------------------------*/
+.background-logohugo/*OK*/
+    {
+       background-color: rgb(120, 123, 54);
+    }
+
+.background-hugo/*OK*/
+{
+    background-color: rgb(240, 238, 226);
+}
+
+.hugologo
+{
+    background-color: rgb(120, 123, 54);
+    border: solid 5px rgb(120, 123, 54)
+}
+.hugotextcentrer
+{
+    text-align: center;
+    color: rgb(120, 123, 54);
+    padding: 5px 5px 5px 5px
+}
+.hugotextjustify
+{
+    text-align: justify;
+    color: rgb(120, 123, 54);
+    padding: 5px 5px 5px 5px
+}
+
+
+.hugograndcadre/* OK*/
+{
+border: solid 4px rgb(120, 123, 54);
+margin-right: 10px;
+margin-left: 10px;
+}
+
+.hugocadre
+{
+border: solid 1px rgb(120, 123, 54);
+}
+
+.ma
+{
+margin-top: 25px;
+}
+
+.circuithugobutton/*OK*/
+{
+    background-color: rgb(209, 213, 157);
+    border: solid 2px rgb(120, 123, 54);
+    color: rgb(240, 238, 226);
+    text-align: center
+}
+
+
+/* -------------------ESSAI FOND ECRAN -----------------------  /* border:3px solid #ddab00;
+  color: #d7b700;*/
 
 .backgroundhugo
 {
   /*background-color: rgb(10, 44, 56);*/
   color: #d7b700
-
 }
-.row
+
+.background1
 {
-  background-color: rgb(10, 44, 56);
-  /*border:3px solid #ddab00;*/
-  color: #d7b700;
+background-color: rgb(10, 44, 56);
+background-color: rgb(120, 123, 54);
+border:3px solid #ddab00;
+color: #d7b700;
+text-align: center
+}
+
+.row1
+{
+background-color: rgb(120, 123, 54);
+text-align: center;
+background-position:100% 100%
+}
+
+.row2
+{
+  background-color: rgb(240, 238, 226);
+  border:3px solid #f0eee2;
+  color: rgb(240, 238, 226);
+  padding:0;
+  text-align: center
+}
+.row3
+{
+  background-color: rgb(240, 238, 226);
+  color: rgb(240, 238, 226);
   padding:0;
   text-align: center
 }
@@ -157,7 +324,7 @@ position:absolute;
 z-index:2
 }
 
-
+/* -------------------FOOTER BOOSTRAP ---------------------------*/
 .copyright {
     color: #d7b700;
     line-height: 30px;
@@ -170,7 +337,6 @@ z-index:2
     border-top: 5px solid #d7b700;
     background: #033649 none repeat scroll 0% 0%;
     padding-top: 30px;
-    margin-top: 60px;
     clear: both;
     color: #AAA;
     display: block;
@@ -205,20 +371,23 @@ z-index:2
     padding: 10px 0px;
 }
 
+
+/* ---------------------------MAP NICOLAS-------------------------------*/
+
 .map {
     width:500px;
     height:300px;
     background:white;
-    
-    
+
   }
 .leaflet-container {
  width:80vh;
     height:80vh;
     background:white;
+
 }
 .my-div-icon {
-  background: url('./images/refresh_dance_fun_rockon_dj_human_behaviour_joy_2_swag_icon-icons.com_54846');
+  background: url('./image/refresh_dance_fun_rockon_dj_human_behaviour_joy_2_swag_icon-icons.com_54846');
   background-size: contain;
   background-repeat: no-repeat;
   width: 50px;
@@ -236,56 +405,50 @@ z-index:2
    z-index: 15;
 }
 
-/* -------------------CIRCUITS HUGO - SON UNIVERS---------------------------*/
+/* ---------ESSAI CAROUSEL-------------------------------*/
 
-.hugobody
-{
-    background-color: rgb(240, 238, 226);
-    color: #AAA
+.slider {
+    width: 80%;
+    max-width: 1000px;
+    overflow: hidden
 }
 
-.hugologo
+.slider figure
 {
-    background-color: rgb(120, 123, 54);
-    border: solid 5px rgb(120, 123, 54)
+    position: relative;
+    width: 500%;
+    margin: 0;
+    padding: 0;
+    font-size:  0;
+    left: 0;
+    text-align: left;
+    animation: 10s slidy infinite
 }
 
-.hugotextcentrer
+.slider figure image
 {
-    text-align: center;
-    color: rgb(120, 123, 54);
-    padding: 5px 5px 5px 5px
+
+    width: 25%;
+    height:  auto;
+    float:  left
 }
 
-.hugotextjustify
+@keyframes slidy
 {
-    text-align: justify;
-    color: rgb(120, 123, 54);
-    padding: 5px 5px 5px 5px
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
 }
 
+/* ------------------------- footer app2 ------------------ */
 
-
-#hugocadre
+.control-label
 {
-border: solid 1px rgb(120, 123, 54);
-}
-#cadre img
-{
-float:left;
-}
-
-
-
-#hugocadre2
-{
-border: solid 4px rgb(120, 123, 54);
-margin-right: 10px;
-margin-left: 10px;
-}
-
-
-.map
-{
-margin-top: 25px;
+color: rgb(240, 238, 226);
 }
