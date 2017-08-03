@@ -55694,14 +55694,16 @@ var CelebtripLeaflet = function (_React$Component) {
 
       //  exploitation des pushs et notifications
       notification: '',
-      desc: []
+      desc: [],
+      watchId: null,
+      timeOutId: null
 
       // distance de detection et d'interaction
 
     };_this.detect = 200;
-    // COORD DE PARIS
     _this.paris = [48.866667, 2.333333];
     _this.data = [];
+
     return _this;
   }
 
@@ -55720,26 +55722,28 @@ var CelebtripLeaflet = function (_React$Component) {
         // CALCUL DES DISTANCES ENTRE L UTILISATEUR ET LES POINTS D'INTERETS
         this.state.marker[j].distance = this.distance(lat1, lon1, lat2, lon2, "K") * 1000;
         //console.log(Math.round(this.marker[j].distance));
-
         if (this.state.marker[j].distance <= this.detect) {
           //  this.state.marker[j].close = true;
           // AJOUT DES DATA A PUSH
           if (this.data.indexOf(this.state.marker[j].description) === -1) {
             this.data.push(this.state.marker[j].description);
             this.setState({ desc: this.data });
+            // navigator.notification.vibrate(1000); 
             console.log(this.state.desc);
-            setTimeout(function () {
+            var timeOutId = setTimeout(function () {
               this.setState({ desc: '' });
             }.bind(this), 90000);
-            console.log(this.state.desc);
+            this.setState({ timeOutId: timeOutId });
+            //console.log(this.state.desc+'after timeout');
           }
 
-          //setTimeout(function(){this.setState({notification: this.state.marker[j].description}) }.bind(this), 5000);
+          //setTimeout(function(){this.setState({notification: this.state.marker[j].description}) }.bind(this), 5000); 
+
         } else {
-          //   this.state.marker[j].close = false;
-          //this.setState({notification: null});
-          console.log(this.state.notification + 'after');
-        }
+            //   this.state.marker[j].close = false;
+            //this.setState({notification: null});
+            //console.log(this.state.notification+'after');
+          }
       }
     }
 
@@ -55784,15 +55788,24 @@ var CelebtripLeaflet = function (_React$Component) {
         //setInterval(function(){}.bind(this), 3000)
 
         //    GPS
-        navigator.geolocation.watchPosition(function (Position) {
+        var watchID = navigator.geolocation.watchPosition(function (Position) {
 
           var lat = Position.coords.latitude;
           var lng = Position.coords.longitude;
           // console.log('lat: '+lat+'lon: '+lng);
-          appObj.setState({ lat: lat, lng: lng, zoom: 13, marker: obj, loading: false });
+          console.log('watch ID : ' + watchID);
+          appObj.setState({ lat: lat, lng: lng, zoom: 13, marker: obj, loading: false, watchId: watchID });
           appObj.parseMarker();
         }, appObj.options);
       });
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      navigator.geolocation.clearWatch(this.state.watchId);
+      clearTimeout(this.state.timeOutId);
+
+      console.log('toto' + this.state.watchId);
     }
 
     //   RENDER PENDANT LE DOWNLOAD DES DATA AVANT INITIALISATION
@@ -55910,20 +55923,6 @@ var CelebtripLeaflet = function (_React$Component) {
       return React.createElement(
         'div',
         null,
-        React.createElement(
-          'h1',
-          null,
-          'CelebTrip'
-        ),
-        React.createElement(
-          'span',
-          null,
-          React.createElement(
-            'p',
-            null,
-            this.state.notification
-          )
-        ),
         React.createElement(
           _reactLeaflet.Map,
           { center: this.paris, zoom: this.state.zoom },
