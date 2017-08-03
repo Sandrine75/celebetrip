@@ -3,7 +3,7 @@ var ReactDOM = require('react-dom');
 import { render } from 'react-dom';
 import DivIcon from 'react-leaflet-div-icon';
 import { Map, TileLayer, Marker, Popup, Circle, LayerGroup} from 'react-leaflet';
-
+var Link = require('react-router-dom').Link;
 var connect = require('react-redux').connect;
 
 
@@ -196,8 +196,6 @@ class CelebtripLeaflet extends React.Component {
 
     return (
       <div>
-      <h1>CelebTrip</h1>
-
        <span><p>{this.state.notification}</p></span>
    <Map center = {this.paris}  zoom = {this.state.zoom}>
      <TileLayer
@@ -229,7 +227,7 @@ class CelebtripLeaflet extends React.Component {
 
     return (
       <div className="leaflet-comp">
-      {this.props.circuit}
+        {this.props.circuit}
         {loading ? this.renderLoading() : this.renderMarker()}
       </div>
     );

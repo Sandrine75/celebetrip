@@ -4,7 +4,7 @@ var ReactDOM = require('react-dom');
 var Router = require('react-router-dom').BrowserRouter;
 var Route = require('react-router-dom').Route;
 var Link = require('react-router-dom').Link;
-
+var Switch = require('react-router-dom').Switch;
 var createStore =  require('redux').createStore;
 var Provider    =  require('react-redux').Provider;
 
@@ -274,7 +274,7 @@ const store = createStore(circuitReducer);
 ReactDOM.render(
   <Provider store={store}>
   <Router>
-    <div>
+    <Switch>
         <Route exact path="/" component={App} />
         <Route exact path="/app2" component={App2} />
         <Route exact path="/app3" component={App3} />
@@ -282,7 +282,8 @@ ReactDOM.render(
         <Route exact path="/app33" component={App33} />
         <Route exact path="/app34" component={App34} />
         <Route exact path="/celebetrip" component={CelebtripLeafletRedux} />
-    </div>
+        <Route component={App} />
+    </Switch>
  </Router>
  </Provider>
   , document.getElementById('root'));
