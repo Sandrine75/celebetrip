@@ -7,6 +7,7 @@ import { Map, TileLayer, Marker, Popup, Circle, LayerGroup} from 'react-leaflet'
 var connect = require('react-redux').connect;
 
 
+
            // COMPOSANT LEAFLET CELEBETRIP
 class CelebtripLeaflet extends React.Component {
     constructor() {
@@ -32,7 +33,6 @@ class CelebtripLeaflet extends React.Component {
    this.data = [];
             }
 
-
        // MODUL DE CALCUL DES DISTANCES 2
   parseMarker() {
     for (var j = 0; j< this.state.marker.length; j++){
@@ -44,6 +44,7 @@ class CelebtripLeaflet extends React.Component {
       // CALCUL DES DISTANCES ENTRE L UTILISATEUR ET LES POINTS D'INTERETS
       this.state.marker[j].distance = this.distance(lat1, lon1, lat2, lon2, "K")*1000;
       //console.log(Math.round(this.marker[j].distance));
+
       if (this.state.marker[j].distance <= this.detect ) {
       //  this.state.marker[j].close = true;
         // AJOUT DES DATA A PUSH
@@ -56,7 +57,6 @@ class CelebtripLeaflet extends React.Component {
         }
 
       //setTimeout(function(){this.setState({notification: this.state.marker[j].description}) }.bind(this), 5000);
-
 
       } else {
        //   this.state.marker[j].close = false;
@@ -105,7 +105,6 @@ class CelebtripLeaflet extends React.Component {
       var lat = Position.coords.latitude;
         var lng = Position.coords.longitude;
       // console.log('lat: '+lat+'lon: '+lng);
-
       appObj.setState({lat: lat, lng: lng, zoom: 13,  marker: obj, loading: false});
       appObj.parseMarker()
 
@@ -198,7 +197,7 @@ class CelebtripLeaflet extends React.Component {
     return (
       <div>
       <h1>CelebTrip</h1>
-      {descDisplay}
+
        <span><p>{this.state.notification}</p></span>
    <Map center = {this.paris}  zoom = {this.state.zoom}>
      <TileLayer
@@ -217,7 +216,7 @@ class CelebtripLeaflet extends React.Component {
 
    </Map>
   <div>
-
+        {descDisplay}
   </div>
   </div>
     )

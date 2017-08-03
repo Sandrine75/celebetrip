@@ -55944,6 +55944,7 @@ var CelebtripLeaflet = function (_React$Component) {
         // CALCUL DES DISTANCES ENTRE L UTILISATEUR ET LES POINTS D'INTERETS
         this.state.marker[j].distance = this.distance(lat1, lon1, lat2, lon2, "K") * 1000;
         //console.log(Math.round(this.marker[j].distance));
+
         if (this.state.marker[j].distance <= this.detect) {
           //  this.state.marker[j].close = true;
           // AJOUT DES DATA A PUSH
@@ -55958,7 +55959,6 @@ var CelebtripLeaflet = function (_React$Component) {
           }
 
           //setTimeout(function(){this.setState({notification: this.state.marker[j].description}) }.bind(this), 5000);
-
         } else {
           //   this.state.marker[j].close = false;
           //this.setState({notification: null});
@@ -56013,7 +56013,6 @@ var CelebtripLeaflet = function (_React$Component) {
           var lat = Position.coords.latitude;
           var lng = Position.coords.longitude;
           // console.log('lat: '+lat+'lon: '+lng);
-
           appObj.setState({ lat: lat, lng: lng, zoom: 13, marker: obj, loading: false });
           appObj.parseMarker();
         }, appObj.options);
@@ -56140,7 +56139,6 @@ var CelebtripLeaflet = function (_React$Component) {
           null,
           'CelebTrip'
         ),
-        descDisplay,
         React.createElement(
           'span',
           null,
@@ -56169,7 +56167,11 @@ var CelebtripLeaflet = function (_React$Component) {
           markerDisplay,
           markerHidden
         ),
-        React.createElement('div', null)
+        React.createElement(
+          'div',
+          null,
+          descDisplay
+        )
       );
     }
   }, {
