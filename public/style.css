@@ -1,5 +1,38 @@
 /**/
 
+.hugopastille3
+{
+    background-image: url(images/hugopastille3.png);
+    height: 300px;
+    background-size: cover
+}
+
+.piafpastille2
+{
+    background-image: url(images/piafpastille2.png);
+    height: 300px;
+    background-size: cover
+}
+
+.rodinpastille2
+{
+    background-image: url(images/rodinpastille2.png);
+    height: 300px;
+    background-size: cover
+}
+
+.yslpastille2
+{
+    background-image: url(images/yslpastille2.png);
+    height: 300px;
+    background-size: cover
+}
+  
+.images_petit {
+width:100px;
+height:400px;
+}
+
 
 /* -----------------------------------HOME PAGE --------------------------------*/
 .homelogo/*OK*/
@@ -14,14 +47,21 @@
     border: solid 3px rgb(215, 183, 99);
     text-align: center
 }
+width=60 height=40
 
+.phototaille
+{
+    
+    width: 40px ;
+    height: 40px
+}
 .homeentete/*OK*/
 {
   background-color: rgb(10, 44, 56);
   margin-bottom: 80px;
   font-family: "Open Sans", sans-serif;
-  padding: 5px 50px;
-  font-size: 32px;
+  padding: 20px 20px;
+  font-size: 20px;
   margin: 0;
   color: rgb(215, 183, 99);
   text-align: center
@@ -230,7 +270,7 @@ text-align: center;
 .hugotextjustify
 {
     text-align: justify;
-    color: rgb(120, 123, 54);
+    color: rgb(215, 183, 99);
     padding: 5px 5px 5px 5px
 }
 
@@ -247,15 +287,15 @@ margin-left: 10px;
 border: solid 1px rgb(120, 123, 54);
 }
 
-.ma
+.mad
 {
 margin-top: 25px;
 }
 
 .circuithugobutton/*OK*/
 {
-    background-color: rgb(209, 213, 157);
-    border: solid 2px rgb(120, 123, 54);
+    background-color: rgb(215, 183, 99);
+    border: solid 2px rgb(10, 44, 56);
     color: rgb(240, 238, 226);
     text-align: center
 }
@@ -374,12 +414,16 @@ z-index:2
 
 /* ---------------------------MAP NICOLAS-------------------------------*/
 
+
+
+
 .map {
     width:500px;
     height:300px;
     background:white;
 
   }
+
 .leaflet-container {
  width:80vh;
     height:80vh;
@@ -452,3 +496,5 @@ z-index:2
 {
 color: rgb(240, 238, 226);
 }
+
+
