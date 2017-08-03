@@ -54837,18 +54837,20 @@ var CelebtripLeaflet = function (_React$Component) {
       lat: '',
       lng: '',
       zoom: 13,
-      // PLACE OF INTERESTS
+      // place of interests
       marker: [],
       loading: true,
 
-      //  PUSH DES NOTIFICATIONS 
-      notification: ''
+      //  exploitation des pushs et notifications
+      notification: '',
+      desc: []
 
-      // DISTANCE DE DETECTION POUR INTERACTION AVEC LES INFOS A PUSH
+      // distance de detection et d'interaction
+
     };_this.detect = 200;
     // COORD DE PARIS
     _this.paris = [48.866667, 2.333333];
-
+    _this.data = [];
     return _this;
   }
 
@@ -54868,20 +54870,28 @@ var CelebtripLeaflet = function (_React$Component) {
         this.state.marker[j].distance = this.distance(lat1, lon1, lat2, lon2, "K") * 1000;
         //console.log(Math.round(this.marker[j].distance));
         if (this.state.marker[j].distance <= this.detect) {
-          this.state.marker[j].close = true;
+          //  this.state.marker[j].close = true;
           // AJOUT DES DATA A PUSH
-          this.setState({ notification: this.state.marker[j].description });
+          if (this.data.indexOf(this.state.marker[j].description) === -1) {
+            this.data.push(this.state.marker[j].description);
+            this.setState({ desc: this.data });
+            console.log(this.state.desc);
+            setTimeout(function () {
+              this.setState({ desc: '' });
+            }.bind(this), 90000);
+            console.log(this.state.desc);
+          }
 
-          console.log(this.state.notification);
+          //setTimeout(function(){this.setState({notification: this.state.marker[j].description}) }.bind(this), 5000); 
+
         } else {
-          this.state.marker[j].close = false;
-          // setTimeout(function(){this.setState({notification: ''}); }.bind(this), 10000);
-          this.setState({ notification: '' });
-          //  console.log(this.state.notification);
+          //   this.state.marker[j].close = false;
+          //this.setState({notification: null});
+          console.log(this.state.notification + 'after');
         }
       }
     }
-    //
+
     // MODULE DE CALCUL DES DISTANCES 1
 
   }, {
@@ -54943,7 +54953,9 @@ var CelebtripLeaflet = function (_React$Component) {
       var loadingIcon = L.icon({
         iconUrl: '../images/89.gif',
         iconSize: [100, 100]
+
       });
+
       return React.createElement(
         'div',
         null,
@@ -54991,7 +55003,16 @@ var CelebtripLeaflet = function (_React$Component) {
       var myPosition = [this.state.lat, this.state.lng];
       var markerDisplay = [];
       var markerHidden = [];
-      if (this.state.marker != undefined) {
+      var descDisplay = [];
+
+      if (this.state.marker != undefined || this.state.desc != undefined) {
+        for (var i = 0; i < this.state.desc.length; i++) {
+          descDisplay.push(React.createElement(
+            'p',
+            { key: i },
+            this.state.desc[i]
+          ));
+        }
 
         for (var i = 0; i < this.state.marker.length; i++) {
 
@@ -55044,6 +55065,7 @@ var CelebtripLeaflet = function (_React$Component) {
           null,
           'CelebTrip'
         ),
+        descDisplay,
         React.createElement(
           'span',
           null,

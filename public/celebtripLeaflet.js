@@ -23,9 +23,10 @@ class CelebtripLeaflet extends React.Component {
         // place of interests
        marker: [],
        loading: true,
-
+      
         //  exploitation des pushs et notifications
-       notification: ''
+       notification: '',
+       desc: []
           }
 
             // distance de detection et d'interaction
@@ -33,7 +34,7 @@ class CelebtripLeaflet extends React.Component {
     this.detect = 200;
       // COORD DE PARIS
       this.paris = [48.866667, 2.333333];
-
+   this.data = [];
             }
   
      
@@ -48,22 +49,28 @@ class CelebtripLeaflet extends React.Component {
       // CALCUL DES DISTANCES ENTRE L UTILISATEUR ET LES POINTS D'INTERETS
       this.state.marker[j].distance = this.distance(lat1, lon1, lat2, lon2, "K")*1000;
       //console.log(Math.round(this.marker[j].distance));
-      if(this.state.marker[j].distance <= this.detect) {
-        this.state.marker[j].close = true;
+      if (this.state.marker[j].distance <= this.detect ) {
+      //  this.state.marker[j].close = true;
         // AJOUT DES DATA A PUSH
-  this.setState({notification: this.state.marker[j].description}); 
-    
+        if(this.data.indexOf(this.state.marker[j].description) === -1){
+        this.data.push(this.state.marker[j].description);
+          this.setState({desc: this.data}); 
+            console.log(this.state.desc);
+    setTimeout(function(){this.setState({desc: ''}); }.bind(this), 90000);
+           console.log(this.state.desc);
+        }
+      
+      //setTimeout(function(){this.setState({notification: this.state.marker[j].description}) }.bind(this), 5000); 
 
-       console.log(this.state.notification);
+     
       } else {
-          this.state.marker[j].close = false;
-        // setTimeout(function(){this.setState({notification: ''}); }.bind(this), 10000);
-        this.setState({notification: ''});
-         //  console.log(this.state.notification);
+       //   this.state.marker[j].close = false;
+        //this.setState({notification: null});
+           console.log(this.state.notification+'after');
       }
     }
   }
-//
+
   // MODULE DE CALCUL DES DISTANCES 1
   distance(lat1, lon1, lat2, lon2, unit) {
     var radlat1 = Math.PI * lat1/180
@@ -105,7 +112,7 @@ class CelebtripLeaflet extends React.Component {
       // console.log('lat: '+lat+'lon: '+lng);
    
       appObj.setState({lat: lat, lng: lng, zoom: 13,  marker: obj, loading: false});   
-      appObj.parseMarker();
+      appObj.parseMarker()
 
     }, appObj.options
       )
@@ -157,7 +164,12 @@ class CelebtripLeaflet extends React.Component {
   var myPosition = [this.state.lat, this.state.lng];
     var markerDisplay = [];
        var markerHidden = [];
-        if(this.state.marker != undefined) {
+         var descDisplay = [];
+
+        if(this.state.marker != undefined || this.state.desc != undefined) {
+            for (var i = 0; i < this.state.desc.length; i++) {
+         descDisplay.push(<p key={i}>{this.state.desc[i]}</p>)
+    }
 
     for (var i = 0; i<this.state.marker.length; i++){
 
@@ -191,6 +203,7 @@ class CelebtripLeaflet extends React.Component {
     return (
       <div>
       <h1>CelebTrip</h1>
+      {descDisplay}
        <span><p>{this.state.notification}</p></span>
    <Map center = {this.paris}  zoom = {this.state.zoom}>
      <TileLayer
