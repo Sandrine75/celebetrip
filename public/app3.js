@@ -41,7 +41,7 @@ class Logo extends React.Component {
             <div className="row">
                 <div className="col-sm-12 col-xs-12">
                     <div className="homelogo">
-                    <center> <img src="images/logo.png" className="img-responsive"/></center>
+                    <center> <img src="/www/images/logo.png" className="img-responsive"/></center>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@ class Introhugo extends React.Component {
   }
 }/*FIN*/
 /*------------------------------------HUGO---------------------------*/
- 
+
 
 /*---CIRCUIT 1 Coeur historique de Paris-*/
 class Circuit1 extends React.Component {
@@ -90,7 +90,7 @@ return(
     <div className="container">
         <div className="row">
             <div className="col-sm-12 col-xs-12">
-    
+
                 <div className="container">
                     <div className="row">
                         <div className="col-xs-offset-0 col-xs-3">
@@ -107,7 +107,7 @@ return(
                         </div>
                     </div>
                 </div>
-    
+
             </div>
             <br />
         </div>
@@ -137,7 +137,7 @@ return(
         <div className="container">
             <div className="row">
                 <div className="col-sm-12 col-xs-12">
-    
+
                 <div className="container">
                     <div className="row">
                         <div className="col-xs-offset-0 col-xs-3">
@@ -155,7 +155,7 @@ return(
                         </div>
                     </div>
                 </div>
-    
+
                 </div>
             <br />
         </div>
@@ -206,7 +206,7 @@ return(
     <div className="container">
         <div className="row">
             <div className="col-sm-12 col-xs-12">
-    
+
                 <div className="container">
                     <div className="row">
                         <div className="col-xs-offset-0 col-xs-3">
@@ -223,7 +223,7 @@ return(
                         </div>
                     </div>
                 </div>
-    
+
             </div>
             <br />
         </div>
@@ -253,7 +253,7 @@ return(
         <div className="container">
             <div className="row">
                 <div className="col-sm-12 col-xs-12">
-    
+
                 <div className="container">
                     <div className="row">
                         <div className="col-xs-offset-0 col-xs-3">
@@ -271,9 +271,9 @@ return(
                         </div>
                     </div>
                 </div>
-    
+
                 </div>
-            <br />
+            <br /><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         </div>
     </div>
 </div>
@@ -283,7 +283,7 @@ return(
 }/*FIN*/
 
 
-        
+
 
 
 function mapDispatchToPropsCircuit1(dispatch) {

@@ -52,7 +52,7 @@ class CelebtripLeaflet extends React.Component {
           if(this.data.indexOf(this.state.marker[j].description) === -1){
             this.data.push(this.state.marker[j].description);
                this.setState({desc: this.data});
-               // navigator.notification.vibrate(1000);
+                navigator.notification.vibrate(1000);
             console.log(this.state.desc);
            var timeOutId = setTimeout(function(){this.setState({desc: ''}); }.bind(this), 90000);
             this.setState({timeOutId: timeOutId });
@@ -129,14 +129,24 @@ class CelebtripLeaflet extends React.Component {
  //   RENDER PENDANT LE DOWNLOAD DES DATA AVANT INITIALISATION
         renderLoading() {
              var loadingIcon = L.icon({
-        iconUrl: '../images/89.gif',
+        iconUrl: '/www/images/89.gif',
         iconSize: [100, 100]
 
       });
 
     return (
-      <div>
-     <h1>Loading</h1>
+      <div className="background-color">
+      <div className="background-logo">
+          <div className="container">
+              <div className="row">
+                  <div className="col-sm-12 col-xs-12">
+                      <div className="homelogo">
+                      <center> <Link to="/app3"><img src="/www/images/logo.png" className="img-responsive"/></Link></center>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
       <Map center = {this.paris}  zoom = {this.state.zoom}>
      <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -157,11 +167,11 @@ class CelebtripLeaflet extends React.Component {
 
 
        var coffreIcon = L.icon({
-        iconUrl: '../images/etoile-gestion-sports.png',
+        iconUrl: '/www/images/etoile-gestion-sports.png',
         iconSize: [30, 30]
         });
         var userIcon = L.icon({
-        iconUrl: '../images/806 (4).gif',
+        iconUrl: '/www/images/806 (4).gif',
         iconSize: [20, 20]
       });
 
@@ -207,8 +217,21 @@ class CelebtripLeaflet extends React.Component {
 
 
     return (
+      <div className="background-color">
+      <div className="background-logo">
+          <div className="container">
+              <div className="row">
+                  <div className="col-sm-12 col-xs-12">
+                      <div className="homelogo">
+                      <center> <Link to="/app3"><img src="/www/images/logo.png" className="img-responsive"/></Link></center>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
       <div>
-
+            <p className="jaune1">{descDisplay}</p>
+      </div>
    <Map center = {this.paris}  zoom = {this.state.zoom}>
      <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -224,9 +247,7 @@ class CelebtripLeaflet extends React.Component {
         {markerHidden}
 
    </Map>
-  <div>
-        {descDisplay}
-  </div>
+
   </div>
     )
   }
@@ -237,10 +258,12 @@ class CelebtripLeaflet extends React.Component {
     const { loading } = this.state;
 
     return (
+
       <div className="leaflet-comp">
-        {this.props.circuit}
+
         {loading ? this.renderLoading() : this.renderMarker()}
       </div>
+
     );
   }
 }

@@ -73,7 +73,7 @@ class Intro extends React.Component {
                 <div className="col-sm-12 col-xs-12">
                     <div className="homeentete">
                        <strong><p>Découvrez Paris</p></strong>
-                        <p font-size ="9">avec pour compagnon de voyage </p>
+                        <p>avec pour compagnon de voyage </p>
                        <strong><p>une célébrité d’hier ou d’aujourd’hui</p></strong>
         </div></div></div></div></div>
     );
@@ -94,7 +94,7 @@ class Chatbot extends React.Component {
                     <div className="col-sm-12 col-xs-12">
                         <div className="jaune">
                         <br/>
-                        <center><Link to="app3" ><img src="images/operateur2.png" className="img-responsive"/></Link></center><br/>
+                        <center><Link to="/app3" ><img src="images/operateur2.png" className="img-responsive"/></Link></center><br/>
                         </div>
                     </div>
                 </div>
@@ -103,65 +103,65 @@ class Chatbot extends React.Component {
     )
   }
 }/*FIN*/
-        
+
 class Stars extends React.Component {
   constructor() {
     super();
   }
   render() {
-    return (   
+    return (
     <div className="background-color">
          <div className="container">
             <div className="row">
-        
-                <div className="col-sm-6 col-xs-6">
-                    <div className="phototaille">
-                         <img src="images/hugotrans.png" className="img-responsive" /> 
-                      
-                    </div></div>
 
-                <div className="col-sm-6 col-xs-6">
-                <div className="phototaille">
-                         <img src="images/piaftrans.png" className="img-responsive" />
-                      
-                    </div></div>
+                <div className="col-sm-offset-2 col-sm-4 col-xs-4 col-xs-offset-2 ">
+                      <div className="phototaille">
+                         <img src="/www/images/hugotrans.png" className="img-responsive" height="100px" width="100px"/>
+                      </div>
+                </div>
+
+                <div className="col-sm-5 col-xs-5 offset-2">
+                      <div className="phototaille">
+                         <img src="/www/images/piaftrans.png" className="img-responsive" height="100px" width="100px"/>
+                      </div>
+                </div>
     </div></div></div>
     )
   }
 }/*FIN*/
-        
+
 class Textstars extends React.Component {
   constructor() {
     super();
   }
   render() {
-    return (  
-        
+    return (
+
 <div className="background-color">
     <div className="container">
         <div className="row">
-            <div className="col-sm-6 col-xs-6">
-                <div className="homeentete">
-                    <h3> Victor Hugo </h3>
-                </div>
-            </div>
-        
-            <div className="col-sm-6 col-xs-6">
-                <div className="homeentete">
-                    <h3> Edith Piaf </h3>
-                </div>
+            <div className="col-sm-offset-2 col-sm-4 col-xs-4 col-xs-offset-2">
+
+                    <h3 className="homeentete"> Victor Hugo </h3>
+
             </div>
 
-        <br/><br/><br/>
-        
+            <div className="col-sm-offset-0 col-sm-5 col-xs-offset-0 col-xs-5  ">
+
+                    <h3 className="homeentete"> Edith Piaf </h3>
+
+            </div>
+
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
     </div></div></div>
-        
+
     )
   }
 }/*FIN*/
-        
-        
-        
+
+
+
                    /*    <Link to="/app2" className="btn btn-default homebutton">
                        <span>Go ! <br /> Découvrez-les <span className="glyphicon glyphicon-chevron-right"></span></span>
                        </Link>
