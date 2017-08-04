@@ -41,7 +41,7 @@ class Logo extends React.Component {
             <div className="row">
                 <div className="col-sm-12 col-xs-12">
                     <div className="homelogo">
-                    <center> <img src="/www/images/logo.png" className="img-responsive"/></center>
+                    <center> <img src="images/logo.png" className="img-responsive"/></center>
                     </div>
                 </div>
             </div>

@@ -30405,7 +30405,7 @@ var Stars = function (_React$Component5) {
                             React.createElement(
                                 'div',
                                 { className: 'phototaille' },
-                                React.createElement('img', { src: '/www/images/hugotrans.png', className: 'img-responsive', height: '100px', width: '100px' })
+                                React.createElement('img', { src: 'images/hugotrans.png', className: 'img-responsive', height: '100px', width: '100px' })
                             )
                         ),
                         React.createElement(
@@ -30414,7 +30414,7 @@ var Stars = function (_React$Component5) {
                             React.createElement(
                                 'div',
                                 { className: 'phototaille' },
-                                React.createElement('img', { src: '/www/images/piaftrans.png', className: 'img-responsive', height: '100px', width: '100px' })
+                                React.createElement('img', { src: 'images/piaftrans.png', className: 'img-responsive', height: '100px', width: '100px' })
                             )
                         )
                     )
@@ -30575,7 +30575,7 @@ return(
              </ul>
            </div>
          </div>
-          <div className="col-sm-6 col-md-2">
+           <div className="col-sm-6 col-md-2">
              <div id="recent-posts-3" className="widget widgetFooter widget_recent_entries">
                  <h4 className="widgettitle">Réseaux sociaux</h4>
                      <ul>
@@ -30611,7 +30611,7 @@ return(
                          </div>
              </div>
          </div>
-          <div className="col-sm-6 col-md-4">
+           <div className="col-sm-6 col-md-4">
              <div id="search-3" className="widget widgetFooter widget_search"><h4 className="widgettitle"></h4>
                  <div className="form-group">
                      <label className="control-label">  </label>
@@ -54182,7 +54182,7 @@ var Logo = function (_React$Component2) {
                                     'center',
                                     null,
                                     ' ',
-                                    React.createElement('img', { src: '/www/images/logo.png', className: 'img-responsive' })
+                                    React.createElement('img', { src: 'images/logo.png', className: 'img-responsive' })
                                 )
                             )
                         )
@@ -55840,7 +55840,7 @@ var CelebtripLeaflet = function (_React$Component) {
     key: 'renderLoading',
     value: function renderLoading() {
       var loadingIcon = L.icon({
-        iconUrl: '/www/images/89.gif',
+        iconUrl: "images/89.gif",
         iconSize: [100, 100]
 
       });
@@ -55870,7 +55870,7 @@ var CelebtripLeaflet = function (_React$Component) {
                     React.createElement(
                       Link,
                       { to: '/app3' },
-                      React.createElement('img', { src: '/www/images/logo.png', className: 'img-responsive' })
+                      React.createElement('img', { src: 'images/logo.png', className: 'img-responsive' })
                     )
                   )
                 )
@@ -55905,11 +55905,11 @@ var CelebtripLeaflet = function (_React$Component) {
     value: function renderMarker() {
 
       var coffreIcon = L.icon({
-        iconUrl: '/www/images/etoile-gestion-sports.png',
+        iconUrl: "images/etoile-gestion-sports.png",
         iconSize: [30, 30]
       });
       var userIcon = L.icon({
-        iconUrl: '/www/images/806 (4).gif',
+        iconUrl: "images/806 (4).gif",
         iconSize: [20, 20]
       });
 
@@ -55996,7 +55996,7 @@ var CelebtripLeaflet = function (_React$Component) {
                     React.createElement(
                       Link,
                       { to: '/app3' },
-                      React.createElement('img', { src: '/www/images/logo.png', className: 'img-responsive' })
+                      React.createElement('img', { src: 'images/logo.png', className: 'img-responsive' })
                     )
                   )
                 )

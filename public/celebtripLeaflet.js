@@ -129,7 +129,7 @@ class CelebtripLeaflet extends React.Component {
  //   RENDER PENDANT LE DOWNLOAD DES DATA AVANT INITIALISATION
         renderLoading() {
              var loadingIcon = L.icon({
-        iconUrl: '/www/images/89.gif',
+        iconUrl: "images/89.gif",
         iconSize: [100, 100]
 
       });
@@ -141,7 +141,7 @@ class CelebtripLeaflet extends React.Component {
               <div className="row">
                   <div className="col-sm-12 col-xs-12">
                       <div className="homelogo">
-                      <center> <Link to="/app3"><img src="/www/images/logo.png" className="img-responsive"/></Link></center>
+                      <center> <Link to="/app3"><img src="images/logo.png" className="img-responsive"/></Link></center>
                       </div>
                   </div>
               </div>
@@ -167,11 +167,11 @@ class CelebtripLeaflet extends React.Component {
 
 
        var coffreIcon = L.icon({
-        iconUrl: '/www/images/etoile-gestion-sports.png',
+        iconUrl: "images/etoile-gestion-sports.png",
         iconSize: [30, 30]
         });
         var userIcon = L.icon({
-        iconUrl: '/www/images/806 (4).gif',
+        iconUrl: "images/806 (4).gif",
         iconSize: [20, 20]
       });
 
@@ -223,7 +223,7 @@ class CelebtripLeaflet extends React.Component {
               <div className="row">
                   <div className="col-sm-12 col-xs-12">
                       <div className="homelogo">
-                      <center> <Link to="/app3"><img src="/www/images/logo.png" className="img-responsive"/></Link></center>
+                      <center> <Link to="/app3"><img src="images/logo.png" className="img-responsive"/></Link></center>
                       </div>
                   </div>
               </div>

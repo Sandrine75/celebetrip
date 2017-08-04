@@ -116,13 +116,13 @@ class Stars extends React.Component {
 
                 <div className="col-sm-offset-2 col-sm-4 col-xs-4 col-xs-offset-2 ">
                       <div className="phototaille">
-                         <img src="/www/images/hugotrans.png" className="img-responsive" height="100px" width="100px"/>
+                         <img src="images/hugotrans.png" className="img-responsive" height="100px" width="100px"/>
                       </div>
                 </div>
 
                 <div className="col-sm-5 col-xs-5 offset-2">
                       <div className="phototaille">
-                         <img src="/www/images/piaftrans.png" className="img-responsive" height="100px" width="100px"/>
+                         <img src="images/piaftrans.png" className="img-responsive" height="100px" width="100px"/>
                       </div>
                 </div>
     </div></div></div>
