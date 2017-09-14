@@ -93,7 +93,7 @@ class CelebtripLeaflet extends React.Component {
         var options = {enableHighAccuracy: false,timeout: 50000,maximumAge: 0, desiredAccuracy: 0, distanceFilter: 1 };
 
      // APPEL A LA DB
-   fetch('https://mighty-brushlands-14103.herokuapp.com/getAllData', {
+   fetch('https://celebetrip.herokuapp.com/getAllData', {
     method: 'post'
       }).then(function(response) {
     // return response.text();

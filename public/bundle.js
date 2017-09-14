@@ -30575,7 +30575,7 @@ return(
              </ul>
            </div>
          </div>
-           <div className="col-sm-6 col-md-2">
+          <div className="col-sm-6 col-md-2">
              <div id="recent-posts-3" className="widget widgetFooter widget_recent_entries">
                  <h4 className="widgettitle">Réseaux sociaux</h4>
                      <ul>
@@ -30611,7 +30611,7 @@ return(
                          </div>
              </div>
          </div>
-           <div className="col-sm-6 col-md-4">
+          <div className="col-sm-6 col-md-4">
              <div id="search-3" className="widget widgetFooter widget_search"><h4 className="widgettitle"></h4>
                  <div className="form-group">
                      <label className="control-label">  </label>
@@ -55804,7 +55804,7 @@ var CelebtripLeaflet = function (_React$Component) {
       var options = { enableHighAccuracy: false, timeout: 50000, maximumAge: 0, desiredAccuracy: 0, distanceFilter: 1 };
 
       // APPEL A LA DB
-      fetch('https://mighty-brushlands-14103.herokuapp.com/getAllData', {
+      fetch('https://celebetrip.herokuapp.com/getAllData', {
         method: 'post'
       }).then(function (response) {
         // return response.text();
